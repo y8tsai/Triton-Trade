@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -38,6 +37,3 @@ gem 'puma'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-=======
-gem 'pg'
->>>>>>> parent of 60c81fe... Still trying to deploy to heroku
