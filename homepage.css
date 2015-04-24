@@ -82,3 +82,22 @@ main div {
   display: flex;
   justify-content: center;
 }
+
+.navbar-brand-name {
+    display: inline-block;
+    padding-top: 15px;
+}
+
+.navbar-default {
+    background-color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
