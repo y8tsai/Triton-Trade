@@ -12,6 +12,9 @@ module RubyGettingStarted
     config.autoload_paths += %W(#{config.root}/lib)
     config.autoload_paths += %W(#{config.root}/app)
 
+	# to force the application to not access the DB or load models when precompiling assets
+	# specific to deployment using heroku
+	config.assets.initialize_on_precompile = false
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
