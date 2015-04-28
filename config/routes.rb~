@@ -8,11 +8,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
 
   root 'welcome#index'
-<<<<<<< HEAD
-  match '/testpage' => 'pages#testpage'  
-=======
-  match '/login' => 'pages#login_index', :via => [:get, :post]
->>>>>>> 0d25c59ae48bf609b12280aa0360d1753bf9cd46
+  get '/testpage' => 'pages#testpage'  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
