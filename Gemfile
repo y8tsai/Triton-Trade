@@ -38,3 +38,5 @@ gem 'puma'
 # gem 'debugger', group: [:development, :test]
 
 gem 'devise', '3.4.0'
+gem 'omniauth'
+gem 'omniauth-facebook'
