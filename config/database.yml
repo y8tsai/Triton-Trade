@@ -59,6 +59,7 @@ development:
  # <<: *default
  # database: triton-trade_test
 test:
+  <<: *default
   database: d2bjjbi6tjg0rs
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -77,8 +78,8 @@ test:
 #
 # You can use this database configuration with:
 #
-  production:
-     url: <%= ENV['DATABASE_URL'] %>
+#  production:
+#     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
   <<: *default
