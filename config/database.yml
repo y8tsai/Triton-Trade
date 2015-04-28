@@ -23,25 +23,25 @@ default: &default
 
 development:
   <<: *default
-  database: triton-trade_development
+  database: d2bjjbi6tjg0rs
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: triton-trade
+  username: qobnsnlunaueru
 
   # The password associated with the postgres role (username).
-  #password:
+  password: noK3AzGMpmcBxSIswmelFKAjgQ
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
-  #host: localhost
+  # host: localhost
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
-  #port: 5432
+  port: 5432
 
   # Schema search path. The server defaults to $user,public
   #schema_search_path: myapp,sharedapp,public
@@ -71,12 +71,12 @@ test:
 # On Heroku and other platform providers, you may have a full connection URL
 # available as an environment variable. For example:
 #
-#   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
+   DATABASE_URL="postgres://qobnsnlunaueru:noK3AzGMpmcBxSIswmelFKAjgQ@ec2-23-21-140-156.compute-1.amazonaws.com:5432/d2bjjbi6tjg0rs"
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
+   production:
+     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
   <<: *default
