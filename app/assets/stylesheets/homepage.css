@@ -4,6 +4,16 @@
     font-size: 12px;
 }
 
+.navbar-header a {
+	text-align: center;
+}
+
+.narvbar-header a text {
+	font-family: "Lobster";
+	font-size: 20px;
+	color: #3498db;
+}
+
 .main {
 	background-color: #FFFFFF;
 }
@@ -18,14 +28,15 @@
 }
 
 .logo h1 {
-	font-family: "Lobster", cursive;
+	font-family: "Lobster";
 	font-size: 60px;
 	color: #FFFFFF;
 	text-align: center;
 }
 
 form {
-    width:300px;
+    width: 75%;
+    padding-top: 15px;
     margin:0 auto;
 }
 
