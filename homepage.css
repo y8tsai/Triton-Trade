@@ -4,6 +4,16 @@
     font-size: 12px;
 }
 
+.navbar-header a {
+	text-align: center;
+}
+
+.navbar-header a text {
+    font-family: "Lobster", cursive;
+	font-size: 20px;
+	color: #3498db;
+}
+
 .main {
 	background-color: #FFFFFF;
 }
@@ -25,7 +35,8 @@
 }
 
 form {
-    width:300px;
+    width:75%;
+    padding-top: 15px;
     margin:0 auto;
 }
 
@@ -91,13 +102,3 @@ main div {
 .navbar-default {
     background-color: #FFFFFF;
 }
-
-
-
-
-
-
-
-
-
-
