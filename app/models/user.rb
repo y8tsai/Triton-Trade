@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable, :omniauth_providers => [:google_oauth2]
+         :omniauthable, :omniauth_providers => [:google_oauth2, :facebook]
 
   def user_params
     params.require(:user).permit(:username, :email, :password, :password_confirmation)
