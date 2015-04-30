@@ -260,4 +260,8 @@ Devise.setup do |config|
   # ==> Facebook connect integration using omniauth
   require "omniauth-facebook"
   config.omniauth :facebook, "1451454388480735", "729f9df5799de4a3ee2f23eac5d88319"
+
+  # Google Login Integration Info
+  require "omniauth-google-oauth2"
+  config.omniauth :google_auth2, "803665374887-p4km0dpj2gh99mcsmsmfci9sqigeuo68.apps.googleusercontent.com", "OeA2l_2eIwuuqvq_hKUY4Xof" {}
 end
