@@ -263,5 +263,5 @@ Devise.setup do |config|
 
   # Google Login Integration Info
   require "omniauth-google-oauth2"
-  config.omniauth :google_auth2, "803665374887-p4km0dpj2gh99mcsmsmfci9sqigeuo68.apps.googleusercontent.com", "OeA2l_2eIwuuqvq_hKUY4Xof", {}
+  config.omniauth :google_oauth2, "803665374887-p4km0dpj2gh99mcsmsmfci9sqigeuo68.apps.googleusercontent.com", "OeA2l_2eIwuuqvq_hKUY4Xof", {}
 end
