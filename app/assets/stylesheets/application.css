@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-border-form-div {
+.border-form-div {
   max-width: 300px;
   padding: 19px 29px 29px;
   margin: 0 auto 20px;
