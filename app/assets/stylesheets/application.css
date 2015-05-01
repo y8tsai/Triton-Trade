@@ -37,7 +37,8 @@
 .border-form-div .password_field,
 .border-form-div .check_box,
 .border-form-div .submit {
-  position: left;
+  position: relative;
+  left: -20px;
 }
 .border-form-div .form-signin-heading,
 .border-form-div .checkbox {
