@@ -51,6 +51,7 @@
 
 <li>Hello, <%= current_user.username %>!</li>
 <li><%= link_to "Sign out", destroy_user_session_path,:method => :delete %></li>
+<li><%= link_to "ProfileTest", edit_profile_path(current_user.profile) %></li>
 <li><a href="#">Profile</a></li>
 
 <% else %>
