@@ -8,4 +8,7 @@ class PagesController < ApplicationController
 
    def info
    end
+
+   def about_us
+   end
 end
