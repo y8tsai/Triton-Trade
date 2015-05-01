@@ -1,2 +1,8 @@
 class PagesController < ApplicationController
+
+   def testpage
+   end
+
+   def profile
+   end
 end
