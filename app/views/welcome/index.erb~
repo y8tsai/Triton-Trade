@@ -9,7 +9,7 @@
 			</div>
 		</div>-->
         
-		<header class="navbar-default" role="banner">
+		<header class="navbar-default navbar-fixed-top" role="banner">
 		  <nav role="navigation">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
@@ -54,7 +54,6 @@
 <li>Hello, <%= current_user.email %>!</li>
 <li><%= link_to "Sign out", destroy_user_session_path,:method => :delete %></li>
 <li><%= link_to 'Edit Profile',edit_user_registration_path %></li>
-<li><a href="#">Profile</a></li>
 
 <% else %>
 
