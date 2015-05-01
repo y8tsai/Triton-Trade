@@ -44,6 +44,4 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 
-# Use Twitter Bootstrap for devise form stles
-gem 'bootstrap-sass-rails', '~> 2.2.2.0'
 
