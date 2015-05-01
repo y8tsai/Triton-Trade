@@ -154,6 +154,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass-rails (~> 2.2.2.1)
   coffee-rails (~> 4.0.0)
   devise (= 3.4.0)
   jbuilder (~> 2.0)
