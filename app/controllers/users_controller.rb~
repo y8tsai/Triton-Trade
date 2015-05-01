@@ -1,9 +1,5 @@
 # change this later
 class UsersController < ActionController::Base
-  def edit
-    @profile = current_user.profile
-  end 
-
   def create
     User.create(user_params)
   end

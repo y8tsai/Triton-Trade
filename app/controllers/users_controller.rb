@@ -1,5 +1,10 @@
 # change this later
 class UsersController < ActionController::Base
+
+  def index
+     @users= User.all
+  end
+
   def create
     User.create(user_params)
   end
