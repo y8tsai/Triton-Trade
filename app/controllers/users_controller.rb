@@ -1,4 +1,3 @@
-# change this later
 class UsersController < ActionController::Base
   def create
     User.create(user_params)
