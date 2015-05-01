@@ -18,9 +18,9 @@
 .border-form-div {
   max-width: 300px;
   padding: 19px 29px 29px;
-   margin: 0 20px 50px 20px; 
+   margin: 0 auto 20px; 
   background-color: #fff;
-  border: 20px solid #3498db;
+  border: 15px solid #3498db;
   
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
@@ -37,8 +37,7 @@
 .border-form-div .password_field,
 .border-form-div .check_box,
 .border-form-div .submit {
-  position: absolute;
-  left: 50px;
+  margin-right: 50px;
 }
 .border-form-div .form-signin-heading,
 .border-form-div .checkbox {
