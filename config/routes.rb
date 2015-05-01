@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'testpage' => 'pages#testpage'  
   get 'info' => 'pages#info'
-  match 'profile' => 'users#show', :as => 'profile' 
+  get 'profile' => 'users#show', :as => 'profile' 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
