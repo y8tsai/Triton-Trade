@@ -21,12 +21,16 @@
    margin: 0 auto 20px; 
   background-color: #fff;
   border: 1px solid #3498db;
+  /*
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
   -webkit-box-shadow: 0 1px 2px rgba(52,152,219,.05);
      -moz-box-shadow: 0 1px 2px rgba(52,152,219,.05);
-          box-shadow: 0 1px 2px rgba(52,152,219,.05);
+          box-shadow: 0 1px 2px rgba(52,152,219,.05); */
+}
+.border-form-div h2 {
+  text-align: center;
 }
 .border-form-div .form-signin-heading,
 .border-form-div .checkbox {
