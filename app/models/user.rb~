@@ -5,12 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:google_oauth2, :facebook]
 
-  after_create :create_profile
-  def create_profile
- 	self.profile.create
-  end
-
-
   def user_params
     params.require(:user).permit(:username, :email, :password, :password_confirmation)
   end
