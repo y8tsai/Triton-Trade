@@ -5,12 +5,12 @@ class ApplicationController < ActionController::Base
 
  #The following block of code is used to store updated profile information
  #THe data is passed as parameters to the database
- #before_filter :configure_permitted_parameters, if: :devise_controller?
+ before_filter :configure_permitted_parameters, if: :devise_controller?
 
-  #   protected
+     protected
 
-   #  def configure_permitted_parameters
-    #         devise_parameter_sanitizer.for(:sign_up) { |u| u.permit (:name, :email, :password) }
-     #        devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :email, :password, :current_password, :PID, :date_of_birth, :is_female) }
-     #end  
+     def configure_permitted_parameters
+              devise_parameter_sanitizer.for(:sign_up) { |u| u.permit (:name, :email, :password) }
+             devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :email, :password, :current_password, :PID, :date_of_birth, :is_female) }
+     end  
 end
