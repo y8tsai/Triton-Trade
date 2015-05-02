@@ -10,6 +10,13 @@ class User < ActiveRecord::Base
  	self.profile.create
   end
 
+  def full_name
+    if self.name.blank?
+      self.email
+    else
+      self.name
+    end
+  end
 
   def user_params
     params.require(:user).permit(:username, :email, :password, :password_confirmation)
