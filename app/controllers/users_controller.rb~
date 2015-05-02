@@ -4,6 +4,10 @@ class UsersController < ActionController::Base
      @users= User.all
   end
 
+  def show
+     @users = User.find(params[:id])
+  end
+
   def create
     User.create(user_params)
   end
