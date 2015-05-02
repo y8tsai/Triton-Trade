@@ -5,6 +5,7 @@ class UsersController < ActionController::Base
   end
 
   def show
+     before_filter :authenticate_user!
      @user = User.find(params[:id])
   end
 

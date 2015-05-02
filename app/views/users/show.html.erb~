@@ -1,10 +1,5 @@
 <h1><%= @user.email %></h1>
 <ul>
-    <% unless @user.name.blank? %>
-        <li>Name: <%= @user.name %></li>
-    <% end %>
-
-    <% unless @user.date_of_birth.blank? %>
-        <li>Date of birth:<%= @user.date_of_birth %></li>
-    <% end %>
+    <%= content_tag(:li, ("Name: " + @user.name)) unless @user.name.blank? %>
+    <%= content_tag(:li, ("Date of birth: " + @user.date_of_birth)) unless @user.date_of_birth.blank? %>
 </ul>
