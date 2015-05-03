@@ -1,5 +1,10 @@
 <h1><%= @user.email %></h1>
 <ul>
     <li>Name: <%= @user.name %></li>
-    <li>Date of birth:<%= @user.date_of_birth %></li>
+    <li>Date of birth: <%= @user.date_of_birth %></li>
+    <li>PID: <%= @user.PID %></li>
+    <% if @user.is_female %>
+    	<li>Gender: Female</li>
+    <% else %>
+        <li>Gender: Male</li>
 </ul>
