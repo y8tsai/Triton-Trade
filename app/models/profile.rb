@@ -1,3 +1,4 @@
 class Profile < ActiveRecord::Base
-   validates :profile, :presence => true
+  belongs_to :user
+  validates :profile, :presence => true
 end
