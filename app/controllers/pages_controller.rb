@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   end
 
   def info
-    @css_list = ['round-about', 'search']
+    @css_list = ['info', 'search']
   end
 
 end
