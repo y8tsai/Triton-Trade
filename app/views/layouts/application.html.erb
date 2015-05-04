@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Triton Trade</title>
+    <link href='//fonts.googleapis.com/css?family=Poiret+One|Lobster|Droid+Serif|Playfair+Display+SC:400italic|Oswald|Berkshire+Swash|Satisfy|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' %>
 
-    <head>
-        <title>Triton Trade</title>
-        <link href='//fonts.googleapis.com/css?family=Poiret+One|Lobster|Droid+Serif|Playfair+Display+SC:400italic|Oswald|Berkshire+Swash|Satisfy|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-        <%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' %>
-        <%= stylesheet_link_tag    'homepage' %>
-        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-        <%= csrf_meta_tags %>
-        
-    </head>
-    
-    <body>
-
+    <!-- apply page specific style -->
+    <% if defined? @css_list %>
+      <% for css_filename in @css_list do %>
+        <%= stylesheet_link_tag css_filename %>
+      <% end %>
+    <% end %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
     <%= yield %>
-
-    </body>
+  </body>
 </html>

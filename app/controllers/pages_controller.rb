@@ -1,12 +1,17 @@
 class PagesController < ApplicationController
 
-   def testpage
-   end
+  def index
+    @css_list = ['index']
+  end
 
-   def profile
-   end
+  def testpage
+  end
 
-   def info
-   end
+  def profile
+  end
+
+  def info
+    @css_list = ['round-about', 'search']
+  end
 
 end
