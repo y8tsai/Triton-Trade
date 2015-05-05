@@ -79,7 +79,7 @@ main {
 
 main div {
   font-family: "Georgia", sans-serif;
-  border-radius: 20px/300px;
+  border-radius: 20px;
   font-size: 15px;
   background: #3498db;
   color: white;
