@@ -37,9 +37,14 @@
   margin: 50px auto 20px; 
   background-color: #fff;
   border: 1px solid #3498db;
+  border-radius: 20px;
 }
 
-.border-form-div2 h2, h3 {
+.border-form-div h2 {
+  text-align: center;
+}
+
+.border-form-div h2,h3 {
   text-align: center;
 }
 
@@ -65,3 +70,5 @@ footer {
     text-align: center;
     /*margin: 50px 0; */
 }
+
+
