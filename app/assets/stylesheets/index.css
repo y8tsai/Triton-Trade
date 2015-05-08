@@ -32,6 +32,8 @@
 .main img {
 	display: block;
 	margin:0 auto;
+	max-height: 33%;
+	max-width: 33%;
 }
 
 .logo{
@@ -86,8 +88,6 @@ main {
   background: white;
   margin: 5px 0;
   padding: 10px;
-  max-width: 30%;
-  max-height: 30%;
 }
 
 main div {
