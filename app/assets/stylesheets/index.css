@@ -1,4 +1,4 @@
-/*.navbar li {
+.navbar li {
 	display: inline;
     font-family: "Helvetic", sans-serif;
     font-size: 12px;
@@ -116,7 +116,7 @@ main div {
 .navbar-default {
     background-color: #FFFFFF;
 }
-*/
+
 
 
 
