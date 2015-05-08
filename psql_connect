@@ -1,0 +1,1 @@
+heroku pg:psql --app triton-trade HEROKU_POSTGRESQL_MAROON
