@@ -30,9 +30,19 @@
      -moz-box-shadow: 0 1px 2px rgba(52,152,219,.5);
           box-shadow: 0 1px 2px rgba(52,152,219,.5); */
 }
-.border-form-div h2 {
+
+.border-form-div2 {
+  max-width: 600px;
+  /*padding: 19px 29px;*/
+  margin: 50px auto 20px; 
+  background-color: #fff;
+  border: 1px solid #3498db;
+}
+
+.border-form-div2 h2, h3 {
   text-align: center;
 }
+
 .border-form-div .form-signin-heading,
 .border-form-div .checkbox {
   margin-bottom: 10px;
