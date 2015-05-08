@@ -87,10 +87,10 @@ form {
 main {
   background: white;
   margin: 5px 0;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
-/*main div {
+main div {
   font-family: "Georgia", sans-serif;
   border-radius: 20px;
   font-size: 15px;
@@ -101,7 +101,7 @@ main {
   margin: 10px;
   width: 200px;
   text-align: center;
-} */
+} 
 
 .quicklinks {
   display: flex;
