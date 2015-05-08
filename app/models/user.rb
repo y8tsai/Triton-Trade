@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
   end
 
   def user_params
-    params.require(:user).permit(:username, :email, :password, :password_confirmation)
+    params.require(:user).permit(:username, :name, :email, :password, :password_confirmation)
   end
 
   # change this later
