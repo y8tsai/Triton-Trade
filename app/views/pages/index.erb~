@@ -1,10 +1,4 @@
-<style type="text/css">
-    <!--
-    body {
-     margin: 0px 0px 0px 0px;
-     }
-    -->
-    </style>
+		
 
 <!--div class = "navbar">
 			<div class = "container">
@@ -17,6 +11,13 @@
 			</div>
 		</div-->
 <head>
+    <style type="text/css">
+    <!--
+    body {
+     margin: 0px 0px 0px 0px;
+     }
+    -->
+    </style>
 
 <!--<link rel="icon" type="image/png" href="http://i.imgur.com/whET9XY.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="http://i.imgur.com/20lYXKL.png" sizes="16x16" />-->
