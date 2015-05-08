@@ -21,7 +21,7 @@
   margin: 50px auto 20px; 
   background-color: #fff;
   border: 1px solid #3498db;
-  border-radius: 20px;
+  border-radius: 10%;
   
   
  /* -webkit-border-radius: 5px;
@@ -38,7 +38,7 @@
   margin: 50px auto 20px; 
   background-color: #fff;
   border: 1px solid #3498db;
-  border-radius: 20px;
+  border-radius: 10%;
 }
 
 .border-form-div h2 {
