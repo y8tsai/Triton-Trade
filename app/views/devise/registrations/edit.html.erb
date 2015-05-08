@@ -17,6 +17,9 @@
     <div><%= f.label :PID %><br />
         <%= f.text_field :PID, autofocus: true %></div>
 
+    <div><%= f.label :avatar_url %><br />
+        <%= f.text_field :avatar_url, autofocus: true %></div>     
+
     <div><%= f.check_box :is_female, {}, true %> <%= f.label :is_female, "Female" %> </div>
     <div><%= f.check_box :is_female, {}, false %> <%= f.label :is_female, "Male" %> </div>
 

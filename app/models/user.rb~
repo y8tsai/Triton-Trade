@@ -1,18 +1,26 @@
 class User < ActiveRecord::Base
+  has_one :profile
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:google_oauth2, :facebook]
 
-  after_create :create_profile
-  def create_profile
- 	self.profile.create
+  after_create :add_profile
+  def add_profile
+ 	self.create_profile
   end
 
+  def full_name
+    if self.name.blank?
+      self.email
+    else
+      self.name
+    end
+  end
 
   def user_params
-    params.require(:user).permit(:username, :email, :password, :password_confirmation)
+    params.require(:user).permit(:username, :name, :email, :password, :password_confirmation)
   end
 
   # change this later
