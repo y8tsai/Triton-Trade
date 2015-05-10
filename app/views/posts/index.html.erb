@@ -42,7 +42,7 @@
 
 <% if user_signed_in? %>
 
-<li>Hello, <%= current_user.email %>!</li>
+<li>Hello, <%= current_user.name.blank? ? current_usr.email : current_user.name %>!</li>
 <li><%= link_to "Sign out", destroy_user_session_path,:method => :delete %></li>
 <li><%= link_to 'Edit Profile',edit_user_registration_path %></li>
 <li><%= link_to "Profile", current_user %></li>
@@ -69,22 +69,27 @@
 <table>
   <thead>
     <tr>
-      <th>Content</th>
       <th>User</th>
+      <th>Content</th>
       <th colspan="30"></th>
     </tr>
   </thead>
 
-<%= link_to 'New Post', new_post_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Post', new_post_path %>
+<% end %>
 
   <tbody>
     <% @posts.each do |post| %>
       <tr>
+        <td><%= post.user.name %></td>
         <td><%= post.content %></td>
-        <td><%= post.user_id %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete %></td>
+        <% if user_signed_in? %>
+          <td><%= link_to 'View', post %></td>
+          <td><%= link_to 'Edit', edit_post_path(post) %></td>
+          <td><%= link_to 'Delete', post, method: :delete %></td>
+        <% end %>
+
       </tr>
     <% end %>
   </tbody>
