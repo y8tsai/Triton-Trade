@@ -1,6 +1,9 @@
 addons:
   postgresql: "9.4"
 
+before_script:
+  - psql -c 'create databse triton-trade_test;' -U postgres
+
 deploy:
   provider: heroku
   api_key: "7001fe18-d149-4f65-8120-27ccbf18c599"
