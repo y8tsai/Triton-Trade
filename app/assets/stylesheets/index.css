@@ -9,6 +9,9 @@
     color: gray;
 }
 
+.navbar li a {
+	display: inline;
+}
 
 .navbar-default {
     background-color: #FFFFFF;
