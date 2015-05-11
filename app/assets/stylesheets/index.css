@@ -9,10 +9,9 @@
 	color: gray;
 }
 
-.navbar-right li {
+.navbar-right text {
 	display: inline;
-	padding-top: 15px;
-	padding-bottom: 15px;
+	position: relative;
 }
 
 .navbar-default {
@@ -101,9 +100,9 @@ main div {
   font-size: 15px;
   background: #3498db;
   color: white;
-  padding: 20px;
+  padding-top: 25px;
   max-width: 125px;
-  margin: 10px;
+  margin: 5px;
   width: 75px;
   text-align: center;
 } 
