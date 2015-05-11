@@ -74,7 +74,7 @@
 				<li>Hello, <%= current_user.name.blank? ? current_user.email : current_user.name  %>!</li>
 				<!--<li><a href="PROFILE"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>-->
 				
-				<li><%= link_to current_user, class: "btn btn-default btn-sm" do %>
+				<li><%= link_to current_user, type: "submit", class: "btn btn-default btn-sm" do %>
 				    <i class="glyphicon glyphicon-user">Profile</i>
 				<% end %></li>
 
@@ -87,8 +87,8 @@
 
 				<% else %>
 				
-				<li><%= link_to "Log In", new_user_session_path, type: "button", class: "btn btn-default btn-sm" %></li>
-				<li><%= link_to "Sign Up For Free", new_user_registration_path, type: "button", class: "btn btn-default btn-sm" %></li>
+				<li><%= link_to "Log In", new_user_session_path, type: "submit", class: "btn btn-default btn-sm" %></li>
+				<li><%= link_to "Sign Up For Free", new_user_registration_path, type: "submit", class: "btn btn-default btn-sm" %></li>
 
 				<!--<li><%= link_to "Sign In", new_user_session_path %></li>-->
 				<!--<li><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></li>-->
