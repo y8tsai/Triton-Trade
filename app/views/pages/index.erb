@@ -52,7 +52,7 @@
 
 				<% if user_signed_in? %>
 				
-				<li><text>Hello, <%= current_user.name.blank? ? current_user.email : current_user.name  %>!</text></li>
+				<li><a class="navbartext">Hello, <%= current_user.name.blank? ? current_user.email : current_user.name  %>!</a></li>
 				
 				<li><%= link_to current_user do %>
 				    <i class="glyphicon glyphicon-user"> Profile</i>
