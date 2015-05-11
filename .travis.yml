@@ -1,7 +1,14 @@
 addons:
   postgresql: "9.4"
 
+before_script:
+  - psql -c 'create database triton_trade_test;' -U postgres
+
 deploy:
   provider: heroku
   api_key: "7001fe18-d149-4f65-8120-27ccbf18c599"
   app: triton-trade
+
+language: ruby
+rvm:
+  - 2.2.2
