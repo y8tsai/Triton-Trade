@@ -59,7 +59,7 @@
 				<!--<li><a href="PROFILE"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>-->
 				
 				<li><%= link_to current_user, type: "submit", class: "btn btn-default btn-sm" do %>
-				    <i class="glyphicon glyphicon-user">Profile</i>
+				    <i class="glyphicon glyphicon-user"> Profile</i>
 				<% end %></li>
 
 				<li><%= button_to "Sign Out", destroy_user_session_path, :method => :delete, type: "button", class: "btn btn-default btn-sm" %></li>
@@ -71,8 +71,10 @@
 
 				<% else %>
 				
-				<li><button type="button" class="btn btn-default navbar-btn">Log in</button></li>
-				<li><button type="button" class="btn btn-default navbar-btn">Sign Up For Free</button></li>
+				<li><%= link_to new_user_session_path, class: "btn btn-default btn-sm" do %>
+					<button type="button" class="btn btn-default navbar-btn">Log in</button>
+				<%end%></li>
+				
 				<li><%= link_to "Log In", new_user_session_path, type: "submit", class: "btn btn-default btn-sm" %></li>
 				<li><%= link_to "Sign Up For Free", new_user_registration_path, type: "submit", class: "btn btn-default btn-sm" %></li>
 
