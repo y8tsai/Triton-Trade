@@ -55,8 +55,7 @@
 				<% if user_signed_in? %>
 				
 				
-				<li>Hello, <%= current_user.name.blank? ? current_user.email : current_user.name  %>!</li>
-				<!--<li><a href="PROFILE"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>-->
+				<li><text>Hello, <%= current_user.name.blank? ? current_user.email : current_user.name  %>!</text></li>
 				
 				<li><%= link_to current_user do %>
 				    <i class="glyphicon glyphicon-user"> Profile</i>
