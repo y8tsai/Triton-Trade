@@ -11,6 +11,7 @@
 
 <h1><center><%= @user.name %></center></h1>
 <ul>
+    <%= image_tag @user.avatar_url %>
     <li>Email: <%= @user.email %></li>
     <li>Date of birth: <%= @user.date_of_birth %></li>
     <li>PID: <%= @user.PID %></li>
