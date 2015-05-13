@@ -1,0 +1,13 @@
+class CreateProducts < ActiveRecord::Migration
+  def change
+    create_table :products do |t|
+      t.string :name
+      t.text :description
+      t.boolean :is_sold
+      t.string :item_url
+      t.decimal :price
+
+      t.timestamps
+    end
+  end
+end
