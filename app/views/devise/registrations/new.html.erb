@@ -83,9 +83,6 @@
   <div><%= f.label :name %><br />
   <%= f.text_field :name, autofocus: true %></div>
 
-  <div><%= f.label :avatar_url %><br />
-  <%= f.text_field :avatar_url, autofocus: true %></div>
-
   <div><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
 
