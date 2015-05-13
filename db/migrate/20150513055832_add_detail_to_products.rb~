@@ -1,0 +1,7 @@
+class AddDetailToProducts < ActiveRecord::Migration
+  def change
+    add_column :products, :is_sold, :boolean, default:false
+    add_column :products, :price, :float, precision: 5, scale: 2
+    add_column :products, :product_url, :string, default:nil
+  end
+end
