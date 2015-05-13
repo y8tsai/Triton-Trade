@@ -16,7 +16,7 @@
     <% end %>
 
     <% else %>
-	<%= image_tag "http://community.blrstartups.com/content/plugins/techchamp/assets/avatars/anon.png", :width => 200, :height => 200, :crop => :fill %>
+	<%= image_tag ("http://community.blrstartups.com/content/plugins/techchamp/assets/avatars/anon.png", :width => 200, :height => 200, :crop => :fill) %>
     <% end %>
 
     <li>Email: <%= @user.email %></li>

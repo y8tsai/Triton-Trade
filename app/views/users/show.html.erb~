@@ -11,7 +11,13 @@
 
 <h1><center><%= @user.name %></center></h1>
 <ul>
-    <%= image_tag @user.avatar_url, :width => 200, :height => 200, :crop => :fill %>
+    <% if @user.avatar_url.blank? %>
+    	<%= image_tag @user.avatar_url, :width => 200, :height => 200, :crop => :fill %>
+    <% end %>
+
+    <% else %>
+	<%= image_tag "http://community.blrstartups.com/content/plugins/techchamp/assets/avatars/anon.png", :width => 200, :height => 200, :crop => :fill %>
+    <% end %>
 
     <li>Email: <%= @user.email %></li>
     <li>Date of birth: <%= @user.date_of_birth %></li>
