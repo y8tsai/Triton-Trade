@@ -1,0 +1,10 @@
+<li id="item-<%= item.id %>">
+  <%= link_to gravatar_for(item.user, size: 50), item.user %>
+  <span class="user"><%= link_to item.user.name, item.user %></span>
+  <span class="item"><%= item.name %></span>
+  <span class="condition"><%= item.condition %></span>
+  <span class="price"><%= item.price %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(item.created_at) %> ago.
+  </span>
+</li>
