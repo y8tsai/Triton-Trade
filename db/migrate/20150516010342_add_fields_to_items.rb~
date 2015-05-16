@@ -1,0 +1,4 @@
+class AddFieldsToItems < ActiveRecord::Migration
+  def change
+  end
+end
