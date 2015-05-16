@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :posts
+
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
   resources :widgets
   resources :users, only: [:index, :show]
@@ -7,10 +9,10 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-  root 'welcome#index'
+  root 'pages#index'
   get 'testpage' => 'pages#testpage'  
   get 'info' => 'pages#info'
-  get '/:id', to: 'users#show', as: :profile
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
