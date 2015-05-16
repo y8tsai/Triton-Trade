@@ -1,0 +1,39 @@
+<h1>Items for Sale</h1>
+
+<%= render 'shared/nav_bar' %>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th style="padding-right: 10px">Item</th>
+      <th style="padding-right: 10px">Condition</th>
+      <th style="padding-right: 10px">Price</th>
+      <th colspan="30"></th>
+    </tr>
+  </thead>
+
+<% if user_signed_in? %>
+  <%= link_to 'New Item', new_item_path %>
+<% end %>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.user.name.blank? ? item.user.email : item.user.name %></td>
+        <td style="padding-right: 10px"><%= item.name %></td>
+	<td style="padding-right: 10px"><%= item.condition %></td>
+	<td style="padding-right: 10px"><%= item.price %></td>
+        <td style="padding-right: 10px"><%= link_to 'View Item Details', item %></td>
+        <% if user_signed_in? %>
+          <td style="padding-right: 10px"><%= link_to 'Edit', edit_item_path(item) %></td>
+          <td style="padding-right: 10px"><%= link_to 'Delete', item, method: :delete %></td>
+        <% end %>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
