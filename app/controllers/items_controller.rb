@@ -4,7 +4,7 @@ before_action :set_item, :authenticate_user!, only: [:show, :edit, :update, :des
   respond_to :html
 
   def index
-    @items = item.all
+    @items = Item.all
     respond_with(@items)
   end
 
@@ -13,7 +13,7 @@ before_action :set_item, :authenticate_user!, only: [:show, :edit, :update, :des
   end
 
   def new
-    @item = item.new
+    @item = Item.new
     respond_with(@item)
   end
 
@@ -21,7 +21,7 @@ before_action :set_item, :authenticate_user!, only: [:show, :edit, :update, :des
   end
 
   def create
-    @item = item.new(item_params)
+    @item = Item.new(item_params)
     @item.save
     respond_with(@item)
   end
