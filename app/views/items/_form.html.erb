@@ -1,13 +1,8 @@
 
 <%= form_for(@item) do |f| %>
-
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name, autofocus: true %><br>
-
-    <%= f.label :condition %><br>
-    <%= f.text_field :condition, autofocus: true %><br>
-
+    <%= f.text_field :name, autofocus: true %>
 
   </div>
   <%= f.hidden_field :user_id, :value => current_user.id %>
