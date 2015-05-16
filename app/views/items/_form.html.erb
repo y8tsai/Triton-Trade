@@ -1,11 +1,5 @@
 
 <%= form_for(@item) do |f| %>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name, autofocus: true %>
-
-  </div>
-  <%= f.hidden_field :user_id, :value => current_user.id %>
   <div class="actions">
     <%= f.submit %>
   </div>
