@@ -70,9 +70,9 @@
   <thead>
     <tr>
       <th>User</th>
-      <th>Item</th>
-      <th>Condition</th>
-      <th>Price</th>
+      <th style="padding-right: 10px">Item</th>
+      <th style="padding-right: 10px">Condition</th>
+      <th style="padding-right: 10px">Price</th>
       <th colspan="30"></th>
     </tr>
   </thead>
@@ -85,13 +85,13 @@
     <% @items.each do |item| %>
       <tr>
         <td><%= item.user.name.blank? ? item.user.email : item.user.name %></td>
-        <td><%= item.name %></td>
-	<td><%= item.condition %></td>
-	<td><%= item.price %></td>
+        <td style="padding-right: 10px"><%= item.name %></td>
+	<td style="padding-right: 10px"><%= item.condition %></td>
+	<td style="padding-right: 10px"><%= item.price %></td>
+        <td style="padding-right: 10px"><%= link_to 'View Item Details', item %></td>
         <% if user_signed_in? %>
-          <td><%= link_to 'View', item %></td>
-          <td><%= link_to 'Edit', edit_item_path(item) %></td>
-          <td><%= link_to 'Delete', item, method: :delete %></td>
+          <td style="padding-right: 10px"><%= link_to 'Edit', edit_item_path(item) %></td>
+          <td style="padding-right: 10px"><%= link_to 'Delete', item, method: :delete %></td>
         <% end %>
 
       </tr>

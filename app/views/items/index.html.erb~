@@ -88,8 +88,8 @@
         <td><%= item.name %></td>
 	<td><%= item.condition %></td>
 	<td><%= item.price %></td>
+        <td><%= link_to 'View Item Details', item %></td>
         <% if user_signed_in? %>
-          <td><%= link_to 'View', item %></td>
           <td><%= link_to 'Edit', edit_item_path(item) %></td>
           <td><%= link_to 'Delete', item, method: :delete %></td>
         <% end %>
