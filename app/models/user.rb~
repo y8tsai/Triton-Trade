@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_one :profile
+  has_many :posts, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -20,7 +21,7 @@ class User < ActiveRecord::Base
   end
 
   def user_params
-    params.require(:user).permit(:username, :name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:username, :name, :avatar_url, :email, :password, :password_confirmation)
   end
 
   # change this later
