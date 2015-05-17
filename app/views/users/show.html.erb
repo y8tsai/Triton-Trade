@@ -1,6 +1,3 @@
-
-<%= stylesheet_link_tag "application" %>
-
 <head>
 <style>
   body {background-color: rgba(52,152,219,.5)};
@@ -8,11 +5,12 @@
 </head>
 
 <body>
+<%= render 'shared/nav_bar' %>
 <div class="border-form-div2">
 
 <h1><center><%= @user.name %></center></h1>
+<p><center><%= image_tag @user.avatar_url.blank? ? ("http://community.blrstartups.com/content/plugins/techchamp/assets/avatars/anon.png") : @user.avatar_url, :width => 200, :height => 200, :crop => :fill %></center></p>
 <ul>
-    <center><%= image_tag @user.avatar_url.blank? ? ("http://community.blrstartups.com/content/plugins/techchamp/assets/avatars/anon.png") : @user.avatar_url, :width => 200, :height => 200, :crop => :fill %></center>
     <li>Email: <%= @user.email %></li>
     <li>Date of birth: <%= @user.date_of_birth %></li>
     <li>PID: <%= @user.PID %></li>
@@ -30,4 +28,4 @@
             <!-- /.row -->
         </footer> 
 
-<body>
+</body>
