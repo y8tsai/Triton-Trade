@@ -5,7 +5,7 @@ before_action :set_item, :authenticate_user!, only: [:show, :edit, :update, :des
 
   def index
     if params[:tag]
-       @items = Item.tagged_with(param[:tag])
+       @items = Item.tagged_with(params[:tag])
     else
        @items = Item.all
     end
