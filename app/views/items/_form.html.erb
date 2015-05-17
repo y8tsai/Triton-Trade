@@ -28,7 +28,7 @@
     <%= f.number_field :price, autofocus: true %><br>
 
     <%= f.label :all_tags %><br>
-    <%= f.text_field :all_tags, placeholder: "Tags separated with comma" %><br>
+    <%= f.text_field :all_tags, placeholder: "Tags separated with ," %><br>
     
   </div>
   <%= f.hidden_field :user_id, :value => current_user.id %>
