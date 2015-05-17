@@ -7,7 +7,7 @@ class Ability
        alias_action :read, :create, :update, :destroy, :to => :crud
   
     #     can :read, :all
-         can :crud, Post, :user_id => user.id
+         can :crud, Item, :user_id => user.id
        
     #
     # The first argument to `can` is the action you are giving the user 
