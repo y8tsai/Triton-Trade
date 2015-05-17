@@ -4,7 +4,11 @@ before_action :set_item, :authenticate_user!, only: [:show, :edit, :update, :des
   respond_to :html
 
   def index
-    @items = Item.all
+    if params[:tag]
+       @items = Item.tagged_with(param[:tag])
+    else
+       @items = Item.all
+    end
     respond_with(@items)
   end
 
