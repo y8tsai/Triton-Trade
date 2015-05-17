@@ -43,5 +43,7 @@ gem 'devise', '3.4.0'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
+gem 'cancan'
+# gem for determininguser abilities
 
 
