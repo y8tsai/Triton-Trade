@@ -16,7 +16,7 @@ class Item < ActiveRecord::Base
   end
 
   def self.tagged_with(name)
-    Tag.find_by_name!(name).posts
+    Tag.find_by_name!(name).items
   end
 
   
