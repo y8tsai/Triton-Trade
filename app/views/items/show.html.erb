@@ -29,5 +29,7 @@
   <%= @item.price %>
 </p>
 
-<%= link_to 'Edit', edit_item_path(@item) %> |
+<% if user_signed_in? %>
+  <% if can? :crud, @item %>
+    <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
