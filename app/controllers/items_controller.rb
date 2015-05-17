@@ -42,6 +42,6 @@ before_action :set_item, :authenticate_user!, only: [:show, :edit, :update, :des
     end
 
     def item_params
-      params.require(:item).permit(:name, :description, :is_sold, :price, :condition, :image_url, :user_id, :all_tags);
+      params.require(:item).permit(:name, :description, :is_sold, :price, :condition, :image_url, :user_id);
     end
 end
