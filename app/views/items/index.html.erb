@@ -1,8 +1,8 @@
-<h1>For Sale</h1>
+<center><h1>For Sale</h1></center>
 
 <%= render 'shared/nav_bar' %>
 
-<!-- test1 -->
+
 
 <table>
   <thead>
@@ -17,7 +17,7 @@
   </thead>
 
 <% if user_signed_in? %>
-  <%= link_to 'New Item', new_item_path %>
+  <%= button_to 'New Item', new_item_path %>
 <% end %>
 
   <tbody>
