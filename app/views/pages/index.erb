@@ -1,61 +1,38 @@
-<style type="text/css">
-    <!--body {
-     	margin: 0px 0px 0px 0px;
-     }-->
-</style>
+<%= render 'shared/nav_bar' %>
+<div class = "main">
+	<img src = "http://i.imgur.com/ET2tXbK.png">
+</div>
+<div class = "logo">
+	<h1>Triton Trade</h1>
+</div>
+<!--<form>
+	<input type="text" placeholder="Search..." required>
+	<input type="button" value="Search">
+</form>-->
 
-<head>
-
-<!--<link rel="icon" type="image/png" href="http://i.imgur.com/whET9XY.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="http://i.imgur.com/20lYXKL.png" sizes="16x16" />-->
-  
-</head>
-<body>
-		<%= render 'shared/nav_bar' %>
-		<div class = "main">
-			<img src = "http://i.imgur.com/ET2tXbK.png">
-		</div>
-		
-		<div class = "logo">
-			<h1>Triton Trade</h1>
-		</div>
-		
-        <!--<form>
-            <input type="text" placeholder="Search..." required>
-            <input type="button" value="Search">
-        </form>-->
-        
-        <div class="row search">
-	       <div class="col-sm-6 col-sm-offset-3">
-	           <form role="form">
-                   <div class="input-group">
-			<input type="text" class="form-control input-sm" placeholder="Find something you want!">
+<div class="row search">
+	<div class="col-sm-6 col-sm-offset-3">
+		<form role="form">
+			<div class="input-group">
+				<input type="text" class="form-control input-sm" placeholder="Find something you want!">
 				<span class="input-group-btn">
-					<button class="btn btn-default btn-sm" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+				<button class="btn btn-default btn-sm" type="submit"><span class="glyphicon glyphicon-search"></span></button>
 				</span>
-                   </div>
-	           </form>
-	       </div>
-        </div> 
-
-        <main class="quicklinks">
-	    <div><a href="./posts">BUY</a></div>
-            <div><a href="./items">SELL</a></div>
-            <div>FREE</div>
-	    <div>Q&A</div>
-	    <div><a href="./info">ABOUT</a></div>
-        </main>
-    
-         <footer>
-            <div class="row">
+			</div>
+		</form>
+	</div>
+</div>
+<ul class="quicklinks">
+	<li><a href="./posts">BUY</a></li>
+	<li><a href="./items">SELL</a></li>
+	<li>FREE</li>
+</ul>
+<footer>
+	<div class="row">
 		<div class="col-sm-12">
-		    <p><!--<a href="./info">About Us</a> |--> &copy; Team OBT. All rights reserved.</p>
+			<p>
+				<a href="./info">About Us</a> | &copy; Team OBT. All rights reserved.
+			</p>
 		</div>
-   
-            </div>
-            
-        </footer> 
-<!--
-           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-</body> -->
+	</div>
+</footer>

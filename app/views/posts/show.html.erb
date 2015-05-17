@@ -7,7 +7,8 @@
 
 <p>
   <strong>Content:</strong>
-  <%= @post.content %>
+  <% if can? :crud, @post %>
+    <%= @post.content %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
