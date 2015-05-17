@@ -23,9 +23,8 @@
 	</div>
 </div>
 <ul class="quicklinks">
-        <li><a href="./posts">POST</a></li>
-	<li><a href="./items">BUY</a></li>
-	<li><a href="./items/new">SELL</a></li>
+	<li><a href="./posts">BUY</a></li>
+	<li><a href="./items">SELL</a></li>
 	<li><a href-"#">FREE</a></li>
 </ul>
 <footer>
