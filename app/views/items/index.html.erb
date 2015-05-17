@@ -25,7 +25,7 @@
         <td style="padding-right: 10px"><%= item.name %></td>
 	<td style="padding-right: 10px"><%= item.condition %></td>
 	<td style="padding-right: 10px"><%= item.price %></td>
-        <td style="padding-right: 10px"><%= item.all_tags %></td>
+        <td style="padding-right: 10px"><%= raw tag_links(item.all_tags) %></td>
         <td style="padding-right: 10px"><%= link_to 'View Item Details', item %></td>
         <% if user_signed_in? %>
           <td style="padding-right: 10px"><%= link_to 'Edit', edit_item_path(item) %></td>
