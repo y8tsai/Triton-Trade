@@ -17,8 +17,7 @@ class Item < ActiveRecord::Base
 
   def self.tagged_with(name)
     #Tag.find_by_name!(name).items
-    tags = Arel::Table.new(:tags)
-    Tag.where(tags[:name].matches(name)).items
+    Tag.find(:all, :conditions => ["name = lower(?)", name]).items
   end
 
   
