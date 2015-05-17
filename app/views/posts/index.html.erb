@@ -20,6 +20,7 @@
         <td><%= post.user.name.blank? ? post.user.email : post.user.name %></td>
         <td><%= post.content %></td>
         <% if user_signed_in? %>
+        <% if can? :crud, @post %>
           <td><%= link_to 'View', post %></td>
           <td><%= link_to 'Edit', edit_post_path(post) %></td>
           <td><%= link_to 'Delete', post, method: :delete %></td>
