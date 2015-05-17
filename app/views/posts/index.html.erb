@@ -24,9 +24,8 @@
           <td><%= link_to 'View', post %></td>
         <% if can? :crud, @post %>
           <td><%= link_to 'Edit', edit_post_path(post) %></td>
-          <td><% if can? :crud, @post %>
-                <%= link_to 'Delete', post, method: :delete %>
-          </td>
+        <% if can? :crud, @post %>
+           <td><%= link_to 'Delete', post, method: :delete %></td>
         <% end %>
 
       </tr>
