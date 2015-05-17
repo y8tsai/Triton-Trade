@@ -17,7 +17,7 @@ class Item < ActiveRecord::Base
 
   def self.tagged_with(name)
     #Tag.find_by_name!(name).items
-    t = Arel::Table.new(:tags)
+    t = Tag.arel_table
     Tag.where(t[:name].matches(name))
   end
 
