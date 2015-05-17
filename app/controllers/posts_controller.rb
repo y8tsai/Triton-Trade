@@ -23,6 +23,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.save
+    @post.user_id = current_user.id if current_user
     respond_with(@post)
   end
 

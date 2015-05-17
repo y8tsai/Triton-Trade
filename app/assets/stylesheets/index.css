@@ -63,7 +63,6 @@ form {
 }
 
 .quicklinks {
-    background: white;
     margin: 5px 0;
     padding: 10px;
     list-style: none;
@@ -71,29 +70,30 @@ form {
     justify-content: center;
 }
 
-.quicklinks a {
+.quicklinks a, a:hover, a:visited {
   color: #ffffff; 
   text-decoration: none;
 }
 
 .quicklinks a:hover {
-    text-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+    text-shadow: 1px 3px 2px rgba(0,0,0,0.4);
+    text-decoration: none;
+    background-color: transparent;
 }
 
 .quicklinks li {
-  font-family: "Georgia", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 15px;
   border-radius: 20px;
   background: #3498db;
-  /*color: white;*/
-  padding: 20px;
+  padding: 10px;
   max-width: 125px;
   margin: 3px;
-  width: 350px;
+  width: 100px;
   text-align: center;
-  text-shadow: 0px 1px 0px rgba(0,0,0,0.4);
+  /*text-shadow: 0px 1px 0px rgba(0,0,0,0.4);
+  box-shadow: 0px 3px 1px #888888;*/
 }
-
 .navbar-brand-name {
     display: inline-block;
     padding-top: 15px;
