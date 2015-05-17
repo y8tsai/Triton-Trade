@@ -1,13 +1,6 @@
 class ItemsController < ApplicationController
 before_action :set_item, :authenticate_user!, only: [:show, :edit, :update, :destroy]
 
-before_save :downcase_fields
-  
-  def downcase_fields
-     self.all_tags.downcase!
-  end
-  
-
   respond_to :html
 
   def index
