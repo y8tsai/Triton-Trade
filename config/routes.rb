@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   root 'pages#index'
   get 'testpage' => 'pages#testpage'  
   get 'info' => 'pages#info'
+  get 'tags/:tag', to: 'items#index', as: "tag"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
