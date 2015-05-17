@@ -1,3 +1,4 @@
+<%= render 'shared/nav_bar' %>
 <%= stylesheet_link_tag "application" %>
 
 <head>
@@ -5,9 +6,6 @@
   body {background-color: rgba(52,152,219,.5)};
 </style>
 </head>
-<h1>User Profile</h1>
-
-<%= render 'shared/nav_bar' %>
 
 <body>
 <div class="border-form-div2">
