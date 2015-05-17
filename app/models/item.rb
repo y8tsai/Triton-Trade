@@ -17,7 +17,7 @@ class Item < ActiveRecord::Base
 
   def self.tagged_with(name)
     #Tag.find_by_name!(name).items
-    Tag.find(:all, :conditions => ["name = lower(?)", name]).items
+    Tag.find(:name, :conditions => ["name = lower(?)", name]).items
   end
 
   
