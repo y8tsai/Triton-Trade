@@ -6,6 +6,8 @@
 </style>
 </head>
 
+<%= render 'shared/nav_bar' %>
+
 <body>
 <div class="border-form-div2">
 
