@@ -1,8 +1,9 @@
-<h1>Items for Sale</h1>
+<h1>For Sale</h1>
 
 <%= render 'shared/nav_bar' %>
 
-<div class="border-form-div2">
+<!-- test1 -->
+
 <table>
   <thead>
     <tr>
@@ -21,6 +22,7 @@
 
   <tbody>
     <% @items.each do |item| %>
+      
       <tr>
         <td><%= item.user.name.blank? ? item.user.email : item.user.name %></td>
         <td style="padding-right: 10px"><%= item.name %></td>
@@ -41,4 +43,4 @@
 </table>
 
 <br>
-</div>
+
