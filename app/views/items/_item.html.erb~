@@ -1,3 +1,4 @@
+<%raw tag_links(item.all_tags)%>
 <li id="item-<%= item.id %>">
   <%= link_to gravatar_for(item.user, size: 50), item.user %>
   <span class="user"><%= link_to item.user.name, item.user %></span>
