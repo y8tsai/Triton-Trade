@@ -1,16 +1,16 @@
 <head>
 	<style>
-		body h1 { font-family: "Lobster", cursive; }
+		body h1 { font-family: "Lobster", cursive; text-transform: uppercase; }
 	</style>
 </head>
 
-<%= render='shared/nav_bar'%>
+<%= render 'shared/nav_bar' %>
 
 <body>
 
 <p id="notice"><%= notice %></p>
 
-<h1><%= @item.name %></h1>
+<center><h1><%= @item.name %></h1>
 
 <p>
   <%= image_tag @item.image_url.blank? ? ("http://www.drivenmavens.com/wp-content/uploads/Blank-page.jpg") : @item.image_url, :width => 400, :height => 400, :crop => :fill %>
@@ -18,7 +18,7 @@
 
 <% if user_signed_in? %>
   <% if can? :crud, @item %>
-    <%= link_to 'Edit', edit_item_path(@item) %>
+    <center><%= link_to 'Edit', edit_item_path(@item) %></center>
   <% end %>
 <% end %>
 
@@ -43,4 +43,10 @@
 </p>
 
 <center><%= link_to 'Go Back', items_path %></center>
+
+
+
+
 </body>
+
+
