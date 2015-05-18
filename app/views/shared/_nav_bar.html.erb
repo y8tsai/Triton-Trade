@@ -36,14 +36,13 @@
 					<% if user_signed_in? %>
 
 					<li><a class="navbartext">Hello, <%= current_user.name.blank? ? current_user.email : current_user.name  %>!</a></li>
-					<li><%= link_to current_user do %>
-						<i class="glyphicon glyphicon-user"> Profile</i>
+					<liclass="rightbutton"><%= link_to current_user do %>
+						<span class="glyphicon glyphicon-user" aria-hidden="true"></span>Profile
 						<% end %>
 					</li>
 
-					<li><%= link_to destroy_user_session_path, :method => :delete do %>
-						<i class="glyphicon glyphicon-log-out"> Sign Out</i>								
-						<%end%>
+					<li class="rightbutton"><%= link_to destroy_user_session_path, :method => :delete do %>
+						<span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>Sign Out											<%end%>
 					</li>
 
 					<!--<li><%= link_to "Edit Profile",edit_user_registration_path %></li>-->
