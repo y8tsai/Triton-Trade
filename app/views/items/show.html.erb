@@ -1,6 +1,6 @@
 <head>
 	<style>
-		body h1 { font-family: "Lobster", cursive; text-transform: uppercase; }
+		body h1 { font-family: "Oswald", sans-serif; text-transform: uppercase; }
 	</style>
 </head>
 
@@ -38,9 +38,11 @@
 </p>
 
 <p>
-  <strong>User:</strong>
+  <strong>Seller:</strong>
   <%= @item.user.name.blank? ? @item.user.email : @item.user.name %>
 </p>
+
+<center><button class="buy">BUY</button></center>
 
 <center><%= link_to 'Go Back', items_path %></center>
 
