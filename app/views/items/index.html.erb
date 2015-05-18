@@ -21,7 +21,7 @@
 	<li>
 		<p><%= image_tag item.image_url.blank? ? ("http://www.drivenmavens.com/wp-content/uploads/Blank-page.jpg") : item.image_url, :width => 300, :height => 300, :crop => :fill %></p>
 		<h4><%= item.name %></h4>
-		<p>$ <%= item.price %></p>
+		<p>$<%= item.price %></p>
 		<p><%= link_to 'Details', item %></p>
 		<p><%= raw tag_links(item.all_tags) %></p>
 	</li>
