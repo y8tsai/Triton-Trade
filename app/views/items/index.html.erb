@@ -1,6 +1,8 @@
-<h1>Items for Sale</h1>
+<center><h1>For Sale</h1></center>
 
 <%= render 'shared/nav_bar' %>
+
+
 
 <table>
   <thead>
@@ -15,11 +17,12 @@
   </thead>
 
 <% if user_signed_in? %>
-  <%= link_to 'New Item', new_item_path %>
+  <center><%= button_to 'New Item', new_item_path, :class => "button", :method => :get %></center>
 <% end %>
 
   <tbody>
     <% @items.each do |item| %>
+      
       <tr>
         <td><%= item.user.name.blank? ? item.user.email : item.user.name %></td>
         <td style="padding-right: 10px"><%= item.name %></td>
@@ -28,8 +31,10 @@
         <td style="padding-right: 10px"><%= raw tag_links(item.all_tags) %></td>
         <td style="padding-right: 10px"><%= link_to 'Details', item %></td>
         <% if user_signed_in? %>
-          <td style="padding-right: 10px"><%= link_to 'Edit', edit_item_path(item) %></td>
-          <td style="padding-right: 10px"><%= link_to 'Delete', item, method: :delete %></td>
+           <% if can? :crud, item %>
+              <td style="padding-right: 10px"><%= link_to 'Edit', edit_item_path(item) %></td>
+              <td style="padding-right: 10px"><%= link_to 'Delete', item, method: :delete %></td>
+           <% end %>
         <% end %>
 
       </tr>

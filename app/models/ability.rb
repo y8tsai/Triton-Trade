@@ -5,12 +5,10 @@ class Ability
        user ||= User.new # guest user (not logged in)
 
        alias_action :read, :create, :update, :destroy, :to => :crud
-       if user.role? :admin
-         can :manage, :all
-       else
+  
     #     can :read, :all
-         can :crud, Post, :user_id => user.id
-       end
+         can :crud, Item, :user_id => user.id
+       
     #
     # The first argument to `can` is the action you are giving the user 
     # permission to do.
