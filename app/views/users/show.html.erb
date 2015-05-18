@@ -3,8 +3,10 @@
 <head>
 <style>
   body {background-color: rgba(52,152,219,.5)};
+  .border-form-div2 { background: white;  margin-left: auto; margin-right: auto; }
   .border-form-div2 h1 { font-family: "Lobster", cursive; }
-  .border-form-div2 img { float: left; }
+  .border-form-div2 img { float: left; padding-left: 10px; }
+  .border-form-div2 ul { list-style: none; 
 </style>
 </head>
 
@@ -16,10 +18,13 @@
 	<p><%= image_tag @user.avatar_url.blank? ? ("http://community.blrstartups.com/content/plugins/techchamp/assets/avatars/anon.png") : @user.avatar_url, :width => 200, :height => 200, :crop => :fill %>
 	
 	<ul>
-	    <li>Email: <%= @user.email %></li>
-	    <li>Date of birth: <%= @user.date_of_birth %></li>
-	    <li>PID: <%= @user.PID %></li>
+	    <li><strong>Email:</strong> <%= @user.email %></li>
+	    <li><strong>Date of birth:</strong> <%= @user.date_of_birth %></li>
+	    <li><strong>PID:</strong> <%= @user.PID %></li>
 	</ul>
+
+	<p><strong>Items for Sale</strong></p>
+	<!--display user's items for sale -->
 
 	<p><center><%= link_to 'Edit Profile', edit_user_registration_path %></center></p>
 
