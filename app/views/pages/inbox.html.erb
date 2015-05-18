@@ -27,3 +27,9 @@
 
 <br>
 
+<% form_for :message, :url => {:controller => "message", :action => "create"} do |f| %>
+  <p>To: <%= f.text_field %></p>
+  <p>Subject: <%= f.text_field :subject %></p>
+  <p>Body: <%= f.text_area :body %></p>
+  <p><%= submit_tag "Send" %></p>
+<% end %>
