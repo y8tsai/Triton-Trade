@@ -1,18 +1,26 @@
+<head>
+	<style>
+		body h1 { font-family: "Lobster", cursive; }
+	</style>
+</head>
+
+<%= render='shared/nav_bar'%>
+
+<body>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @item.user.name.blank? ? @item.user.email : @item.user.name %>
-</p>
+<h1><%= @item.name %></h1>
 
 <p>
   <%= image_tag @item.image_url.blank? ? ("http://www.drivenmavens.com/wp-content/uploads/Blank-page.jpg") : @item.image_url, :width => 400, :height => 400, :crop => :fill %>
 </p>
 
-<p>
-  <strong>Item Name:</strong>
-  <%= @item.name %>
-</p>
+<% if user_signed_in? %>
+  <% if can? :crud, @item %>
+    <%= link_to 'Edit', edit_item_path(@item) %>
+  <% end %>
+<% end %>
 
 <p>
   <strong>Item Condition:</strong>
@@ -29,9 +37,10 @@
   <%= @item.price %>
 </p>
 
-<% if user_signed_in? %>
-  <% if can? :crud, @item %>
-    <%= link_to 'Edit', edit_item_path(@item) %>
-  <% end %>
-<% end %> |
-<%= link_to 'Back', items_path %>
+<p>
+  <strong>User:</strong>
+  <%= @item.user.name.blank? ? @item.user.email : @item.user.name %>
+</p>
+
+<center><%= link_to 'Go Back', items_path %></center>
+</body>

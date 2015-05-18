@@ -17,12 +17,11 @@
   </center>
 <% end %>
 
-
-
 <ul class="products">
 <% @items.each do |item| %>
 	<li>
-		<p><%= item.image_url %></p>
+		<!--<p><%= item.image_url %></p>-->
+		<p><%= image_tag @item.image_url.blank? ? ("http://www.drivenmavens.com/wp-content/uploads/Blank-page.jpg") : @item.image_url, :width => 400, :height => 400, :crop => :fill %></p>
 		<h4><%= item.name %></h4>
 		<p><%= item.price %></p>
 		<p><%= link_to 'Details', item %></p>
