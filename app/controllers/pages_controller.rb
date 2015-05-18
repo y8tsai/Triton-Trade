@@ -14,4 +14,6 @@ class PagesController < ApplicationController
     @css_list = ['info', 'search']
   end
 
+  def inbox
+    @messages = Message.find_by recipient_id: current_user.id
 end
