@@ -1,10 +1,27 @@
-<center><h1>For Sale</h1></center>
+<head>
+	<style>
+		.products li { display: inline-block; width: 400px; vertical-align:top; }
+		.products h4 { font-family: "Oswald", sans-serif; text-align: center; }
+		.products p { text-align: center; }
+	</style>
+</head>
 
 <%= render 'shared/nav_bar' %>
+<center><h1 style="font-family: "Lobster", cursive">For Sale</h1></center>
 
+<ul class="products">
+<% @items.each do |item| %>
+	<li><% link_to item do %>
+		<p><%= item.image_url %></p>
+		<h4><%= item.name %></h4>
+		<p><%= item.price %></p>
+		<p><%= raw tag_links(item.all_tags) %></p>
+	    <% end %>
+	</li>
+<% end %>
+</ul>
 
-
-<table>
+<!--<table>
   <thead>
     <tr>
       <th style="padding-right: 10px">User</th>
@@ -14,13 +31,17 @@
       <th style="padding-right: 10px">Tags</th> 
       <th colspan="30"></th>
     </tr>
-  </thead>
+  </thead>-->
 
 <% if user_signed_in? %>
-  <center><%= button_to 'New Item', new_item_path, :class => "button", :method => :get %></center>
+  <!--<center><%= button_to 'New Item', new_item_path, :class => "button", :method => :get %></center>-->
+  <center><%= link_to new_item_path, :method => :get do %>
+		<button>New Item</button>
+	  <% end %>
+  </center>
 <% end %>
 
-  <tbody>
+<!--  <tbody>
     <% @items.each do |item| %>
       
       <tr>
@@ -40,7 +61,7 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table>-->
 
 <br>
 

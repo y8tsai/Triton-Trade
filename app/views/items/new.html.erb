@@ -1,6 +1,24 @@
-<h1>New item</h1>
+<head>
+	<style>
+		body { background-color: rgba(52,152,219,.5)};
+		body h1 { font-family: "Lobster", cursive; }
+	</style>
+</head>
+<%= render 'shared/nav_bar' %>
+<body>
+	<h1>New item</h1>
 
-<%= render 'form' %>
-<%= link_to 'Back', items_path %>
+	<%= render 'form' %>
+	<p><center><%= link_to 'Back', items_path %></center><p/>
+
+	<div class="row">
+		<div class="col-sm-12">
+			<p>
+				<a href="./info">About Us</a> | &copy; Team OBT. All rights reserved.
+			</p>
+		</div>
+	</div>
+</body>
+
 	
 
