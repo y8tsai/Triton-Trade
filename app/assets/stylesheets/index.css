@@ -14,7 +14,8 @@
 }
 
 .rightbuttons {
-	padding: 0px;
+	padding: 10px;
+	display: inline;
 }
 
 .navbar-header a {
