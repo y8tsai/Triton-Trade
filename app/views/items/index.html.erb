@@ -9,14 +9,24 @@
 <%= render 'shared/nav_bar' %>
 <center><h1 style="font-family: "Lobster", cursive">For Sale</h1></center>
 
+<% if user_signed_in? %>
+  <!--<center><%= button_to 'New Item', new_item_path, :class => "button", :method => :get %></center>-->
+  <center><%= link_to new_item_path, :method => :get do %>
+		<button>New Item</button>
+	  <% end %>
+  </center>
+<% end %>
+
+
+
 <ul class="products">
 <% @items.each do |item| %>
-	<li><% link_to item do %>
+	<li>
 		<p><%= item.image_url %></p>
 		<h4><%= item.name %></h4>
 		<p><%= item.price %></p>
+		<p><%= link_to 'Details', item %></p>
 		<p><%= raw tag_links(item.all_tags) %></p>
-	    <% end %>
 	</li>
 <% end %>
 </ul>
@@ -32,14 +42,6 @@
       <th colspan="30"></th>
     </tr>
   </thead>-->
-
-<% if user_signed_in? %>
-  <!--<center><%= button_to 'New Item', new_item_path, :class => "button", :method => :get %></center>-->
-  <center><%= link_to new_item_path, :method => :get do %>
-		<button>New Item</button>
-	  <% end %>
-  </center>
-<% end %>
 
 <!--  <tbody>
     <% @items.each do |item| %>
