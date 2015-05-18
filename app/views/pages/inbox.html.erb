@@ -1,0 +1,29 @@
+<center><h1>Messages</h1></center>
+
+<%= render 'shared/nav_bar' %>
+
+<table>
+  <thead>
+    <tr>
+      <th style="padding-right: 10px">From</th>
+      <th style="padding-right: 10px">Subject</th>
+      <th style="padding-right: 10px">Date</th>
+      <th colspan="30"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% if not @messages.nil? %>
+      <% @messages.each do |message| %>
+        <tr>
+          <td><%= message.user.name.blank? ? message.user.email : message.user.name %></td>
+          <td style="padding-right: 10px"><%= message.subject %></td>
+          <td style="padding-right: 10px"><%= message.created_at %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
