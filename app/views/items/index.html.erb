@@ -10,7 +10,6 @@
 <center><h1 style="font-family: "Lobster", cursive">For Sale</h1></center>
 
 <% if user_signed_in? %>
-  <!--<center><%= button_to 'New Item', new_item_path, :class => "button", :method => :get %></center>-->
   <center><%= link_to new_item_path, :method => :get do %>
 		<button>New Item</button>
 	  <% end %>
