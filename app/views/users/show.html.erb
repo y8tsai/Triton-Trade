@@ -8,6 +8,9 @@
   .border-form-div2 img { float: left; padding-right: 10px; }
   .border-form-div2 ul { list-style: none; }
   footer p { clear: both; text-align; center; }
+  .products li { display: inline-block; width: 200px; vertical-align:top; }
+  .products h1, h4 { font-family: "Oswald", sans-serif; text-align: center; }
+  .products p { text-align: center; }
 </style>
 </head>
 
@@ -26,8 +29,24 @@
 
 	<p><strong>Items for Sale</strong></p>
 	<!--display user's items for sale -->
+	<center><ul class="products">
+		<% @items.each do |item| %>
+			<li>
+		<p><%= image_tag item.image_url.blank? ? ("http://www.drivenmavens.com/wp-content/uploads/Blank-page.jpg") : item.image_url, :width => 150, :height => 150, :crop => :fill %></p>
+		<h4><%= item.name %></h4>
+		<p>$<%= item.price %></p>
+		<p><%= link_to 'Details', item %></p>
+		<p><%= raw tag_links(item.all_tags) %></p>
+		</li>
+		<% end %>
+	</ul></center>
 
-	<p><center><%= link_to 'Edit Profile', edit_user_registration_path %></center></p>
+      <% if user_signed_in? %>
+           <% if can? :crud, @user %>
+		<p><center><%= link_to 'Edit Profile', edit_user_registration_path %></center></p>
+           <% end %>
+        <% end %>	
+
 
 	</div>
 	<footer>

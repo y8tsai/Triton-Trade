@@ -43,5 +43,8 @@
   <%= f.hidden_field :user_id, :value => current_user.id %>
   <div class="actions">
     <%= f.submit %>
+    <!-- Deletes item -->
+    <%= button_to "Delete Item", f, data: { confirm: "Are you sure?" }, method: :delete %>
   </div>
+
 <% end %>

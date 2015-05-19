@@ -1,6 +1,17 @@
-<h1>Editing Item</h1>
+<head>
+	<style>
+		body h1 {  font-family: "Oswald", sans-serif }
+	</style>
+</head>
 
-<%= render 'form' %>
+<%= render='shared/nav_bar' %>
 
-<%= link_to 'Show', @item %> |
-<%= link_to 'Back', items_path %>
+<body>
+
+	<center><h1>Editing Item</h1></center>
+
+	<center><%= render 'form' %></center>
+
+	<center><%= link_to 'Go Back', @item %></center>
+
+</body>
