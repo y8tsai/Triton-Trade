@@ -1,5 +1,3 @@
-<%= render 'shared/nav_bar' %>
-
 <head>
 <style>
   body {background-color: rgba(52,152,219,.5)};
@@ -9,12 +7,13 @@
   .border-form-div2 ul { list-style: none; }
   footer p { text-align; center; }
   .itemshowcase { clear: both; }
+  .itemshowcase .it { padding-left: 2%; }
   .products li { display: inline-block; width: 150px; vertical-align:top; }
   .products h1, h4 { font-family: "Oswald", sans-serif; text-align: center; }
   .products p { text-align: center; }
 </style>
 </head>
-
+<%= render 'shared/nav_bar' %>
 <body>
 	<div class="border-form-div2">
 
@@ -30,7 +29,7 @@
 	</ul>
 
 <div class = "itemshowcase">
-	<p><strong>Items for Sale</strong></p>
+	<p class="it"><strong>Items for Sale</strong></p>
 	<!--display user's items for sale -->
 	<ul class="products">
 		<% @items.each do |item| %>
@@ -43,10 +42,10 @@
 		<% end %>
 	</ul>
 </div>
-      <p>!!!! NOTE: should only be visible when user is viewing own profile</p>
+      <center><p>!!!! NOTE: should only be visible when user is viewing own profile</p></center>
       <%# if user_signed_in? %>
            <%# if can? :crud, @user %>
-		<p><center><%= link_to 'Edit Profile', edit_user_registration_path %></center></p>
+		<center><p><%= link_to 'Edit Profile', edit_user_registration_path %></p></center>
            <%# end %>
         <%# end %>
 

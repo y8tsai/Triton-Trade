@@ -1,17 +1,18 @@
 <head>
 	<style>
 		body { background-color: rgba(52,152,219,.5)};
-		body h1 { font-family: "Lobster", cursive; }
+		body h1 { font-family: "Oswald", sans-serif; }
 	</style>
 </head>
 <%= render 'shared/nav_bar' %>
 <body>
-	<h1>New item</h1>
+<div class="border-form-div2">
+	<center><h1>New item</h1></center>
 
 	<%= render 'form' %>
 
 	<p><center><%= link_to 'Back', items_path %></center><p/>
-
+</div>
 	<div class="row">
 		<div class="col-sm-12">
 			<p>
