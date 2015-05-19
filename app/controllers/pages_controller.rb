@@ -15,6 +15,6 @@ class PagesController < ApplicationController
   end
 
   def inbox
-    @messages = Message.find_by recipient_id: current_user.id unless current_user.nil?
+    @messages = Message.where recipient_id: current_user.id unless current_user.nil?
   end
 end
