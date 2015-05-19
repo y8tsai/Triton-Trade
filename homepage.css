@@ -1,16 +1,14 @@
-.navbar li {
-	display: inline;
-    font-family: "Helvetic", sans-serif;
-    font-size: 12px;
-}
-
-.main {
+/*.main {
 	background-color: #FFFFFF;
-}
+    padding-top: 30px;
+}*/
 
 .main img {
 	display: block;
 	margin:0 auto;
+    max-width: 30%;
+    background: transparent;
+    padding-top: 30px;
 }
 
 .logo{
@@ -25,79 +23,196 @@
 }
 
 form {
-    width:300px;
-    margin:0 auto;
-}
-
-.button {
-  background: #3498db;
-  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
-  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
-  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-  background-image: -o-linear-gradient(top, #3498db, #2980b9);
-  background-image: linear-gradient(to bottom, #3498db, #2980b9);
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0px;
-  -webkit-box-shadow: 0px 1px 3px #666666;
-  -moz-box-shadow: 0px 1px 3px #666666;
-  box-shadow: 0px 1px 3px #666666;
-  font-family: Georgia;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 10px 40px 10px 40px;
-  text-decoration: none;
-  margin: 0 auto;
-}
-
-.button:hover {
-  background: #3cb0fd;
-  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-  text-decoration: none;
-}
-
-main {
-  background: white;
-  margin: 5px 0;
-  padding: 10px;
-}
-
-main div {
-  font-family: "Georgia", sans-serif;
-  font-size: 15px;
-  background: #3498db;
-  color: white;
-  padding: 20px;
-  max-width: 125px;
-  margin: 10px;
-  width: 200px;
-  text-align: center;
-}
+	width: 75%;
+	margin:0 auto;
+    z-index: -1;
+} 
 
 .quicklinks {
-  display: flex;
-  justify-content: center;
+    margin: 5px 0;
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
 }
 
-.navbar-brand-name {
-    display: inline-block;
-    padding-top: 15px;
+.quicklinks a {
+  color: #ffffff; 
+  text-decoration: none;
 }
 
-.navbar-default {
-    background-color: #FFFFFF;
+.quicklinks a:hover {
+    text-shadow: 1px 3px 2px rgba(0,0,0,0.4);
 }
 
+.quicklinks li {
+  font-family: "Georgia", sans-serif;
+  font-size: 15px;
+  border-radius: 20px;
+  background: #3498db;
+  padding: 10px;
+  max-width: 125px;
+  margin: 3px;
+  width: 100px;
+  text-align: center;
+  /*text-shadow: 0px 1px 0px rgba(0,0,0,0.4);
+  box-shadow: 0px 3px 1px #888888;*/
+}
+
+/* Slide-in menu */
+
+.menu {
+    background: #ffda47;
+    padding-top: 60px;
+    left: -260px;
+    height: 100%;
+    position: fixed;
+    width: 260px;
+    z-index: 999999999;
+}
+
+.icon-list {
+    list-style: none;
+    margin: 0;
+    padding-left: 0px;
+}
+
+.icon-list > li {
+    font-family: 'Tahoma', 'Geneva', sans-serif;
+    line-height: 50px;
+    padding-bottom: 2px;
+    padding-left: 40px;
+    padding-top: 2px;
+}
+
+.icon-list a {
+    color: #fff;
+    font-size: 15px;
+    word-spacing: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu .arrow {
+    font-size: 5px
+	line-height: 0%
+}
+
+/* Changes color when element is highlighted */
+.menu li:hover {
+    background: rgba(52,152,219,0.7);
+}
+
+.sub-menu li:hover {
+    background: 0;
+}
+
+.menu a:hover {
+    text-shadow: 0px 1px 2px rgba(25,25,25,0.2);
+}
+
+/* Shows sub-menu when hovering over list item.
+   If it has no children then there is no affect */
+/*.menu li:hover .sub-menu {
+    z-index: 1;
+    opacity: 1;
+}*/
 
 
+.sub-menu {
+    /*width: 160%;
+    padding: 5px 0px;
+    position: absolute;*/
+    /* Supposed to be always position bottom of parent */
+    top: 100%;
+    /* Want to indent it 10px */
+    left: 10px;
+    /* Hides sub-menu behind everything until hovered over */
+    z-index: -1;*/
+    opacity: 0;
+    list-style: none;
+}
 
+.sub-menu li, .sub-menu a {
+    display: block;
+    font-size: 13px;
+}
+    
+/* close icon */
+/*.icon-close {
+  cursor: pointer;
+  padding-left: 10px;
+  padding-top: 10px;
+}*/
 
+.icon-menu {
+  color: #3498db;
+  cursor: pointer;
+  font-family: 'Tahoma', 'Geneva' sans-serif;
+  font-size: 35px;
+  position: absolute;
+  padding-bottom: 0;
+  padding-left: 1%;
+  padding-top: 1%;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 
+.close-button {
+	width: 2em;
+	height: 2em;
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	overflow: hidden;
+	text-indent: 1em;
+	font-size: 0.75em;
+	border: none;
+	background: transparent;
+	color: transparent;
+}
 
+.close-button::before, .close-button::after {
+	content: '';
+	position: absolute;
+	width: 3px;
+	height: 100%;
+	top: 0;
+	left: 50%;
+	background: #ffffff;
+}
 
+.close-button::before {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
 
+.close-button::after {
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
 
+/*body {
+    background: url("http://www.sumoware.com/images/000/achcfzgjimjgitom.png") bottom left no-repeat fixed;
+}*/
+
+.right {
+    position: fixed;
+    right: 5%;
+    padding-top: 8px;
+}
+
+.right li
+{
+    display: inline-block;   
+    padding: 10px;
+    background: #3498db;
+    border-radius: 20px;
+}
+
+.right a
+{
+    color: white;  
+    font-family: "Georgia", sans-serif;
+    text-transform: uppercase;
+}
