@@ -1,7 +1,7 @@
 <head>
 	<style>
 		body h1 { font-family: "Oswald", sans-serif; text-transform: uppercase; }
-		.pic { float: left; padding-right: 10px; }
+		.pic { padding-left: 2%; float: left; padding-right: 10px; }
 		.iteminfo li { list-style: none; display: block; }
 		.buy { padding: 5px; }	
 	</style>
@@ -36,8 +36,8 @@
 	$<%= @item.price %></li>
 
 	<li><strong>Seller:</strong><br>
-	<%= link_to @item.user.name.blank? ? @item.user.email : @item.user.name, user_path(@item.user.name) %>
-</p>
+	<%= link_to @item.user.name.blank? ? @item.user.email : @item.user.name, user_path(@item.user) %>
+</ul>
 
 <center><button class="buy">BUY</button></center>
 

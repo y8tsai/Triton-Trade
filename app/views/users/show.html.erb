@@ -5,10 +5,11 @@
   body {background-color: rgba(52,152,219,.5)};
   .border-form-div2 { background: white;  margin-left: auto; margin-right: auto; }
   .border-form-div2 h1 { font-family: "Lobster", cursive; }
-  .border-form-div2 img { float: left; padding-right: 10px; }
+  .border-form-div2 img { padding-left: 2%; float: left; padding-right: 10px; }
   .border-form-div2 ul { list-style: none; }
-  footer p { clear: both; text-align; center; }
-  .products li { display: inline-block; width: 200px; vertical-align:top; }
+  footer p { text-align; center; }
+  .products { clear: both; }
+  .products li { display: inline-block; width: 150px; vertical-align:top; }
   .products h1, h4 { font-family: "Oswald", sans-serif; text-align: center; }
   .products p { text-align: center; }
 </style>
@@ -24,28 +25,29 @@
 	<ul>
 	    <li><strong>Email:</strong> <%= @user.email %></li>
 	    <li><strong>Date of birth:</strong> <%= @user.date_of_birth %></li>
-	    <li><strong>PID:</strong> <%= @user.PID %></li>
+	    <li><strong>PID:</strong> <%= @user.PID %><br><br></li>
+            <li><strong>About Me:</strong><br>Should be able to have an "about me" section; text</li>
 	</ul>
 
 	<p><strong>Items for Sale</strong></p>
 	<!--display user's items for sale -->
-	<center><ul class="products">
+	<ul class="products">
 		<% @items.each do |item| %>
 			<li>
-		<p><%= image_tag item.image_url.blank? ? ("http://www.drivenmavens.com/wp-content/uploads/Blank-page.jpg") : item.image_url, :width => 150, :height => 150, :crop => :fill %></p>
-		<h4><%= item.name %></h4>
-		<p>$<%= item.price %></p>
-		<p><%= link_to 'Details', item %></p>
-		<p><%= raw tag_links(item.all_tags) %></p>
-		</li>
+				<p><%= image_tag item.image_url.blank? ? ("http://www.drivenmavens.com/wp-content/uploads/Blank-page.jpg") : item.image_url, :width => 150, :height => 150, :crop => :fill %></p>
+				<h4><%= item.name %></h4>
+				<p>$<%= item.price %></p>
+				<p><%= link_to 'Details', item %></p>
+			</li>
 		<% end %>
-	</ul></center>
+	</ul>
 
-      <% if user_signed_in? %>
-           <% if can? :crud, @user %>
+      <p>!!!! NOTE: should only be visible when user is viewing own profile</p>
+      <%# if user_signed_in? %>
+           <%# if can? :crud, @user %>-->
 		<p><center><%= link_to 'Edit Profile', edit_user_registration_path %></center></p>
-           <% end %>
-        <% end %>	
+           <%# end %>
+        <%# end %>-
 
 
 	</div>
