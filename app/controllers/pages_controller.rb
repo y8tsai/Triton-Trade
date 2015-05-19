@@ -15,6 +15,6 @@ class PagesController < ApplicationController
   end
 
   def inbox
-    @messages = current_user.received_messages.find(params[:id])
+    @messages = Messages.find_by recipient_id: current_user.id
   end
 end
