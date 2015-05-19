@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'messages/index'
+
+  get 'messages/show'
+
+  get 'messages/new'
+
   resources :posts
   resources :items
 
