@@ -7,16 +7,16 @@
 		.products { padding-top: 5px; }
 		/*---------------------------------------*/
 		a { color: #ea4c89; text-decoration: none; }
-		a:hover { color: #df3e7b; background: transparent; }
+		a:hover { color: #3498db; background: transparent; text-decoration: none; }
 		.products .image { bottom: 0; display: block; height: auto; max-width: 100%; }
 		.clearfix p { margin: 0; }
 		.clearfix h4 { font-family: "Oswald", sans-serif; color: #fff; margin: 0; padding: 0; }
-		.clearfix .button { background: #0084b4; border-radius: 3px; color: #fff; display: inline-block; font-weight: bold; padding: 4px 8px; position: absolute; right: 10 px; top: 20px; }
+		.clearfix .button { background: #0084b4; border-radius: 3px; color: #fff; display: inline-block; font-weight: bold; position: absolute; float: right; padding-top: 15px; padding-right: 10px; }
 		.clearfix .button:hover { background: #2D76B9; color: #fff; }
 		.products li { border: 6px solid #fff; box-shadow: 0 0 5px rgba(0, 0, 0, .3); overflow: hidden; position: relative; width: 330px; }
 		.products li:hover .clearfix { opacity: 1; -webkit-transform: translateY(0); -moz-transform: translateY(0); -ms-transform: translateY(0);	-o-transform: translateY(0); transform: translateY(0); -webkit-transition: -webkit-transform .4s, opacity .1s;	-moz-transition: -moz-transform .4s, opacity .1s; -ms-transition: -ms-transform .4s, opacity .1s; -o-transition: -o-transform .4s, opacity .1s;	transition: transform .4s, opacity .1s; }
 
-		.products li .clearfix { background: rgba(255,255,255,0.4); bottom: 0; color: #fff; height: 50px; left: 0; opacity: 0; padding: 10px; position: absolute; -webkit-transform: translateY(100%); -moz-transform: translateY(100%); -ms-transform: translateY(100%); -o-transform: translateY(100%); transform: translateY(100%); -webkit-transition: -webkit-transform .4s, opacity .1s .3s; -moz-transition: -moz-transform .4s, opacity .1s .3s; -ms-transition: -ms-transform .4s, opacity .1s .3s; -o-transition: -o-transform .4s, opacity .1s .3s; transition: transform .4s, opacity .1s .3s; width: 360px; }	
+		.products li .clearfix { background: rgba(255,255,255,0.4); bottom: 0; color: #fff; height: 50px; left: 0; opacity: 0; padding: 10px; position: absolute; -webkit-transform: translateY(100%); -moz-transform: translateY(100%); -ms-transform: translateY(100%); -o-transform: translateY(100%); transform: translateY(100%); -webkit-transition: -webkit-transform .4s, opacity .1s .3s; -moz-transition: -moz-transform .4s, opacity .1s .3s; -ms-transition: -ms-transform .4s, opacity .1s .3s; -o-transition: -o-transform .4s, opacity .1s .3s; transition: transform .4s, opacity .1s .3s; width: 330px; }	
 </style>
 </head>
 
@@ -39,7 +39,7 @@
 			<h4><%= link_to item.name, item %></h4>
 			<!--<p>< % = # link_to '$'item.price, item.buy % ></p>-->
 			<p><%= raw tag_links(item.all_tags) %></p>
-			<a href="#" class="button"><%= item.price %></a>
+			<a href="#" class="button">$<%= item.price %></a>
 		</div>
 	</li>
 <% end %>
