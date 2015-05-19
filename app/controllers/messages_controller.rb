@@ -4,7 +4,6 @@ class MessagesController < ApplicationController
   end
 
   def show
-    @messages = Message.where(
   end
 
   def new
