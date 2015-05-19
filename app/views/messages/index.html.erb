@@ -18,7 +18,7 @@
         <tr>
           <td><%= message.user.name.blank? ? message.user.email : message.user.name %></td>
           <td style="padding-right: 10px"><%= link_to message.subject, message %></td>
-          <td style="padding-right: 10px"><%= message.created_at.strftime("%b. %d, %Y) %></td>
+          <td style="padding-right: 10px"><%= message.created_at.strftime("%b. %d, %Y") %></td>
         </tr>
       <% end %>
     <% end %>
