@@ -1,2 +1,27 @@
 <h1>Messages#show</h1>
 <p>Find me in app/views/messages/show.html.erb</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @message.user.name.blank? ? @message.user.email : @message.user.name %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= current_user.name.blank? ? @current_user.user.email : @current_user.user.name %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @message.subject %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @message.body %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @message.created_at.strftime("%b %d, %Y") %>
+</p>
