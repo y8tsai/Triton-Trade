@@ -33,7 +33,7 @@
 <center><ul class="products">
 <% @items.each do |item| %>
 	<li>
-		<p><%= image_tag item.image_url.blank? ? ("http://www.drivenmavens.com/wp-content/uploads/Blank-page.jpg") : item.image_url, :width => 300, :height => 300, :crop => :fill, :class => "image" %></p>
+		<div class="image"><%= image_tag item.image_url.blank? ? ("http://www.drivenmavens.com/wp-content/uploads/Blank-page.jpg") : item.image_url, :width => 300, :height => 300, :crop => :fill %></div>
 		<div class="clearfix">
 			<h4><%= link_to item.name, item %></h4>
 			<!--<p><%=# link_to '$'item.price, item.buy %></p>-->
