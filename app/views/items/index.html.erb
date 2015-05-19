@@ -3,7 +3,7 @@
 		body h1/*, products h4*/ { font-family: "Oswald", sans-serif; text-align: center; }
 		.products li { display: inline-block; width: 400px; vertical-align:top; }
 		/*.products p { text-align: center; }*/
-		body button { padding: 5px; }
+		body .button { padding: 5px; }
 		/*---------------------------------------*/
 		/*a { color: #ea4c89; text-decoration: none; }
 		a:hover { color: #df3e7b; }
@@ -36,7 +36,7 @@
 		<div class="image"><%= image_tag item.image_url.blank? ? ("http://www.drivenmavens.com/wp-content/uploads/Blank-page.jpg") : item.image_url, :width => 300, :height => 300, :crop => :fill %></div>
 		<div class="clearfix">
 			<h4><%= link_to item.name, item %></h4>
-			<!--<p><%=# link_to '$'item.price, item.buy %></p>-->
+			<!--<p>< % = # link_to '$'item.price, item.buy % ></p>-->
 			<a href="#" class="button"><%= item.price %></a>
 			<p><%= raw tag_links(item.all_tags) %></p>
 		</div>
