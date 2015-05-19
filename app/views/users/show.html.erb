@@ -8,7 +8,7 @@
   .border-form-div2 img { padding-left: 2%; float: left; padding-right: 10px; }
   .border-form-div2 ul { list-style: none; }
   footer p { text-align; center; }
-  .products { clear: both; }
+  .itemshowcase { clear: both; }
   .products li { display: inline-block; width: 150px; vertical-align:top; }
   .products h1, h4 { font-family: "Oswald", sans-serif; text-align: center; }
   .products p { text-align: center; }
@@ -29,6 +29,7 @@
             <li><strong>About Me:</strong><br>Should be able to have an "about me" section; text</li>
 	</ul>
 
+<div class = "itemshowcase">
 	<p><strong>Items for Sale</strong></p>
 	<!--display user's items for sale -->
 	<ul class="products">
@@ -41,13 +42,13 @@
 			</li>
 		<% end %>
 	</ul>
-
+</div>
       <p>!!!! NOTE: should only be visible when user is viewing own profile</p>
       <%# if user_signed_in? %>
-           <%# if can? :crud, @user %>-->
+           <%# if can? :crud, @user %>
 		<p><center><%= link_to 'Edit Profile', edit_user_registration_path %></center></p>
            <%# end %>
-        <%# end %>-
+        <%# end %>
 
 
 	</div>
