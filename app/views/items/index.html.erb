@@ -1,10 +1,9 @@
 <head>
 	<style>
-		body h1/*, products h4*/ { font-family: "Oswald", sans-serif; text-align: center; }
+		body h1 { font-family: "Oswald", sans-serif; text-align: center; }
 		.products li { display: inline-block; width: 400px; vertical-align:top; }
-		/*.products p { text-align: center; }*/
 		body .new { padding: 5px; }
-		.products { padding-top: 5px; }
+		.products { padding-top: 5px; width: 75%; }
 		/*---------------------------------------*/
 		a { color: #787878; text-decoration: none; font-size: 14px; }
 		a:hover { color: #3498db; background: transparent; text-decoration: none; }
@@ -13,7 +12,7 @@
 		.clearfix h4 { font-family: "Oswald", sans-serif; color: #fff; margin: 0; padding: 0; }
 		.clearfix .pricebutton { background: #0084b4; border-radius: 3px; color: #fff; display: block; font-weight: bold; margin: 0; padding: 10px }
 		.clearfix .pricebutton:hover { background: #2D76B9; color: #fff; }
-		.products li { border: 6px solid #fff; box-shadow: 0 0 5px rgba(0, 0, 0, .3); overflow: hidden; width: 330px; padding-bottom: 3px; position: relative; }
+		.products li { border: 6px solid #fff; box-shadow: 0 0 5px rgba(0, 0, 0, .3); overflow: hidden; width: 330px; padding-bottom: 3px; /*position: relative;*/ }
 		.products li:hover .clearfix { opacity: 1; -webkit-transform: translateY(0); -moz-transform: translateY(0); -ms-transform: translateY(0);	-o-transform: translateY(0); transform: translateY(0); -webkit-transition: -webkit-transform .4s, opacity .1s;	-moz-transition: -moz-transform .4s, opacity .1s; -ms-transition: -ms-transform .4s, opacity .1s; -o-transition: -o-transform .4s, opacity .1s;	transition: transform .4s, opacity .1s; }
 
 		.products li .clearfix { background: rgba(255,255,255,0.6); bottom: 0; color: #fff; height: 80px; left: 0; opacity: 0; padding: 10px; position: absolute; -webkit-transform: translateY(100%); -moz-transform: translateY(100%); -ms-transform: translateY(100%); -o-transform: translateY(100%); transform: translateY(100%); -webkit-transition: -webkit-transform .4s, opacity .1s .3s; -moz-transition: -moz-transform .4s, opacity .1s .3s; -ms-transition: -ms-transform .4s, opacity .1s .3s; -o-transition: -o-transform .4s, opacity .1s .3s; transition: transform .4s, opacity .1s .3s; width: 320px; }	
@@ -26,12 +25,12 @@
 
 <% if user_signed_in? %>
   <center><%= link_to new_item_path, :method => :get do %>
-		<button class="new">New Item</button>
+		<button class="new">New Item</button><br>
 	  <% end %>
-  </center>
+   	</center>
 <% end %>
 
-<center><ul class="products">
+<ul class="products">
 <% @items.each do |item| %>
 	<li>
 		<div class="image"><%= image_tag item.image_url.blank? ? ("http://www.drivenmavens.com/wp-content/uploads/Blank-page.jpg") : item.image_url, :width => 300, :height => 300, :crop => :fill %></div>
@@ -43,29 +42,7 @@
 		</div>
 	</li>
 <% end %>
-</ul></center>
+</ul>
    
-<!--  <tbody>
-    <% @items.each do |item| %>
-      
-      <tr>
-        <td><%= item.user.name.blank? ? item.user.email : item.user.name %></td>
-        <td style="padding-right: 10px"><%= item.name %></td>
-	<td style="padding-right: 10px"><%= item.condition %></td>
-	<td style="padding-right: 10px"><%= item.price %></td>
-        <td style="padding-right: 10px"><%= raw tag_links(item.all_tags) %></td>
-        <td style="padding-right: 10px"><%= link_to 'Details', item %></td>
-        <% if user_signed_in? %>
-           <% if can? :crud, item %>
-              <td style="padding-right: 10px"><%= link_to 'Edit', edit_item_path(item) %></td>
-              <td style="padding-right: 10px"><%= link_to 'Delete', item, method: :delete %></td>
-           <% end %>
-        <% end %>
-
-      </tr>
-    <% end %>
-  </tbody>
-</table>-->
-
 </body>
 

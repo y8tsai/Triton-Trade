@@ -29,7 +29,7 @@
 	    <li><strong>Email:</strong> <%= @user.email %></li>
 	    <li><strong>Date of birth:</strong> <%= @user.date_of_birth %></li>
 	    <li><strong>PID:</strong> <%= @user.PID %><br><br></li>
-            <li><strong>About Me:</strong><br>Will implement if we have time for it</li>
+            <li><strong>About Me:</strong><br>Hello!</li>
 	</ul>
 
 <div class = "itemshowcase">
@@ -46,7 +46,7 @@
 		<% end %>
 	</ul>
 </div>
-      <center><p>!!!! NOTE: should only be visible when user is viewing own profile</p></center>
+      <!--!!!! NOTE: should only be visible when user is viewing own profile-->
       <%# if user_signed_in? %>
            <%# if can? :crud, @user %>
 		<center><p><%= link_to 'Edit Profile', edit_user_registration_path %></p></center>
