@@ -3,7 +3,7 @@
 		body h1 { font-family: "Oswald", sans-serif; text-align: center; }
 		.products li { display: inline-block; width: 400px; vertical-align:top; }
 		body .new { padding: 5px; }
-		.products { padding-top: 5px; width: 75%; margins:0; }
+		.products { padding-top: 5px; }
 		/*---------------------------------------*/
 		a { color: #787878; text-decoration: none; font-size: 14px; }
 		a:hover { color: #3498db; background: transparent; text-decoration: none; }
@@ -27,10 +27,10 @@
   <center><%= link_to new_item_path, :method => :get do %>
 		<button class="new">New Item</button><br>
 	  <% end %>
-   	</center>
+   </center>
 <% end %>
 
-<ul class="products">
+<center><ul class="products">
 <% @items.each do |item| %>
 	<li>
 		<div class="image"><%= image_tag item.image_url.blank? ? ("http://www.drivenmavens.com/wp-content/uploads/Blank-page.jpg") : item.image_url, :width => 300, :height => 300, :crop => :fill %></div>
@@ -42,7 +42,7 @@
 		</div>
 	</li>
 <% end %>
-</ul>
+</ul></center>
    
 </body>
 

@@ -1,6 +1,6 @@
 <head>
 	<style>
-		body h1 { font-family: "Oswald", sans-serif; text-transform: uppercase; margin-bottom: 20px }
+		body h1 { font-family: "Oswald", sans-serif; text-transform: uppercase; margin-bottom: 20px; }
 		.pic { padding-left: 10%; float: left; padding-right: 10px; }
 		.iteminfo li { list-style: none; display: block; margin-bottom: 10px; text-align: right; }
 		.itembox .buy { padding: 5px; }
@@ -48,6 +48,7 @@
 <% if user_signed_in? %>
   <% if can? :crud, @item %>
     <center><%= link_to 'Edit', edit_item_path(@item) %> | <%= link_to 'Delete', @item, method: :delete %></center>
+  <% end %>
 <% end %>
 
 <center><%= link_to 'Go Back', items_path %></center>
