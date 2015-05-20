@@ -12,6 +12,22 @@ class UsersController < ApplicationController
   def create
     User.create(user_params)
   end
+
+  def update
+  end
+
+  def destroy
+    @user.destroy
+  end
+
+  def promote
+    @user.update_attribute :admin, true
+  end
+
+  def demote
+    @user.update_attribute :admin, false
+  end
+
   private
   def user_params
     params.require(:user).permit(:name, :provider, :uid, :email);

@@ -1,20 +1,21 @@
 <%= render 'shared/nav_bar' %>
-<<<<<<< HEAD
 
-<tbody>
-  <% @users.each do |user| %>
-    <tr>
-      <td><%= link_to user.email, user_path(user) %></td>
-      <% if current_user.try(:admin?) %>
-        <% if user.admin %>
-          <td><%= link_to 'Demote', user, method: :demote %><td>
-        <% else %>
-          <td><%= link_to 'Promote', user, method: :promote %><td>
+<table>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= link_to user.email, user_path(user) %></td>
+        <% if current_user.try(:admin?) %>
+          <% if user.admin %>
+            <td><%= link_to 'Demote', user, method: :demote %><td>
+          <% else %>
+            <td><%= link_to 'Promote', user, method: :promote %><td>
+          <% end %>
+          <% if can? :crud, user %>
+            <td><%= link_to 'Ban', user, method: :delete %></td>
+          <% end %>
         <% end %>
-        <% if can? :crud, user %>
-          <td><%= link_to 'Ban', user, method: :delete %></td>
-        <% end %>
-      <% end %>
-    </tr>
-  <% end %>
-</tbody>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
