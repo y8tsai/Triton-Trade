@@ -12,6 +12,7 @@
   .products li { display: inline-block; width: 150px; vertical-align:top; }
   .products h1, h4 { font-family: "Oswald", sans-serif; text-align: center; }
   .products p { text-align: center; }
+  .products p:hover { text-decoration: none; }
 </style>
 </head>
 
@@ -22,7 +23,7 @@
 
 	<center><h1><%= @user.name %></h1></center>
 	
-	<p><%= image_tag @user.avatar_url.blank? ? ("http://community.blrstartups.com/content/plugins/techchamp/assets/avatars/anon.png") : @user.avatar_url, :width => 200, :height => 200, :crop => :fill %><p><br><br>
+	<p><%= image_tag @user.avatar_url.blank? ? ("http://community.blrstartups.com/content/plugins/techchamp/assets/avatars/anon.png") : @user.avatar_url, :width => 200, :height => 200, :crop => :fill %><p>
 	
 	<ul>
 	    <li><strong>Email:</strong> <%= @user.email %></li>
@@ -37,7 +38,7 @@
 	<ul class="products">
 		<% @items.each do |item| %>
 			<li>
-				<p><%= image_tag item.image_url.blank? ? ("http://www.drivenmavens.com/wp-content/uploads/Blank-page.jpg") : item.image_url, :width => 150, :height => 150, :crop => :fill %></p>
+				<p><%= image_tag item.image_url.blank? ? ("http://www.drivenmavens.com/wp-content/uploads/Blank-page.jpg") : item.image_url, :width => 125, :height => 125, :crop => :fill %></p>
 				<h4><%= item.name %></h4>
 				<p>$<%= item.price %></p>
 				<p><%= link_to 'Details', item %></p>
