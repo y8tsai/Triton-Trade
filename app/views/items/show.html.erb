@@ -9,6 +9,7 @@
 		.itembox { border-radius: 25px; border: 2px solid #3498db; background: #FFFFFF;
 			   width: 800px; height: 550px; position: absolute;
 			   top:0; bottom:0; left:0; right:0; margin: auto}
+		.bottom { clear: both; }
 	</style>
 </head>
 
@@ -42,7 +43,8 @@
 	<li><strong>Tags:</strong><br>
 	<%= raw tag_links(@item.all_tags) %><br></li>
 </ul>
-
+</div>
+<div class="bottom">
 <center><button class="buy">BUY</button><br><br></center>
 
 
