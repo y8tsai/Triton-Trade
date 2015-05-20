@@ -12,11 +12,13 @@
 <!--> 
 Test search bar
 -->
+<div class="col-sm-6 col-sm-offset-3">
 <%= form_tag("/search", method: "get") do %>
   <%= label_tag(:q, "Search for:") %>
   <%= text_field_tag(:q) %>
   <%= submit_tag("Search") %>
 <% end %>
+</div>
 <!-->
 End test search bar
 -->
