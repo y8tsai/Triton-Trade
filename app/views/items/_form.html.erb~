@@ -34,7 +34,7 @@
     <%= f.text_field :image_url, autofocus: true %><br>
 
     <%= f.label :price %><br>
-    <%= f.number_field :price, :class => 'text_field', :step => 'any', autofocus: true %><br>
+    <%= f.number_field :price, autofocus: true %><br>
 
     <%= f.label :all_tags %><br>
     <%= f.text_field :all_tags, placeholder: "Tags separated with ," %><br>
