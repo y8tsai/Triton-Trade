@@ -4,7 +4,7 @@
 		.pic { padding-left: 10%; float: left; padding-right: 10px; }
 		.iteminfo li { list-style: none; display: block; margin-bottom: 10px; text-align: left; }
 		.iteminfo a:hover { text-decoration: none; }
-		.itembox .buy { padding-top: 10px; }
+		.itembox .buy { padding: 5px; }
 		.iteminfo .price { font-size: 15px; }
 		body { background-color: rgba(52, 152, 219, .5) }
 		.itembox { border-radius: 25px; border: 2px solid #3498db; background: #FFFFFF;
@@ -46,7 +46,7 @@
 </ul>
 
 <div class="bottom">
-<center><button class="buy">BUY</button><br></center>
+<br><center><button class="buy">BUY</button><br></center>
 
 <% if user_signed_in? %>
   <% if can? :crud, @item %>
