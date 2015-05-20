@@ -17,15 +17,15 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user.destroy
+    User.find(params[:id]).destroy
   end
 
   def promote
-    @user.update_attribute :admin, true
+    User.find(params[:id]).update_attribute :admin, true
   end
 
   def demote
-    @user.update_attribute :admin, false
+    User.find(params[:id]).update_attribute :admin, false
   end
 
   private
