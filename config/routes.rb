@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get 'info' => 'pages#info'
   get 'inbox' => 'messages#index'
   get 'tags/:tag', to: 'items#index', as: "tag"
+  get 'users/:id/promote', to: 'users#promote', as: 'promote_user'
+  get 'users/:id/demote', to: 'users#demote', as: 'demote_user'
 
   # for admin previlleges
 
