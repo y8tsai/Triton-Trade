@@ -18,14 +18,17 @@ class UsersController < ApplicationController
 
   def destroy
     User.find(params[:id]).destroy
+    redirect_to :back
   end
 
   def promote
     User.find(params[:id]).update_attribute :admin, true
+    redirect_to :back
   end
 
   def demote
     User.find(params[:id]).update_attribute :admin, false
+    redirect_to :back
   end
 
   private
