@@ -2,8 +2,8 @@
 	<style>
 		body h1 { font-family: "Oswald", sans-serif; text-transform: uppercase; margin-bottom: 20px }
 		.pic { padding-left: 10%; float: left; padding-right: 10px; }
-		.iteminfo li { list-style: none; display: block; margin-bottom: 10px }
-		.buy { padding: 5px; }
+		.iteminfo li { list-style: none; display: block; margin-bottom: 10px; text-align: right; }
+		.itembox .buy { padding: 5px; }
 		body { background-color: rgba(52, 152, 219, .5) }
 		.itembox { border-radius: 25px; border: 2px solid #3498db; background: #FFFFFF;
 			   width: 800px; height: 550px; position: absolute;
@@ -26,12 +26,6 @@
   <%= image_tag @item.image_url.blank? ? ("http://www.drivenmavens.com/wp-content/uploads/Blank-page.jpg") : @item.image_url, :width => 400, :height => 400, :crop => :fill %>
 </div></p>
 
-<% if user_signed_in? %>
-  <% if can? :crud, @item %>
-    <center><%= link_to 'Edit', edit_item_path(@item) %><br></center>
-  <% end %>
-<% end %>																																																																																																																																																																																																																																																																																																																																																				
-
 <ul class="iteminfo">
 	<li><strong>Item Condition:</strong><br>
 	<%= @item.condition %><br></li>
@@ -39,7 +33,6 @@
 	<li><strong>Description:</strong><br>
 	<%= @item.description %><br></li>
 
-	<li><strong>Price: </strong><br>																																																																																																																																																																																																																																																				
 	$<%= @item.price %><br></li>
 
 	<li><strong>Seller:</strong><br>
@@ -49,9 +42,18 @@
 	<%= raw tag_links(@item.all_tags) %><br></li>
 </ul>
 
-<center><button class="buy">BUY</button><br></center>
+<center><button class="buy">BUY</button><br><br></center>
 
+
+<% if user_signed_in? %>
+  <% if can? :crud, @item %>
+    <center><%= link_to 'Edit', edit_item_path(@item) %> | 
+  <% else %>
+    <%= link_to 'Go Back', items_path %></center>
+<%else%>
 <center><%= link_to 'Go Back', items_path %></center>
+<% end %>
+
 
 </div>
 
