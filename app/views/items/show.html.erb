@@ -3,7 +3,11 @@
 		body h1 { font-family: "Oswald", sans-serif; text-transform: uppercase; }
 		.pic { padding-left: 10%; float: left; padding-right: 10px; }
 		.iteminfo li { list-style: none; display: block; }
-		.buy { padding: 5px; }	
+		.buy { padding: 5px; }
+		.body { background-color: rgba(52, 152, 219, .5) }
+		.itembox { border-radius: 25px; border: 2px solid #3498db;
+			   width: 400px; height: 400px; position: absolute;
+			   top:0; bottom:0; left:0; right:0; margin: auto}
 	</style>
 </head>
 
@@ -12,6 +16,9 @@
 <body>
 
 <p id="notice"><%= notice %></p>
+
+<!-- This div is the box containing the item elements -->
+<div class="itembox">
 
 <center><h1><%= @item.name %></h1>
 
@@ -23,7 +30,7 @@
   <% if can? :crud, @item %>
     <center><%= link_to 'Edit', edit_item_path(@item) %><br></center>
   <% end %>
-<% end %>
+<% end %>																																																																																																																																																																																																																																																																																																																																																				
 
 <ul class="iteminfo">
 	<li><strong>Item Condition:</strong><br>
@@ -32,7 +39,7 @@
 	<li><strong>Description:</strong><br>
 	<%= @item.description %><br></li>
 
-	<li><strong>Price: </strong><br>
+	<li><strong>Price: </strong><br>																																																																																																																																																																																																																																																				
 	$<%= @item.price %><br></li>
 
 	<li><strong>Seller:</strong><br>
@@ -46,7 +53,7 @@
 
 <center><%= link_to 'Go Back', items_path %></center>
 
-
+</div>
 
 
 </body>
