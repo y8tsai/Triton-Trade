@@ -16,6 +16,10 @@ Rails.application.routes.draw do
   get 'inbox' => 'messages#index'
   get 'tags/:tag', to: 'items#index', as: "tag"
 
+  # for admin previlleges
+  match 'users/:id/promote' => 'users#promote', :as => 'promote_user'
+  match 'users/:id/demote' => 'users#demote', :as => 'demote_user'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
