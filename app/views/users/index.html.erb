@@ -1,10 +1,21 @@
+<%= render 'shared/nav_bar' %>
 
-<body>
-<a href="/">Home</a>
-
-<ul>
+<table>
+  <tbody>
     <% @users.each do |user| %>
-        <li><%= link_to user.email, user_path(user) %></li>
+      <tr>
+        <td><%= link_to user.email, user_path(user) %></td>
+        <% if current_user.try(:admin?) %>
+          <% if user.admin %>
+            <td><%= link_to 'Demote', user, method: :demote %><td>
+          <% else %>
+            <td><%= link_to 'Promote', user, method: :promote %><td>
+          <% end %>
+          <% if can? :crud, user %>
+            <td><%= link_to 'Ban', user, method: :delete %></td>
+          <% end %>
+        <% end %>
+      </tr>
     <% end %>
-</ul>
-</body>
+  </tbody>
+</table>
