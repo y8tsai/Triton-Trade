@@ -1,7 +1,6 @@
 class PagesController < ApplicationController
 
   def index
-    @css_list = ['index']
   end
 
   def testpage
@@ -11,7 +10,6 @@ class PagesController < ApplicationController
   end
 
   def info
-    @css_list = ['info', 'search']
   end
 
 end

@@ -10,12 +10,6 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' %>
 
-    <!-- apply page specific style -->
-    <% if defined? @css_list %>
-      <% for css_filename in @css_list do %>
-        <%= stylesheet_link_tag css_filename %>
-      <% end %>
-    <% end %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
