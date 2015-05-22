@@ -43,7 +43,11 @@ gem 'devise', '3.4.0'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
+
+# gem for determining user permissions
 gem 'cancan'
-# gem for determininguser abilities
+
+# gem for payment
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 
