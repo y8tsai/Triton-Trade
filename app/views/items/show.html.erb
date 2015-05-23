@@ -46,7 +46,13 @@
 </ul>
 
 <div class="bottom">
-<br><center><button class="buy">BUY</button><br></center>
+
+<%= form_tag charges_path do %>
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="Item price"
+          data-amount= @item.price * 100></script>
+<% end %>
 
 <% if user_signed_in? %>
   <% if can? :crud, @item %>
