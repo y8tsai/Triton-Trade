@@ -28,8 +28,8 @@
 
 	<ul>
 	    <li><strong>Email:</strong> <%= @user.email %></li>
-	    <li><strong>Date of Birth:</strong> <%= @user.date_of_birth.to_time.strftime('%b %d, %Y') %></li>
-	    <li><strong>PID:</strong> <%= @user.PID %><br><br></li>
+	    <li><strong>Date of Birth:</strong> <%= @user.date_of_birth.nil? ? "" : @user.date_of_birth.to_time.strftime('%b %d, %Y') %></li>
+	    <li><strong>PID:</strong> <%= @user.PID.nil? ? "" : @user.PID %><br><br></li>
 	    <li><strong>About Me:</strong><br>Hello!</li>
 
 	</ul>
