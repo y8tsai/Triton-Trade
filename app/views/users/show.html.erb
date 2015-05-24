@@ -42,7 +42,7 @@
 			<li>
 				<p><%= image_tag item.image_url.blank? ? ("https://www.saveful.com/img/no_image_available.jpg") : item.image_url, :width => 140, :height => 140, :crop => :fill %></p>
 				<h4><%= link_to item.name, item %></h4>
-				<p>$<%= item.price %></p>
+				<p><%= number_to_currency(item.price) %></p>
 			</li>
 		<% end %>
 	</ul>
