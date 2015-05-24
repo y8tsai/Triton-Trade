@@ -16,7 +16,7 @@
     <%= f.text_field :name, autofocus: true %><br>
     
     <%= f.label :condition %><br>
-    <%= f.text_field :condition, autofocus: true %><br>
+    <%= f.select :condition, [['Fair', 'fair'], ['Used', 'used'], ['Good', 'good'], ['New', 'new']], autofocus: true %><br>
 
     <!--<select>
 	<option value="select" selected>Select One</option>
