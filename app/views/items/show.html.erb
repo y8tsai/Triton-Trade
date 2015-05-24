@@ -36,7 +36,7 @@
 	<li><strong>Description:</strong><br>
 	<%= @item.description %><br></li>
 
-	<li class="price">$<%= @item.price %><br></li>
+	<li class="price"><%= number_to_currency(@item.price) %><br></li>
 
 	<li><strong>Seller:</strong><br>
 	<%= link_to @item.user.name.blank? ? @item.user.email : @item.user.name, user_path(@item.user) %><br></li>
