@@ -370,3 +370,2666 @@ PG::ConnectionBad (could not connect to server: No such file or directory
   Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
   Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
   Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.6ms)
+<<<<<<< HEAD
+
+
+Started GET "/charges/payment" for 127.0.0.1 at 2015-05-21 22:51:32 -0700
+
+ActiveRecord::NoDatabaseError (FATAL:  role "stjin" does not exist
+Run `$ bin/rake db:create db:migrate` to create your database):
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:898:in `rescue in connect'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /home/stjin/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /home/stjin/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.8) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.8) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.8) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.8) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.9.1) lib/puma/server.rb:490:in `handle_request'
+  puma (2.9.1) lib/puma/server.rb:361:in `process_client'
+  puma (2.9.1) lib/puma/server.rb:254:in `block in run'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.8ms)
+
+
+Started GET "/charges/payments" for 127.0.0.1 at 2015-05-21 22:51:41 -0700
+
+ActiveRecord::NoDatabaseError (FATAL:  role "stjin" does not exist
+Run `$ bin/rake db:create db:migrate` to create your database):
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:898:in `rescue in connect'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /home/stjin/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /home/stjin/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.8) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.8) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.8) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.8) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.9.1) lib/puma/server.rb:490:in `handle_request'
+  puma (2.9.1) lib/puma/server.rb:361:in `process_client'
+  puma (2.9.1) lib/puma/server.rb:254:in `block in run'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.1ms)
+
+
+Started GET "/charges/payment" for 127.0.0.1 at 2015-05-21 23:06:15 -0700
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.8) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.8) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.9.1) lib/puma/server.rb:490:in `handle_request'
+  puma (2.9.1) lib/puma/server.rb:361:in `process_client'
+  puma (2.9.1) lib/puma/server.rb:254:in `block in run'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.2ms)
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (3.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateWidgets (20140707111715)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (29.0ms)[0m  [1mCREATE TABLE "widgets" ("id" serial primary key, "name" character varying(255), "description" text, "stock" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140707111715"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSearches (20150425022002)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "searches" ("id" serial primary key, "search" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150425022002"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProfiles (20150426002521)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "profiles" ("id" serial primary key, "profile" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150426002521"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateUsers (20150426013917)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (6.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (2.4ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36m (2.7ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150426013917"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Migrating to AddProviderToUsers (20150427221755)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD COLUMN "provider" character varying(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD COLUMN "uid" character varying(255)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150427221755"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Migrating to AddUsernameToUsers (20150428221735)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD COLUMN "username" character varying(255)
+  [1m[36m (2.8ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD COLUMN "PID" character varying(255)
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD COLUMN "date_of_birth" timestamp[0m
+  [1m[35m (11.4ms)[0m  ALTER TABLE "users" ADD COLUMN "is_female" boolean DEFAULT 'f'
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150428221735"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+Migrating to AddNameToUsers (20150501220242)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD COLUMN "name" character varying(255)
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "users" ADD COLUMN "PID" character varying(255)[0m
+PG::DuplicateColumn: ERROR:  column "PID" of relation "users" already exists
+: ALTER TABLE "users" ADD COLUMN "PID" character varying(255)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+
+
+Started GET "/charges/payment" for 127.0.0.1 at 2015-05-21 23:07:31 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.8) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.8) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.9.1) lib/puma/server.rb:490:in `handle_request'
+  puma (2.9.1) lib/puma/server.rb:361:in `process_client'
+  puma (2.9.1) lib/puma/server.rb:254:in `block in run'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAvatarUrlToUsers (20150508221915)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD COLUMN "avatar_url" character varying(255)[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150508221915"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Migrating to Db (20150513181816)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150513181816"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Migrating to CreateItems (20150516003310)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (7.9ms)[0m  CREATE TABLE "items" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150516003310"]]
+  [1m[35m (1.6ms)[0m  COMMIT
+Migrating to AddFieldsToItems (20150516010342)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (7.3ms)[0m  ALTER TABLE "items" ADD COLUMN "is_sold" boolean DEFAULT 'f'
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "items" ADD COLUMN "price" decimal(6,2)[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "items" ADD COLUMN "image_url" character varying(255)
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "items" ADD COLUMN "condition" character varying(255)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150516010342"]]
+  [1m[36m (32.8ms)[0m  [1mCOMMIT[0m
+Migrating to AddReferenceToItems (20150516011230)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "items" ADD COLUMN "user_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150516011230"]]
+  [1m[36m (3.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTags (20150517011410)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.1ms)[0m  [1mCREATE TABLE "tags" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150517011410"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTaggings (20150517011535)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "taggings" ("id" serial primary key, "item_id" integer, "tag_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (2.4ms)[0m  CREATE  INDEX  "index_taggings_on_item_id" ON "taggings"  ("item_id")
+  [1m[36m (2.8ms)[0m  [1mCREATE  INDEX  "index_taggings_on_tag_id" ON "taggings"  ("tag_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150517011535"]]
+  [1m[36m (12.5ms)[0m  [1mCOMMIT[0m
+Migrating to AddUserIdToItems (20150517071356)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "items" ADD COLUMN "role" character varying(255)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150517071356"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Migrating to AddRoleToUsers (20150517075851)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD COLUMN "role" character varying(255)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150517075851"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMessages (20150518012948)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (6.8ms)[0m  [1mCREATE TABLE "messages" ("id" serial primary key, "user_id" integer, "recipient_id" integer, "subject" character varying(255), "body" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150518012948"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to AddAdminToUsers (20150520024004)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (11.1ms)[0m  [1mALTER TABLE "users" ADD COLUMN "admin" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150520024004"]]
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/charges/payment" for 127.0.0.1 at 2015-05-21 23:09:56 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+SyntaxError (/home/stjin/Triton-Trade/app/controllers/charges_controller.rb:25: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/charges_controller.rb:25: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (25.1ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.4ms)
+
+
+Started GET "/charges/payment" for 127.0.0.1 at 2015-05-21 23:10:31 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ChargesController):
+  actionpack (4.1.8) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.9.1) lib/puma/server.rb:490:in `handle_request'
+  puma (2.9.1) lib/puma/server.rb:361:in `process_client'
+  puma (2.9.1) lib/puma/server.rb:254:in `block in run'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.3ms)
+
+
+Started GET "/charges/payment" for 127.0.0.1 at 2015-05-21 23:16:22 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ChargesController):
+  actionpack (4.1.8) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.9.1) lib/puma/server.rb:490:in `handle_request'
+  puma (2.9.1) lib/puma/server.rb:361:in `process_client'
+  puma (2.9.1) lib/puma/server.rb:254:in `block in run'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.5ms)
+
+
+Started GET "/charges/payment" for 127.0.0.1 at 2015-05-21 23:16:23 -0700
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ChargesController):
+  actionpack (4.1.8) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.9.1) lib/puma/server.rb:490:in `handle_request'
+  puma (2.9.1) lib/puma/server.rb:361:in `process_client'
+  puma (2.9.1) lib/puma/server.rb:254:in `block in run'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
+
+
+Started GET "/charges/payment" for 127.0.0.1 at 2015-05-21 23:19:10 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ChargesController):
+  actionpack (4.1.8) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.9.1) lib/puma/server.rb:490:in `handle_request'
+  puma (2.9.1) lib/puma/server.rb:361:in `process_client'
+  puma (2.9.1) lib/puma/server.rb:254:in `block in run'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.3ms)
+
+
+Started GET "/charges/payment" for 127.0.0.1 at 2015-05-21 23:19:11 -0700
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ChargesController):
+  actionpack (4.1.8) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.9.1) lib/puma/server.rb:490:in `handle_request'
+  puma (2.9.1) lib/puma/server.rb:361:in `process_client'
+  puma (2.9.1) lib/puma/server.rb:254:in `block in run'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
+
+
+Started GET "/charges/payment" for 127.0.0.1 at 2015-05-22 18:45:42 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (19.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ChargesController):
+  actionpack (4.1.8) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.9.1) lib/puma/server.rb:490:in `handle_request'
+  puma (2.9.1) lib/puma/server.rb:361:in `process_client'
+  puma (2.9.1) lib/puma/server.rb:254:in `block in run'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.9ms)
+
+
+Started GET "/charges/payment" for 127.0.0.1 at 2015-05-22 18:45:50 -0700
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ChargesController):
+  actionpack (4.1.8) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.9.1) lib/puma/server.rb:490:in `handle_request'
+  puma (2.9.1) lib/puma/server.rb:361:in `process_client'
+  puma (2.9.1) lib/puma/server.rb:254:in `block in run'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+
+
+Started GET "/charges/payment" for 127.0.0.1 at 2015-05-22 18:47:15 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"payment"}
+Completed 500 Internal Server Error in 37ms
+
+ActionView::MissingTemplate (Missing template charges/show, application/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/stjin/Triton-Trade/app/views"
+  * "/home/stjin/.rvm/gems/ruby-2.2.2/gems/devise-3.4.0/app/views"
+):
+  actionview (4.1.8) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.8) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.8) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.8) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.8) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.8) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.8) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.8) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.8) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.8) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.8) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.8) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.8) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/stjin/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.1.8) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.8) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.9.1) lib/puma/server.rb:490:in `handle_request'
+  puma (2.9.1) lib/puma/server.rb:361:in `process_client'
+  puma (2.9.1) lib/puma/server.rb:254:in `block in run'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (1.9ms)
+
+
+Started GET "/charges/payment" for 127.0.0.1 at 2015-05-22 18:48:41 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"payment"}
+  Rendered charges/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 72ms
+
+SyntaxError (/home/stjin/Triton-Trade/app/views/charges/show.html.erb:12: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/charges/show.html.erb:12: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (54.5ms)
+
+
+Started GET "/charges/payment" for 127.0.0.1 at 2015-05-22 18:49:15 -0700
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"payment"}
+  Rendered charges/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 2231ms (Views: 2230.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/buy.css?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/charges.css?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/sell.css?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/testpage.css?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/widgets.css?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/buy.js?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/charges.js?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/sell.js?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/testpage.js?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/widgets.js?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-22 18:49:17 -0700
+
+
+Started GET "/charges/show" for 127.0.0.1 at 2015-05-22 18:50:59 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendered charges/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 228ms (Views: 216.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/charges.css?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/buy.css?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/sell.css?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/testpage.css?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/widgets.css?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/buy.js?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/charges.js?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/sell.js?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/testpage.js?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/widgets.js?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-22 18:51:00 -0700
+
+
+Started GET "/charges/payment" for 127.0.0.1 at 2015-05-22 19:12:45 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"payment"}
+  Rendered charges/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 195ms (Views: 183.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:45 -0700
+
+
+Started GET "/assets/charges.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:45 -0700
+
+
+Started GET "/assets/buy.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:45 -0700
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:45 -0700
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:45 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:45 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:45 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:45 -0700
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/sell.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/testpage.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/widgets.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/buy.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/charges.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/sell.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/testpage.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/widgets.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:46 -0700
+
+
+Started GET "/charges/payment" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"payment"}
+  Rendered charges/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 128ms (Views: 126.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/charges.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/buy.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/widgets.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/sell.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/testpage.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/charges.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/buy.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/sell.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/testpage.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/widgets.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-22 19:12:49 -0700
+
+
+Started GET "/items/show" for 127.0.0.1 at 2015-05-22 19:14:44 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[35mItem Load (8.8ms)[0m  SELECT  "items".* FROM "items"  WHERE "items"."id" = $1 LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 139ms
+
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=show):
+  app/controllers/items_controller.rb:47:in `set_item'
+
+
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.5ms)
+
+
+Started GET "/item/index" for 127.0.0.1 at 2015-05-22 19:15:14 -0700
+
+ActionController::RoutingError (No route matches [GET] "/item/index"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.9.1) lib/puma/server.rb:490:in `handle_request'
+  puma (2.9.1) lib/puma/server.rb:361:in `process_client'
+  puma (2.9.1) lib/puma/server.rb:254:in `block in run'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (14.9ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (31.6ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (108.7ms)
+
+
+Started GET "/items/index" for 127.0.0.1 at 2015-05-22 19:15:46 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[35mItem Load (1.4ms)[0m  SELECT  "items".* FROM "items"  WHERE "items"."id" = $1 LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 27ms
+
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=index):
+  app/controllers/items_controller.rb:47:in `set_item'
+
+
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.0ms)
+
+
+Started GET "/items/show" for 127.0.0.1 at 2015-05-22 19:15:55 -0700
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT  "items".* FROM "items"  WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=show):
+  app/controllers/items_controller.rb:47:in `set_item'
+
+
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.4ms)
+=======
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRatingCaches (20150524030415)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (7.9ms)[0m  [1mCREATE TABLE "rating_caches" ("id" serial primary key, "cacheable_id" integer, "cacheable_type" character varying(255), "avg" float NOT NULL, "qty" integer NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "rating_caches" already exists
+: CREATE TABLE "rating_caches" ("id" serial primary key, "cacheable_id" integer, "cacheable_type" character varying(255), "avg" float NOT NULL, "qty" integer NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRatingCaches (20150524030415)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "rating_caches" ("id" serial primary key, "cacheable_id" integer, "cacheable_type" character varying(255), "avg" float NOT NULL, "qty" integer NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "rating_caches" already exists
+: CREATE TABLE "rating_caches" ("id" serial primary key, "cacheable_id" integer, "cacheable_type" character varying(255), "avg" float NOT NULL, "qty" integer NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRatingCaches (20150524030415)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150524030415"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Migrating to CreateRates (20150524030416)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.3ms)[0m  CREATE TABLE "rates" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "stars" float NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+PG::DuplicateTable: ERROR:  relation "rates" already exists
+: CREATE TABLE "rates" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "stars" float NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRates (20150524030416)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "rates" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "stars" float NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "rates" already exists
+: CREATE TABLE "rates" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "stars" float NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRates (20150524030416)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "rates" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "stars" float NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "rates" already exists
+: CREATE TABLE "rates" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "stars" float NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRates (20150524030416)
+  [1m[35m (2.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150524030416"]]
+  [1m[35m (2.5ms)[0m  COMMIT
+Migrating to CreateAverageCaches (20150524030417)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.8ms)[0m  CREATE TABLE "average_caches" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+PG::DuplicateTable: ERROR:  relation "average_caches" already exists
+: CREATE TABLE "average_caches" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAverageCaches (20150524030417)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "average_caches" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "average_caches" already exists
+: CREATE TABLE "average_caches" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAverageCaches (20150524030417)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150524030417"]]
+  [1m[35m (2.4ms)[0m  COMMIT
+Migrating to CreateOverallAverages (20150524030418)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.4ms)[0m  CREATE TABLE "overall_averages" ("id" serial primary key, "rateable_id" integer, "rateable_type" character varying(255), "overall_avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+PG::DuplicateTable: ERROR:  relation "overall_averages" already exists
+: CREATE TABLE "overall_averages" ("id" serial primary key, "rateable_id" integer, "rateable_type" character varying(255), "overall_avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateOverallAverages (20150524030418)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "overall_averages" ("id" serial primary key, "rateable_id" integer, "rateable_type" character varying(255), "overall_avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "overall_averages" already exists
+: CREATE TABLE "overall_averages" ("id" serial primary key, "rateable_id" integer, "rateable_type" character varying(255), "overall_avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateOverallAverages (20150524030418)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "overall_averages" ("id" serial primary key, "rateable_id" integer, "rateable_type" character varying(255), "overall_avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "overall_averages" already exists
+: CREATE TABLE "overall_averages" ("id" serial primary key, "rateable_id" integer, "rateable_type" character varying(255), "overall_avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateOverallAverages (20150524030418)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150524030418"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-23 20:28:49 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_nav_bar.html.erb (48.5ms)
+  Rendered pages/index.erb within layouts/application (55.4ms)
+Completed 200 OK in 2373ms (Views: 2352.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/buy.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/charges.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/sell.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/testpage.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/widgets.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/buy.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/charges.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/sell.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/testpage.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/widgets.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/ratyrate.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/users/4" for 127.0.0.1 at 2015-05-23 20:28:54 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_nav_bar.html.erb (6.1ms)
+  [1m[36mRatingCache Load (0.6ms)[0m  [1mSELECT  "rating_caches".* FROM "rating_caches"  WHERE "rating_caches"."cacheable_id" = $1 AND "rating_caches"."cacheable_type" = $2 AND "rating_caches"."dimension" = 'rating' LIMIT 1[0m  [["cacheable_id", 4], ["cacheable_type", "User"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "rates"  WHERE "rates"."rater_id" = $1 AND "rates"."dimension" = 'rating' AND "rates"."rateable_id" = 4 AND "rates"."rateable_type" = 'User'  [["rater_id", 4]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items"  WHERE "items"."user_id" = 4[0m
+  Rendered users/show.html.erb within layouts/application (51.4ms)
+Completed 200 OK in 295ms (Views: 273.2ms | ActiveRecord: 10.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/users/4" for 127.0.0.1 at 2015-05-23 20:36:23 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_nav_bar.html.erb (6.6ms)
+  [1m[35mRatingCache Load (0.7ms)[0m  SELECT  "rating_caches".* FROM "rating_caches"  WHERE "rating_caches"."cacheable_id" = $1 AND "rating_caches"."cacheable_type" = $2 AND "rating_caches"."dimension" = 'rating' LIMIT 1  [["cacheable_id", 4], ["cacheable_type", "User"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "rates"  WHERE "rates"."rater_id" = $1 AND "rates"."dimension" = 'rating' AND "rates"."rateable_id" = 4 AND "rates"."rateable_type" = 'User'[0m  [["rater_id", 4]]
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items"  WHERE "items"."user_id" = 4
+  Rendered users/show.html.erb within layouts/application (50.4ms)
+Completed 200 OK in 397ms (Views: 324.0ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/buy.css?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/charges.css?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/sell.css?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/testpage.css?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/widgets.css?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/buy.js?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/charges.js?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/ratyrate.js?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/testpage.js?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/sell.js?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/widgets.js?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2015-05-23 20:36:24 -0700
+
+
+Started GET "/assets/cancel-off.png" for 127.0.0.1 at 2015-05-23 20:36:25 -0700
+
+
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2015-05-23 20:36:26 -0700
+
+
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2015-05-23 20:36:26 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-23 20:40:22 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_nav_bar.html.erb (40.5ms)
+  Rendered pages/index.erb within layouts/application (47.2ms)
+Completed 200 OK in 322ms (Views: 299.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/buy.css?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/charges.css?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/sell.css?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/testpage.css?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/widgets.css?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/buy.js?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/charges.js?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/ratyrate.js?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/sell.js?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/testpage.js?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/widgets.js?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-23 20:40:23 -0700
+
+
+Started GET "/users/4" for 127.0.0.1 at 2015-05-23 20:40:25 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_nav_bar.html.erb (5.3ms)
+  [1m[36mRatingCache Load (1.1ms)[0m  [1mSELECT  "rating_caches".* FROM "rating_caches"  WHERE "rating_caches"."cacheable_id" = $1 AND "rating_caches"."cacheable_type" = $2 AND "rating_caches"."dimension" = 'rating' LIMIT 1[0m  [["cacheable_id", 4], ["cacheable_type", "User"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "rates"  WHERE "rates"."rater_id" = $1 AND "rates"."dimension" = 'rating' AND "rates"."rateable_id" = 4 AND "rates"."rateable_type" = 'User'  [["rater_id", 4]]
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items"  WHERE "items"."user_id" = 4[0m
+  Rendered users/show.html.erb within layouts/application (46.1ms)
+Completed 200 OK in 279ms (Views: 260.8ms | ActiveRecord: 8.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/users/4" for 127.0.0.1 at 2015-05-23 20:41:00 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_nav_bar.html.erb (5.8ms)
+  [1m[35mRatingCache Load (0.6ms)[0m  SELECT  "rating_caches".* FROM "rating_caches"  WHERE "rating_caches"."cacheable_id" = $1 AND "rating_caches"."cacheable_type" = $2 AND "rating_caches"."dimension" = 'rating' LIMIT 1  [["cacheable_id", 4], ["cacheable_type", "User"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "rates"  WHERE "rates"."rater_id" = $1 AND "rates"."dimension" = 'rating' AND "rates"."rateable_id" = 4 AND "rates"."rateable_type" = 'User'[0m  [["rater_id", 4]]
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items"  WHERE "items"."user_id" = 4
+  Rendered users/show.html.erb within layouts/application (47.4ms)
+Completed 200 OK in 381ms (Views: 314.9ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-23 20:41:00 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-23 20:41:00 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-23 20:41:00 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2015-05-23 20:41:00 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-23 20:41:00 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-23 20:41:00 -0700
+
+
+Started GET "/assets/buy.css?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/charges.css?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/sell.css?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/testpage.css?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/widgets.css?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/buy.js?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/charges.js?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/ratyrate.js?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/sell.js?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/testpage.js?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/widgets.js?body=1" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/cancel-off.png" for 127.0.0.1 at 2015-05-23 20:41:01 -0700
+
+
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2015-05-23 20:41:03 -0700
+
+
+Started POST "/rate" for 127.0.0.1 at 2015-05-23 20:41:04 -0700
+Processing by RaterController#create as */*
+  Parameters: {"score"=>"3", "dimension"=>"rating", "id"=>"4", "klass"=>"User"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "rates"  WHERE "rates"."rater_id" = $1 AND "rates"."dimension" = 'rating' AND "rates"."rateable_id" = 4 AND "rates"."rateable_type" = 'User'[0m  [["rater_id", 4]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "rates" ("created_at", "dimension", "rateable_id", "rateable_type", "rater_id", "stars", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2015-05-24 03:41:04.154069"], ["dimension", "rating"], ["rateable_id", 4], ["rateable_type", "User"], ["rater_id", 4], ["stars", 3.0], ["updated_at", "2015-05-24 03:41:04.154069"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36mRatingCache Load (0.4ms)[0m  [1mSELECT  "rating_caches".* FROM "rating_caches"  WHERE "rating_caches"."cacheable_id" = $1 AND "rating_caches"."cacheable_type" = $2 AND "rating_caches"."dimension" = 'rating' LIMIT 1[0m  [["cacheable_id", 4], ["cacheable_type", "User"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "rating_caches" ("avg", "cacheable_id", "cacheable_type", "created_at", "dimension", "qty", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["avg", 3.0], ["cacheable_id", 4], ["cacheable_type", "User"], ["created_at", "2015-05-24 03:41:04.169771"], ["dimension", "rating"], ["qty", 1], ["updated_at", "2015-05-24 03:41:04.169771"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Completed 200 OK in 45ms (Views: 0.2ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2015-05-23 20:41:32 -0700
+
+
+Started POST "/rate" for 127.0.0.1 at 2015-05-23 20:41:32 -0700
+Processing by RaterController#create as */*
+  Parameters: {"score"=>"5", "dimension"=>"rating", "id"=>"4", "klass"=>"User"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "rates"  WHERE "rates"."rater_id" = $1 AND "rates"."dimension" = 'rating' AND "rates"."rateable_id" = 4 AND "rates"."rateable_type" = 'User'[0m  [["rater_id", 4]]
+  [1m[35mRate Load (0.4ms)[0m  SELECT  "rates".* FROM "rates"  WHERE "rates"."rater_id" = $1 AND "rates"."rater_id" = 4 AND "rates"."rateable_id" = 4 AND "rates"."dimension" = 'rating' LIMIT 1  [["rater_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "rates" SET "stars" = $1, "updated_at" = $2 WHERE "rates"."id" = 1  [["stars", 5.0], ["updated_at", "2015-05-24 03:41:32.707654"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "rates"  WHERE "rates"."rateable_id" = $1 AND "rates"."rateable_type" = $2 AND "rates"."dimension" = 'rating'  [["rateable_id", 4], ["rateable_type", "User"]]
+  [1m[36mRatingCache Load (0.5ms)[0m  [1mSELECT  "rating_caches".* FROM "rating_caches"  WHERE "rating_caches"."cacheable_id" = $1 AND "rating_caches"."cacheable_type" = $2 AND "rating_caches"."dimension" = 'rating' LIMIT 1[0m  [["cacheable_id", 4], ["cacheable_type", "User"]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "rating_caches" SET "avg" = $1, "updated_at" = $2 WHERE "rating_caches"."id" = 1[0m  [["avg", 5.0], ["updated_at", "2015-05-24 03:41:32.717049"]]
+  [1m[35m (3.9ms)[0m  COMMIT
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/assets/cancel-off.png" for 127.0.0.1 at 2015-05-23 20:41:32 -0700
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2015-05-23 20:41:34 -0700
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_nav_bar.html.erb (2.7ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 191ms (Views: 186.7ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-23 20:47:38 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_nav_bar.html.erb (41.8ms)
+  Rendered pages/index.erb within layouts/application (46.9ms)
+Completed 200 OK in 330ms (Views: 308.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/buy.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/charges.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/sell.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/testpage.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/widgets.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/buy.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/charges.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/ratyrate.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/sell.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/testpage.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/widgets.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:39 -0700
+
+
+Started GET "/users/4" for 127.0.0.1 at 2015-05-23 20:47:42 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_nav_bar.html.erb (4.5ms)
+  [1m[36mRatingCache Load (0.6ms)[0m  [1mSELECT  "rating_caches".* FROM "rating_caches"  WHERE "rating_caches"."cacheable_id" = $1 AND "rating_caches"."cacheable_type" = $2 AND "rating_caches"."dimension" = 'rating' LIMIT 1[0m  [["cacheable_id", 4], ["cacheable_type", "User"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "rates"  WHERE "rates"."rater_id" = $1 AND "rates"."dimension" = 'rating' AND "rates"."rateable_id" = 4 AND "rates"."rateable_type" = 'User'  [["rater_id", 4]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items"  WHERE "items"."user_id" = 4[0m
+  Rendered users/show.html.erb within layouts/application (65.8ms)
+Completed 200 OK in 302ms (Views: 283.6ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/inbox" for 127.0.0.1 at 2015-05-23 20:47:44 -0700
+Processing by MessagesController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_nav_bar.html.erb (1.5ms)
+  [1m[36mMessage Load (0.6ms)[0m  [1mSELECT "messages".* FROM "messages"  WHERE "messages"."recipient_id" = $1[0m  [["recipient_id", 4]]
+  Rendered messages/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 169ms (Views: 160.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-23 20:47:45 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_nav_bar.html.erb (3.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 153ms (Views: 151.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/inbox" for 127.0.0.1 at 2015-05-23 20:47:46 -0700
+Processing by MessagesController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_nav_bar.html.erb (1.5ms)
+  [1m[36mMessage Load (0.3ms)[0m  [1mSELECT "messages".* FROM "messages"  WHERE "messages"."recipient_id" = $1[0m  [["recipient_id", 4]]
+  Rendered messages/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 208ms (Views: 202.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2015-05-23 20:47:46 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (2.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_nav_bar.html.erb (4.8ms)
+  [1m[35mRatingCache Load (3.1ms)[0m  SELECT  "rating_caches".* FROM "rating_caches"  WHERE "rating_caches"."cacheable_id" = $1 AND "rating_caches"."cacheable_type" = $2 AND "rating_caches"."dimension" = 'rating' LIMIT 1  [["cacheable_id", 4], ["cacheable_type", "User"]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "rates"  WHERE "rates"."rater_id" = $1 AND "rates"."dimension" = 'rating' AND "rates"."rateable_id" = 4 AND "rates"."rateable_type" = 'User'[0m  [["rater_id", 4]]
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items"  WHERE "items"."user_id" = 4
+  Rendered users/show.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 187ms (Views: 176.9ms | ActiveRecord: 7.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dHIzkFoe0RmvYZPDgLRqeh3Ydz83/xAiCk2iwOofsfk="}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+Processing by PagesController#index as HTML
+  Rendered shared/_nav_bar.html.erb (7.0ms)
+  Rendered pages/index.erb within layouts/application (7.5ms)
+Completed 200 OK in 168ms (Views: 167.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/charges.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/buy.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/sell.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/testpage.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/widgets.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/buy.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/charges.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/ratyrate.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/testpage.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/sell.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/widgets.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-23 20:47:48 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-23 20:50:07 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Rendered shared/_nav_bar.html.erb (8.0ms)
+  Rendered pages/index.erb within layouts/application (12.5ms)
+Completed 200 OK in 301ms (Views: 282.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/ratyrate.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/testpage.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/widgets.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/buy.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/charges.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/sell.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/testpage.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/widgets.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/buy.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/charges.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/sell.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:08 -0700
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-23 20:50:11 -0700
+Processing by UsersController#index as HTML
+  Rendered shared/_nav_bar.html.erb (2.8ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 251ms (Views: 246.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/inbox" for 127.0.0.1 at 2015-05-23 20:50:12 -0700
+Processing by MessagesController#index as HTML
+  Rendered shared/_nav_bar.html.erb (1.6ms)
+  Rendered messages/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 162ms (Views: 161.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-05-23 20:50:14 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered shared/_nav_bar.html.erb (1.5ms)
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 185ms (Views: 180.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-23 20:50:15 -0700
+Processing by UsersController#index as HTML
+  Rendered shared/_nav_bar.html.erb (1.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 156ms (Views: 154.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-05-23 20:50:16 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered shared/_nav_bar.html.erb (1.7ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 169ms (Views: 167.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-05-23 20:50:19 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AoTrL7YkJpE3oFj7sZyjPs1FBnSDbZSnr2KrUTZHYjE=", "user"=>{"email"=>"enixcell@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (7.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'enixcell@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = 4  [["current_sign_in_at", "2015-05-24 03:50:20.039613"], ["last_sign_in_at", "2015-05-24 02:12:57.043368"], ["sign_in_count", 3], ["updated_at", "2015-05-24 03:50:20.042202"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 132ms (ActiveRecord: 9.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_nav_bar.html.erb (7.1ms)
+  Rendered pages/index.erb within layouts/application (8.2ms)
+Completed 200 OK in 179ms (Views: 176.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/charges.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/sell.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/testpage.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/buy.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/ratyrate.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/sell.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/testpage.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/widgets.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/buy.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/widgets.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/charges.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:20 -0700
+
+
+Started GET "/users/4" for 127.0.0.1 at 2015-05-23 20:50:23 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_nav_bar.html.erb (4.9ms)
+  [1m[36mRatingCache Load (0.4ms)[0m  [1mSELECT  "rating_caches".* FROM "rating_caches"  WHERE "rating_caches"."cacheable_id" = $1 AND "rating_caches"."cacheable_type" = $2 AND "rating_caches"."dimension" = 'rating' LIMIT 1[0m  [["cacheable_id", 4], ["cacheable_type", "User"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "rates"  WHERE "rates"."rater_id" = $1 AND "rates"."dimension" = 'rating' AND "rates"."rateable_id" = 4 AND "rates"."rateable_type" = 'User'  [["rater_id", 4]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items"  WHERE "items"."user_id" = 4[0m
+  Rendered users/show.html.erb within layouts/application (49.1ms)
+Completed 200 OK in 243ms (Views: 218.8ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered shared/_nav_bar.html.erb (3.7ms)
+  [1m[35mRatingCache Load (0.4ms)[0m  SELECT  "rating_caches".* FROM "rating_caches"  WHERE "rating_caches"."cacheable_id" = $1 AND "rating_caches"."cacheable_type" = $2 AND "rating_caches"."dimension" = 'rating' LIMIT 1  [["cacheable_id", 4], ["cacheable_type", "User"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "rates"  WHERE "rates"."rater_id" = $1 AND "rates"."dimension" = 'rating' AND "rates"."rateable_id" = 4 AND "rates"."rateable_type" = 'User'[0m  [["rater_id", 4]]
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items"  WHERE "items"."user_id" = 4
+  Rendered users/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 180ms (Views: 175.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/charges.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/testpage.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/sell.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/buy.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/ratyrate.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/testpage.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/sell.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/widgets.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/buy.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/widgets.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/charges.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-23 20:50:26 -0700
+
+
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2015-05-23 20:50:27 -0700
+
+
+Started GET "/assets/cancel-off.png" for 127.0.0.1 at 2015-05-23 20:50:27 -0700
+>>>>>>> f89a8cb239778d019fe1817c908917a8328f8260

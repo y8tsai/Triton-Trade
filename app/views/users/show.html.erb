@@ -1,13 +1,13 @@
 <head>
 <style>
-  body {background-color: rgba(52,152,219,.5)};
+  body {background-color: rgba(52,152,219,.75)};
   body a:hover { text-decoration:none; }
   .border-form-div2 { background: white;  margin-left: auto; margin-right: auto; }
-  .border-form-div2 h1 { font-family: "Lobster", cursive; }
+  .border-form-div2 h1 { font-family: "Oswald", cursive; padding-bottom: 15px; }
   .border-form-div2 img { padding-left: 2%; float: left; padding-right: 10px; }
   .border-form-div2 ul { list-style: none; }
   .itemshowcase { clear: both; }
-  .itemshowcase .it { padding-left: 2%; padding-top:0; }
+  .itemshowcase .it { padding-left: 2%; padding-top:40px; }
   .products { padding-left:2%; }
   .products li { display: inline-block; width: 140px; vertical-align:top; }
   .products a:hover { color: #3498db; background-color: transparent; }
@@ -23,25 +23,26 @@
 	<div class="border-form-div2">
 
 	<center><h1><%= @user.name %></h1></center>
-	
+
 	<p><%= image_tag @user.avatar_url.blank? ? ("http://community.blrstartups.com/content/plugins/techchamp/assets/avatars/anon.png") : @user.avatar_url, :width => 200, :height => 200, :crop => :fill %><p>
-	
+
 	<ul>
 	    <li><strong>Email:</strong> <%= @user.email %></li>
-	    <li><strong>Date of birth:</strong> <%= @user.date_of_birth %></li>
-	    <li><strong>PID:</strong> <%= @user.PID %><br><br></li>
-            <li><strong>About Me:</strong><br>Hello!</li>
+	    <li><strong>Date of Birth:</strong> <%= @user.date_of_birth :order => [:month, :day, :year] %></li>
+		<li><strong>PID:</strong> <%= @user.PID %><br><br></li>
+		<li><strong>About Me:</strong><br>Hello!</li>
+
 	</ul>
 
 <div class = "itemshowcase">
-	<p class="it"><strong>Items for Sale</strong></p>
+	<p class="it"><center><strong>Items for Sale</strong></center></p>
 	<!--display user's items for sale -->
 	<ul class="products">
 		<% @items.each do |item| %>
 			<li>
-				<p><%= image_tag item.image_url.blank? ? ("http://www.drivenmavens.com/wp-content/uploads/Blank-page.jpg") : item.image_url, :width => 140, :height => 140, :crop => :fill %></p>
+				<p><%= image_tag item.image_url.blank? ? ("https://www.saveful.com/img/no_image_available.jpg") : item.image_url, :width => 140, :height => 140, :crop => :fill %></p>
 				<h4><%= link_to item.name, item %></h4>
-				<p>$<%= item.price %></p>
+				<p><%= number_to_currency(item.price) %></p>
 			</li>
 		<% end %>
 	</ul>
@@ -64,6 +65,6 @@
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
-        </footer> 
+        </footer>
 
 </body>

@@ -5,8 +5,8 @@
 		.iteminfo li { list-style: none; display: block; margin-bottom: 10px; text-align: left; }
 		.iteminfo a:hover { text-decoration: none; }
 		.itembox .buy { padding: 5px; }
-		.iteminfo .price { font-size: 15px; }
-		body { background-color: rgba(52, 152, 219, .5) }
+		/*.iteminfo .price { font-size: 15px; } */
+		body { background-color: rgba(52, 152, 219, .75) }
 		.itembox { border-radius: 25px; border: 2px solid #3498db; background: #FFFFFF;
 			   width: 800px; height: 570px; position: absolute;
 			   top:0; bottom:0; left:0; right:0; margin: auto}
@@ -26,7 +26,7 @@
 <center><h1><%= @item.name %></h1>
 
 <p><div class="pic">
-  <%= image_tag @item.image_url.blank? ? ("http://www.drivenmavens.com/wp-content/uploads/Blank-page.jpg") : @item.image_url, :width => 400, :height => 400, :crop => :fill %>
+  <%= image_tag @item.image_url.blank? ? ("https://www.saveful.com/img/no_image_available.jpg") : @item.image_url, :width => 400, :height => 400, :crop => :fill %>
 </div></p>
 
 <ul class="iteminfo">
@@ -36,7 +36,7 @@
 	<li><strong>Description:</strong><br>
 	<%= @item.description %><br></li>
 
-	<li class="price">$<%= @item.price %><br></li>
+	<li class="price"><strong>Price:</strong><br><%= number_to_currency(@item.price) %><br></li>
 
 	<li><strong>Seller:</strong><br>
 	<%= link_to @item.user.name.blank? ? @item.user.email : @item.user.name, user_path(@item.user) %><br></li>
@@ -46,7 +46,14 @@
 </ul>
 
 <div class="bottom">
-<br><center><button class="buy">BUY</button><br></center>
+
+<%= form_tag charges_path do %>
+  
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="Item price"
+          data-amount= "<%=@item.price * 100 %>"></script>
+<% end %>
 
 <% if user_signed_in? %>
   <% if can? :crud, @item %>
