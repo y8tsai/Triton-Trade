@@ -30,7 +30,9 @@
 	    <li><strong>Email:</strong> <%= @user.email %></li>
 	    <li><strong>Date of birth:</strong> <%= @user.date_of_birth %></li>
 		<li><strong>PID:</strong> <%= @user.PID %><br><br></li>
-            <li><strong>About Me:</strong><br>Hello!</li>
+		<li><strong>About Me:</strong><br>Hello!</li>
+
+		<li>Rating:<%= rating_for @user, "rating" %>
 	</ul>
 
 <div class = "itemshowcase">

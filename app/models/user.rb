@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
   end
 
   #user rating
-  ratyrate_rateable 'rating'
+  ratyrate_rateable "rating"
   ratyrate_rater
 
   def user_params
