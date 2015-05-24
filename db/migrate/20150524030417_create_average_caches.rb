@@ -13,5 +13,5 @@ class CreateAverageCaches < ActiveRecord::Migration
     drop_table :average_caches
   end
 
-end
+#end
 

@@ -379,3 +379,88 @@ Migrating to CreateRatingCaches (20150524030415)
 PG::DuplicateTable: ERROR:  relation "rating_caches" already exists
 : CREATE TABLE "rating_caches" ("id" serial primary key, "cacheable_id" integer, "cacheable_type" character varying(255), "avg" float NOT NULL, "qty" integer NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
   [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRatingCaches (20150524030415)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "rating_caches" ("id" serial primary key, "cacheable_id" integer, "cacheable_type" character varying(255), "avg" float NOT NULL, "qty" integer NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "rating_caches" already exists
+: CREATE TABLE "rating_caches" ("id" serial primary key, "cacheable_id" integer, "cacheable_type" character varying(255), "avg" float NOT NULL, "qty" integer NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRatingCaches (20150524030415)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150524030415"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Migrating to CreateRates (20150524030416)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.3ms)[0m  CREATE TABLE "rates" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "stars" float NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+PG::DuplicateTable: ERROR:  relation "rates" already exists
+: CREATE TABLE "rates" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "stars" float NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRates (20150524030416)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "rates" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "stars" float NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "rates" already exists
+: CREATE TABLE "rates" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "stars" float NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRates (20150524030416)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "rates" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "stars" float NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "rates" already exists
+: CREATE TABLE "rates" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "stars" float NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRates (20150524030416)
+  [1m[35m (2.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150524030416"]]
+  [1m[35m (2.5ms)[0m  COMMIT
+Migrating to CreateAverageCaches (20150524030417)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.8ms)[0m  CREATE TABLE "average_caches" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+PG::DuplicateTable: ERROR:  relation "average_caches" already exists
+: CREATE TABLE "average_caches" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAverageCaches (20150524030417)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "average_caches" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "average_caches" already exists
+: CREATE TABLE "average_caches" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAverageCaches (20150524030417)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150524030417"]]
+  [1m[35m (2.4ms)[0m  COMMIT
+Migrating to CreateOverallAverages (20150524030418)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.4ms)[0m  CREATE TABLE "overall_averages" ("id" serial primary key, "rateable_id" integer, "rateable_type" character varying(255), "overall_avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+PG::DuplicateTable: ERROR:  relation "overall_averages" already exists
+: CREATE TABLE "overall_averages" ("id" serial primary key, "rateable_id" integer, "rateable_type" character varying(255), "overall_avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateOverallAverages (20150524030418)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "overall_averages" ("id" serial primary key, "rateable_id" integer, "rateable_type" character varying(255), "overall_avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "overall_averages" already exists
+: CREATE TABLE "overall_averages" ("id" serial primary key, "rateable_id" integer, "rateable_type" character varying(255), "overall_avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateOverallAverages (20150524030418)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "overall_averages" ("id" serial primary key, "rateable_id" integer, "rateable_type" character varying(255), "overall_avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "overall_averages" already exists
+: CREATE TABLE "overall_averages" ("id" serial primary key, "rateable_id" integer, "rateable_type" character varying(255), "overall_avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateOverallAverages (20150524030418)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150524030418"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"

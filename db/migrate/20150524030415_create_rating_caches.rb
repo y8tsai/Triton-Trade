@@ -16,4 +16,4 @@ class CreateRatingCaches < ActiveRecord::Migration
       drop_table :rating_caches
     end
 
-end
+#end
