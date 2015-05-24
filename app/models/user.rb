@@ -21,6 +21,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  #user rating
+  ratyrate_rateable 'rating'
+  ratyrate_rater
+
   def user_params
     params.require(:user).permit(:username, :name, :avatar_url, :email, :password, :password_confirmation)
   end

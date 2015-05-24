@@ -50,4 +50,5 @@ gem 'cancan'
 # gem for payment
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
-
+# gem for user rating
+gem 'ratyrate'
