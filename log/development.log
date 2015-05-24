@@ -371,6 +371,7 @@ PG::ConnectionBad (could not connect to server: No such file or directory
   Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
   Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.6ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 Started GET "/charges/payment" for 127.0.0.1 at 2015-05-21 22:51:32 -0700
@@ -1775,6 +1776,8 @@ ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=show):
   Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
   Rendered /home/stjin/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.4ms)
 =======
+=======
+>>>>>>> 33b0ebd8efe8044eab768be48f3c41c7d7e45db2
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
@@ -3032,4 +3035,7 @@ Started GET "/assets/star-on.png" for 127.0.0.1 at 2015-05-23 20:50:27 -0700
 
 
 Started GET "/assets/cancel-off.png" for 127.0.0.1 at 2015-05-23 20:50:27 -0700
+<<<<<<< HEAD
 >>>>>>> f89a8cb239778d019fe1817c908917a8328f8260
+=======
+>>>>>>> 33b0ebd8efe8044eab768be48f3c41c7d7e45db2
