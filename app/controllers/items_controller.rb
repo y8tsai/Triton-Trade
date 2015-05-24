@@ -42,6 +42,7 @@ before_filter :authenticate_user!, only: [:new]
     respond_with(@item)
   end
 
+  Stripe.api_key = "sk_test_FpsBvoNQvTMqPqr6lrJfmNuf"
   token = params[:stripeToken]
   
   begin
