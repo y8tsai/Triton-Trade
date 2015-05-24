@@ -50,9 +50,9 @@
 </div>
       <!--!!!! NOTE: should only be visible when user is viewing own profile-->
       <% if user_signed_in? && current_user.id == @user.id%>
-           <% if can? :crud, @user %>
+           <%# if can? :crud, @user %>
 		<center><p><%= link_to 'Edit Profile', edit_user_registration_path %></p></center>
-           <% end %>
+           <%# end %>
         <% end %>
 
 
