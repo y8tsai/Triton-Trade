@@ -42,6 +42,20 @@ before_filter :authenticate_user!, only: [:new]
     respond_with(@item)
   end
 
+  token = params[:stripeToken]
+  
+  begin
+    charge = Stripe::Charge.create(
+      :amount => @item.price * 100,
+      :currency => "usd",
+      :source => token,
+      :description => "Charging customer"
+    )
+  rescue Stripe::CardError => e
+    flash[:error] = e.message
+    redirect_to charges_path
+  end
+
   private
     def set_item
       @item = Item.find(params[:id])
