@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
   resources :widgets
   resources :users
-  resources :charges
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get 'tags/:tag', to: 'items#index', as: "tag"
   get 'users/:id/promote', to: 'users#promote', as: 'promote_user'
   get 'users/:id/demote', to: 'users#demote', as: 'demote_user'
+  match '/charges/', to: 'charges#create', via: 'post'
 
   # for admin previlleges
 
