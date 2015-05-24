@@ -464,3 +464,118 @@ Migrating to CreateOverallAverages (20150524030418)
   [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-23 20:28:49 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_nav_bar.html.erb (48.5ms)
+  Rendered pages/index.erb within layouts/application (55.4ms)
+Completed 200 OK in 2373ms (Views: 2352.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/buy.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/charges.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/sell.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/testpage.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/widgets.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/buy.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/charges.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:51 -0700
+
+
+Started GET "/assets/sell.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/testpage.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/widgets.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/ratyrate.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2015-05-23 20:28:52 -0700
+
+
+Started GET "/users/4" for 127.0.0.1 at 2015-05-23 20:28:54 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered shared/_nav_bar.html.erb (6.1ms)
+  [1m[36mRatingCache Load (0.6ms)[0m  [1mSELECT  "rating_caches".* FROM "rating_caches"  WHERE "rating_caches"."cacheable_id" = $1 AND "rating_caches"."cacheable_type" = $2 AND "rating_caches"."dimension" = 'rating' LIMIT 1[0m  [["cacheable_id", 4], ["cacheable_type", "User"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "rates"  WHERE "rates"."rater_id" = $1 AND "rates"."dimension" = 'rating' AND "rates"."rateable_id" = 4 AND "rates"."rateable_type" = 'User'  [["rater_id", 4]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items"  WHERE "items"."user_id" = 4[0m
+  Rendered users/show.html.erb within layouts/application (51.4ms)
+Completed 200 OK in 295ms (Views: 273.2ms | ActiveRecord: 10.8ms)
