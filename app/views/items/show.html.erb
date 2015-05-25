@@ -41,6 +41,9 @@
 	<li><strong>Seller:</strong><br>
 	<%= link_to @item.user.name.blank? ? @item.user.email : @item.user.name, user_path(@item.user) %><br></li>
 
+	<li><strong>Category:</strong><br>
+	<%= @item.category %><br></li>
+
 	<li><strong>Tags:</strong><br>
 	<%= raw tag_links(@item.all_tags) %><br></li>
 </ul>
