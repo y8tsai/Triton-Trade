@@ -8,6 +8,8 @@ before_filter :authenticate_user!, only: [:new]
   def index
     if params[:tag]
        @items = Item.tagged_with(params[:tag])
+    elsif params[:category]
+       @items = Item.where(category: params[:category])
     else
        @items = Item.all
     end
