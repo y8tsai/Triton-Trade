@@ -16,7 +16,7 @@ def create
 
   charge = Stripe::Charge.create(
     :customer     => customer.id,
-    :amount       => @amount,
+    :amount       => 1500,
     :description  => 'Stripe customer',
     :currency     => 'usd'
   )
