@@ -42,7 +42,7 @@
 	<%= link_to @item.user.name.blank? ? @item.user.email : @item.user.name, user_path(@item.user) %><br></li>
 
 	<li><strong>Category:</strong><br>
-	<%= @item.category %><br></li>
+	<%= link_to @item.category, category_path %><br></li>
 
 	<li><strong>Tags:</strong><br>
 	<%= raw tag_links(@item.all_tags) %><br></li>
