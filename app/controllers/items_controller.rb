@@ -48,6 +48,6 @@ before_filter :authenticate_user!, only: [:new]
     end
 
     def item_params
-      params.require(:item).permit(:name, :description, :is_sold, :price, :condition, :image_url, :user_id, :all_tags);
+      params.require(:item).permit(:name, :description, :is_sold, :price, :condition, :image_url, :user_id, :category, :all_tags);
     end
 end
