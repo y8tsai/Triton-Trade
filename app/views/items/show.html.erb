@@ -63,6 +63,8 @@
 <% if user_signed_in? %>
   <% if can? :crud, @item %>
     <%= link_to 'Edit', edit_item_path(@item) %> | <%= link_to 'Delete', @item, method: :delete %> | 
+  <% elsif current_user.admin %>
+    <%= link_to 'Delete', @item, method: :delete %> | 
   <% end %>
 <% end %>
 
