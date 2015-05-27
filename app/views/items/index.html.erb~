@@ -33,7 +33,6 @@
 
 <center><ul class="products">
 <% @items.each do |item| %>
-	<% unless item.is_sold %>
 	<li>
 		<div class="image"><%= image_tag item.image_url.blank? ? ("https://www.saveful.com/img/no_image_available.jpg") : item.image_url, :width => 300, :height => 300, :crop => :fill %></div>
 		<div class="clearfix">
@@ -43,7 +42,6 @@
 			<p><a href="#" class="pricebutton"><%= number_to_currency(item.price) %></a></p>
 		</div>
 	</li>
-	<% end %>
 <% end %>
 </ul></center>
    
