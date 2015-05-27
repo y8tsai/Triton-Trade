@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @items = Item.where(user_id: params[:id])
-    @purchaseditems = Item.where(buyeremail: params[:email])
+    @purchaseditems = Item.where(user_id: params[:id])
   end
 
   def create
