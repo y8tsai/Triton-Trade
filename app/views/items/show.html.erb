@@ -59,7 +59,6 @@
           data-amount= "<%=@item.price * 100 %>"></script>
   <%= hidden_field_tag :item_price, @item.price %>
   <%= hidden_field_tag :item_id, @item.id %>
-  <%= hidden_field_tag :item_is_sold, @item.is_sold %>
 <% end %>
 
 <% if user_signed_in? %>

@@ -21,6 +21,10 @@ def create
     :currency     => 'usd',
   )
 
+  item=Item.find(params[:item_id])
+  item.is_sold = true
+  item.save
+
   redirect_to root_path  
     
 
