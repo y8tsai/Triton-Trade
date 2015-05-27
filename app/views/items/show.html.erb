@@ -52,6 +52,7 @@
 
 <div class="bottom">
 
+<% if item.is_sold %>
 <%= form_tag({controller: "charges", action: "create"}, mthod: "post") do %> 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
@@ -60,6 +61,10 @@
   <%= hidden_field_tag :item_price, @item.price %>
   <%= hidden_field_tag :item_id, @item.id %>
   <%= hidden_field_tag :current_useremail, current_user.email %>
+<% end %>
+
+<% else %>
+<li class="SOLD"><strong>This item has been SOLD</strong></li>
 <% end %>
 
 <% if user_signed_in? %>
