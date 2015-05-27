@@ -53,7 +53,7 @@
            <%# if can? :crud, @user %>
 
 <div class = "purchaseditemshowcase">
-	<p class="purchasedit"><center><strong>Items I Purchased</strong></center></p>
+	<p class="purchasedit"><center><strong>Items Purchased</strong></center></p>
 	<!--display user's purchased items -->
 	<ul class="purchasedproducts">
 		<% @purchaseditems.each do |item| %>
