@@ -23,6 +23,7 @@ def create
 
   item=Item.find(params[:item_id])
   item.is_sold = true
+  item.buy_email = params[:current_useremail]
   item.save
 
   redirect_to root_path  
