@@ -21,7 +21,7 @@ def create
     :currency     => 'usd',
   )
     
-  :item_is_sold => false
+  :item_is_sold => true
 
   redirect_to root_path  
     

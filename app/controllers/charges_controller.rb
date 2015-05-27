@@ -20,8 +20,6 @@ def create
     :description  => 'Stripe customer',
     :currency     => 'usd',
   )
-    
-  :item_is_sold => true
 
   redirect_to root_path  
     
