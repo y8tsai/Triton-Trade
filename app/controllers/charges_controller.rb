@@ -26,6 +26,12 @@ def create
   item.buyeremail = params[:current_useremail]
   item.save
 
+  message = Message.new
+  message.user_id = User.find_by(email: item.buyeremail)
+  message.recipient_id = item.user.id
+  message.subject = "Your #{item.name} was sold!"
+  message.body = ""
+
   redirect_to root_path  
     
 
