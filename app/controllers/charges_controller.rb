@@ -27,7 +27,7 @@ def create
   item.save
 
   message = Message.new
-  message.user_id = User.find(params[:current_userid])
+  message.user_id = params[:current_userid]
   message.recipient_id = item.user.id
   message.subject = "Your #{item.name} was sold!"
   message.body = ""
