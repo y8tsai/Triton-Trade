@@ -31,6 +31,7 @@ def create
   message.recipient_id = item.user.id
   message.subject = "Your #{item.name} was sold!"
   message.body = ""
+  message.save
 
   redirect_to root_path  
     
