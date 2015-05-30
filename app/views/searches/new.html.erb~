@@ -1,6 +1,6 @@
 <%= form_for(@search) do |f| %>
   <p>
-    <%= f.label :name %><br />
+    <%= f.label "Item Name" %><br />
     <%= f.text_field :name %>
   </p>
 
