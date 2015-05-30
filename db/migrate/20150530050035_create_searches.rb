@@ -6,7 +6,6 @@ class CreateSearches < ActiveRecord::Migration
       t.decimal :minimum_price
       t.decimal :maximum_price   
       t.string  :tag
-      t.string  :user_email  
       t.string  :condition
       t.timestamps
     end
