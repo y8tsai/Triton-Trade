@@ -36,7 +36,7 @@ end
 
 private 
 def set_search 
-  	@search = Search.find(params[:id])
+  	@search = Search.find(search_params)
 end
 
 def search_params

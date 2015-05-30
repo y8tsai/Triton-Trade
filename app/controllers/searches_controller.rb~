@@ -1,5 +1,7 @@
 class SearchesController < ApplicationController
 
+before_action :set_search, :only => [:show]
+
 respond_to :html
 
 def index
@@ -8,7 +10,6 @@ def index
 end
 
 def show
-	@search = Search.find(params[:id])
 	respond_with(@search)
 end
 
@@ -34,6 +35,10 @@ def destroy
 end
 
 private 
+def set_search 
+  	@search = Search.find(search_params)
+end
+
 def search_params
 	params.require(:search).permit(:name, :user_email, :tag, :condition, :minimum_price, :maximum_price, :category);
 end
