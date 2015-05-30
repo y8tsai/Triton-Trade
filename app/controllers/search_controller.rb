@@ -1,11 +1,14 @@
 class SearchController < ApplicationController
 
-def index
+respond_to :html
 
+def index
+	
 end
 
 def new
-
+	@search = Search.new
+	respond_with(@search)
 end
 
 private 
