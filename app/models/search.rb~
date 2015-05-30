@@ -8,7 +8,7 @@ private
 
 def find_items
     items =Item.order(:name)
-    #items =items.where("name like ?", "%#{name}#%") if name.present?
+    items =items.where("name like ?", "%#{name}%") if name.present?
     #items =items.where("category like ?", "%#{category}#%") if category.present?
     #items =items.where("tag like ?", "%#{tag}#%") if tag.present?
     #items =items.where("condition like ?", "%#{condition}#%") if condition.present?
