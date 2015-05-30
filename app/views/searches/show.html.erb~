@@ -1,4 +1,4 @@
 <% title "Search" %>
 
-<%= render :partial => @search.items %>
+<%= render partial: @search.items %>
 
