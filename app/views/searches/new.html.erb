@@ -15,12 +15,12 @@
 
   <p>
     <%= f.label :condition %><br />
-    <%= f.select :condition, [['Fair', 'Fair'], ['Used', 'Used'], ['Good', 'Good'], ['New', 'New']], autofocus: true %><br>
+    <%= f.select :condition, [['-', ''], ['Fair', 'Fair'], ['Used', 'Used'], ['Good', 'Good'], ['New', 'New']], autofocus: true %><br>
   </p>
 
   <p>
     <%= f.label :category %><br />
-    <%= f.select :category, [['Miscellaneous', 'Miscellaneous'], ['Clothes', 'Clothes'], ['Textbooks', 'Textbooks'], ['Furniture', 'Furniture']], autofocus: true %>
+    <%= f.select :category, [['-', ''],['Miscellaneous', 'Miscellaneous'], ['Clothes', 'Clothes'], ['Textbooks', 'Textbooks'], ['Furniture', 'Furniture']], autofocus: true %>
   </p>
 
   <p>
