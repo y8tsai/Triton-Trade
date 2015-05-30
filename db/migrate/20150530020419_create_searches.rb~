@@ -10,6 +10,6 @@ class CreateSearches < ActiveRecord::Migration
       t.string  :condition
 
       t.timestamps
-    ends
+    end
   end
 end
