@@ -10,7 +10,7 @@ end
 
 private 
 def search_params
-	params.require(:search).permit(:name, :user_email, :tag, :condition, :minimum_price, :maximum_price, :category);
+	params.require(:item).permit(:name, :user_email, :tag, :condition, :minimum_price, :maximum_price, :category);
 end
 
 end
