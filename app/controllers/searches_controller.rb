@@ -1,7 +1,11 @@
 class SearchesController < ApplicationController
 
+def index
+	@searches = Search.all
+end
+
 def show
-	@search = Search.all
+	@search = Search.new(search_params)
 end
 
 def new
@@ -10,6 +14,7 @@ end
 
 def create
 	@search = Search.new(search_params)
+	@search.save
 end
 
 private 
