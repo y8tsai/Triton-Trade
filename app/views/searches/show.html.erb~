@@ -1,4 +1,6 @@
-<% title "Search" %>
+<p>
+<strong>Search</strong>
+</p>
 
 <%= render partial: @search.items %>
 
