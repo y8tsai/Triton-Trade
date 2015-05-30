@@ -34,6 +34,18 @@ End test search bar
 		</form>
 	</div>
 </div>
+
+<div class="row search">
+	<div class="col-sm-6 col-sm-offset-3">
+		<% form_tag searches_path, :method => 'get' do %>
+		<p>
+		    <%= text_field_tag :search, params[:search] %>
+		    <%= submit_tag "Search", :name => nil %>
+		</p>
+		<% end %>
+	</div>
+</div>
+
 <ul class="quicklinks">
 	<li><a href="./items">BUY</a></li>
 	<li><a href="./items/new">SELL</a></li>
