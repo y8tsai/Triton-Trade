@@ -1,37 +1,4 @@
 <% title "Search" %>
 
-<p>
-  <strong>Item Name:</strong>
-  <%=h @search.name %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%=h @search.user_email %>
-</p>
-
-<p>
-  <strong>Tag:</strong>
-  <%=h @search.tag %>
-</p>
-
-<p>
-  <strong>Condition:</strong>
-  <%=h @search.condition %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%=h @search.category %>
-</p>
-
-<p>
-  <strong>Minimum Price:</strong>
-  <%=h @search.minimum_price %>
-</p>
-
-<p>
-  <strong>Maximum Price:</strong>
-  <%=h @search.maximum_price %>
-</p>
+<%= render :partial => @search.items %>
 
