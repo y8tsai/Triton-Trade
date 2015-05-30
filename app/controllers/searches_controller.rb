@@ -35,12 +35,12 @@ def destroy
 end
 
 private 
-def set_search 
-  	@search = Search.find(search_params)
-end
+  def set_search 
+  	@search = Search.find(params[:id])
+  end
 
-def search_params
+  def search_params
 	params.require(:search).permit(:name, :user_email, :tag, :condition, :minimum_price, :maximum_price, :category);
-end
+  end
 
 end
