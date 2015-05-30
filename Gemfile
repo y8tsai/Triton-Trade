@@ -55,3 +55,5 @@ gem 'ratyrate'
 
 # gem for nifty generators that generate convenient scripts
 gem 'nifty-generators', :group=> :development
+
+gem "mocha", group: :test
