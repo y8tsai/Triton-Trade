@@ -11,6 +11,7 @@
 
 <center><ul class="products">
 <% @search.items.each do |item| %>
+        <li>whats up</li>
 	<% unless item.is_sold %>
 	<li>
 		<div class="image"><%= image_tag item.image_url.blank? ? ("https://www.saveful.com/img/no_image_available.jpg") : item.image_url, :width => 300, :height => 300, :crop => :fill %></div>
