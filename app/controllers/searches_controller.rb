@@ -13,7 +13,8 @@ def new
 end
 
 def create
-	@search = Search.create!(params[:search])
+	@search = Search.new(search_params)
+	@search.save
 	redirect_to @search
 end
 
