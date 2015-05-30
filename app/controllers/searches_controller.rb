@@ -8,7 +8,7 @@ def index
 end
 
 def show
-	@search = Search.find(search_params)
+	@search = Search.find(params[:id])
 	respond_with(@search)
 end
 
