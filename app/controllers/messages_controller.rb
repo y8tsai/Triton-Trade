@@ -9,11 +9,13 @@ class MessagesController < ApplicationController
 
   def show
     @message = current_user.received_messages.find(params[:id]) unless current_user.nil?
+    redirect_to inbox_path
     respond_with(@message)
   end
 
   def new
     @message = Message.new
+    redirect_to inbox_path
     respond_with(@message)
   end
 
