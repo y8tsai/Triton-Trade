@@ -14,7 +14,7 @@ class MessagesController < ApplicationController
 
   def new
     @message = Message.new
-    redirect_to inbox_path
+    @sender = User.find(params[:sender_id])
     respond_with(@message)
   end
 
