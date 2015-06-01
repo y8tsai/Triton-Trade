@@ -8,6 +8,7 @@ class MessagesController < ApplicationController
 
   def show
     @message = current_user.received_messages.find(params[:id]) unless current_user.nil?
+    @sender = @message.user unless @message.nil?
     respond_with(@messages)
   end
 

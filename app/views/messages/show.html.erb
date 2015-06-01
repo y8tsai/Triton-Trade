@@ -24,3 +24,9 @@
   <strong>Date:</strong>
   <%= @message.created_at.strftime("%b %d, %Y") %>
 </p>
+
+<center>
+  <%= link_to new_message_path, :method => :get do %>
+    <button class="new">Reply</button><br>
+  <% end %>
+</center>
