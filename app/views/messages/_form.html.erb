@@ -16,7 +16,7 @@
     <%= f.text_field :subject, autofocus: true %><br>
     
     <%= f.label :body %><br>
-    <%= f.text_area :body, cols: 20, rows: 40, autofocus: true %><br>
+    <%= f.text_area :body, cols: 20, rows: 20, autofocus: true %><br>
 
   </div>
   <%= f.hidden_field :user_id, :value => current_user.id %>
