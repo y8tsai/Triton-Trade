@@ -24,6 +24,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     @message.save
+    redirect_to inbox_path
     respond_with(@message)
   end
 
