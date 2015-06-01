@@ -25,23 +25,8 @@
   <%= @message.created_at.strftime("%b %d, %Y") %>
 </p>
 
-<%= render 'shared/nav_bar' %>
-<body>
-<div class="border-form-div">
-	<center><h1>Reply</h1></center>
-
-	<%= render 'form' %>
-
-	<p><center><%= link_to 'Back', inbox_path %></center><p/>
-</div>
-	<div class="row">
-		<div class="col-sm-12">
-			<p>
-				<a href="./info">About Us</a> | &copy; Team OBT. All rights reserved.
-			</p>
-		</div>
-	</div>
-</body>
-
-	
-
+<center>
+  <%= link_to new_message_path, :method => :get do %>
+    <button class="new">Reply</button><br>
+  <% end %>
+</center>
