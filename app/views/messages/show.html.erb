@@ -26,7 +26,7 @@
 </p>
 
 <center>
-  <%= link_to new_message_path, :method => :get do %>
+  <%= link_to new_message_path, :method => :get, :sender_id => @message.user_id do %>
     <button class="new">Reply</button><br>
   <% end %>
 </center>
