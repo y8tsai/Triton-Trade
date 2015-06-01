@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
   respond_to :html
+  before_filter :set_recipient_id, :only => [:show, :new]
 
   def index
     @messages = current_user.received_messages unless current_user.nil?
@@ -8,8 +9,7 @@ class MessagesController < ApplicationController
 
   def show
     @message = current_user.received_messages.find(params[:id]) unless current_user.nil?
-    @sender = @message.user unless @message.nil?
-    respond_with(@messages)
+    respond_with(@message)
   end
 
   def new
@@ -34,6 +34,10 @@ class MessagesController < ApplicationController
   def destroy
     @message.destroy
     respond_with(@message)
+  end
+
+  def set_recipient_id
+    @to = params[:user_id]
   end
 
   private
