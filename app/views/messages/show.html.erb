@@ -1,6 +1,7 @@
 <head>
 	<style>
-		body { background-color: rgba(52,152,219,.75)}   
+		body { background-color: rgba(52,152,219,.75)}
+		message-content { margin: 0px auto; padding-top: 20px; }
 	</style>
 </head>
 
@@ -8,6 +9,7 @@
 
 <body>
 <div class="border-form-div2">
+<div class="message-content">
 <p>
   <strong>From:</strong>
   <%= @message.user.name.blank? ? @message.user.email : @message.user.name %>
@@ -38,5 +40,6 @@
     <button class="new">Reply</button><br>
   <% end %>
 </center>
+</div>
 </div>
 </body>

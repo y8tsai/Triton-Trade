@@ -33,19 +33,19 @@
     <%= javascript_include_tag 'ratyrate.js', "data-turbolinks-track" => false %>
 	<center><h1><%= @user.name %></h1></center>
 
+	<% if user_signed_in? && current_user.id == @user.id%>
+		<%# if can? :crud, @user %>
+			<center><li><%= link_to 'Edit Profile', edit_user_registration_path %></li></center>
+		<%# end %>
+	<% end %>
+
 	<p><%= image_tag @user.avatar_url.blank? ? ("http://community.blrstartups.com/content/plugins/techchamp/assets/avatars/anon.png") : @user.avatar_url, :width => 200, :height => 200, :crop => :fill %><p>
 
 	<ul>
 	    <li><strong>Email:</strong> <%= @user.email %></li>
 	    <li><strong>Date of Birth:</strong> <%= @user.date_of_birth.nil? ? "" : @user.date_of_birth.to_time.strftime('%b %d, %Y') %></li>
 	    <li><strong>PID:</strong> <%= @user.PID.nil? ? "" : @user.PID %><br><br></li>
-	    <li><strong>Rating:</strong> <%= rating_for @user, "rating", star_path:'/images/', cancel_place: 'left', cancel_hint: 'Cancel this vote!', space: true%><br><br><br><br></li>
-		<% if user_signed_in? && current_user.id == @user.id%>
-	           <%# if can? :crud, @user %>
-
-			<center><li><%= link_to 'Edit Profile', edit_user_registration_path %></li></center>
-        	   <%# end %>
-	        <% end %>
+	    <li><strong>Rating:</strong> <%= rating_for @user, "rating", star_path:'/images/', cancel_place: 'left', cancel_hint: 'Cancel this vote!', space: true%></li>
 	</ul>
 
 <div class = "itemshowcase">
