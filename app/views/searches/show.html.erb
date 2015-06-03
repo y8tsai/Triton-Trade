@@ -32,7 +32,12 @@
 	  < % end %>
    </center>
 < % end %>-->
-<center><a class="btn-btn-default" href="../searches/new" role="button">Advanced Search</a></center>
+<center>
+	<form method="link" action="../searches/new">
+		<input type="submit" value="Advanced Search">
+	</form>
+	<!--<a class="btn-btn-default" href="../searches/new" role="button">Advanced Search</a>-->
+</center>
 
 <center><ul class="products">
 <% @search.items.each do |item| %>
