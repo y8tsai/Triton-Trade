@@ -8,7 +8,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:google_oauth2, :facebook]
 
+  validates_confirmation_of :password
   after_create :add_profile
+
   def add_profile
  	self.create_profile
   end

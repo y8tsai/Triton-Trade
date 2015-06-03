@@ -41,7 +41,7 @@
 	    <li><strong>PID:</strong> <%= @user.PID.nil? ? "" : @user.PID %><br><br></li>
 
 	    <li><strong>About Me:</strong><br>Hello!</li>
-
+		Rating: <%= rating_for @user, "rating", cancel_place: 'left', cancel_hint: 'cancel this vote!', space: true%>
 	</ul>
 
 <div class = "itemshowcase">
@@ -49,15 +49,17 @@
 	<!--display user's items for sale -->
 	<ul class="products">
 		<% @items.each do |item| %>
+			<% if item.is_sold != true %>
 			<li>
 				<p><%= image_tag item.image_url.blank? ? ("https://www.saveful.com/img/no_image_available.jpg") : item.image_url, :width => 140, :height => 140, :crop => :fill %></p>
 				<h4><%= link_to item.name, item %></h4>
 				<p><%= number_to_currency(item.price) %></p>
 			</li>
+			<% end %>
 		<% end %>
 	</ul>
 </div>
-      <!--!!!! NOTE: should only be visible when user is viewing own profile-->
+ 
       <% if user_signed_in? && current_user.id == @user.id%>
            <%# if can? :crud, @user %>
 
@@ -75,7 +77,7 @@
 	</ul>
 </div>
 
-	   
+
 		<center><p><%= link_to 'Edit Profile', edit_user_registration_path %></p></center>
            <%# end %>
         <% end %>
