@@ -1,5 +1,15 @@
+<head>
+	<style>
+		h1 { font-family: "Oswald", sans-serif; text-align: center; }
+      		.searchbox { border-radius: 25px; border: 2px solid #3498db; background: #FFFFFF;
+                           width: 500px; height: 570px; position: absolute;
+                           top:0; bottom:0; left:0; right:0; margin: auto}      
+	</style>
+</head>
+
 <%= render 'shared/nav_bar' %>
 
+<div class="searchbox">
 <h1>Advanced Search</h1>
 
 <%= form_for(@search) do |f| %>
@@ -25,5 +35,5 @@
   </p>
   <p><%= f.submit "Submit" %></p>
 <% end %>
-
+</div>
 
