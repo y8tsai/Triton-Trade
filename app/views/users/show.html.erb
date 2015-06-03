@@ -30,7 +30,7 @@
 
 <body>
 	<div class="border-form-div2">
-
+    <%= javascript_include_tag 'ratyrate.js', "data-turbolinks-track" => false %>
 	<center><h1><%= @user.name %></h1></center>
 
 	<p><%= image_tag @user.avatar_url.blank? ? ("http://community.blrstartups.com/content/plugins/techchamp/assets/avatars/anon.png") : @user.avatar_url, :width => 200, :height => 200, :crop => :fill %><p>
