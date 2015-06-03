@@ -26,7 +26,7 @@
 	<li><a href="./items">BUY</a></li>
 	<li><a href="./items/new">SELL</a></li>
 	<li><a href="./tags/free">FREE</a></li>
-	<li><a href="./searches/new">Adv Search</a></li>
+	<!--<li><a href="./searches/new">Adv Search</a></li>-->
 </ul>
 
 <footer>
