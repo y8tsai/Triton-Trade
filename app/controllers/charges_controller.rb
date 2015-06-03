@@ -12,7 +12,7 @@ def create
     :card => params[:stripeToken]
   )
 
-  amount = params[:stripeAmount].to_i * 100
+  amount = 15 * 100
 
   charge = Stripe::Charge.create(
     :customer     => customer.id,
@@ -33,8 +33,7 @@ def create
   message.body = ""
   message.save
 
-  redirect_to root_path  
-    
+  redirect_to root_path   
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
