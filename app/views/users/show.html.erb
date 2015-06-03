@@ -4,6 +4,7 @@
   body a:hover { text-decoration:none; }
   .border-form-div2 { background: white;  margin-left: auto; margin-right: auto; }
   .border-form-div2 h1 { font-family: "Oswald", cursive; padding-bottom: 15px; }
+  .border-form-div2 .editprof { font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
   .border-form-div2 img { padding-left: 2%; float: left; padding-right: 10px; }
   .border-form-div2 ul { list-style: none; }
   .itemshowcase { clear: both; }
@@ -31,13 +32,13 @@
 <body>
 	<div class="border-form-div2">
     <%= javascript_include_tag 'ratyrate.js', "data-turbolinks-track" => false %>
-	<center><h1><%= @user.name %></h1></center>
+	<center><h1><%= @user.name %>
 
 	<% if user_signed_in? && current_user.id == @user.id%>
 		<%# if can? :crud, @user %>
-			<center><%= link_to 'Edit Profile', edit_user_registration_path %></center>
+			<center><p class="editprof" ><%= link_to 'Edit Profile', edit_user_registration_path %></p>
 		<%# end %>
-	<% end %>
+	<% end %></h1></center>
 
 	<p><%= image_tag @user.avatar_url.blank? ? ("http://community.blrstartups.com/content/plugins/techchamp/assets/avatars/anon.png") : @user.avatar_url, :width => 200, :height => 200, :crop => :fill %><p>
 
