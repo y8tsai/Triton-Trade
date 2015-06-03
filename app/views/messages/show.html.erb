@@ -1,5 +1,13 @@
+<head>
+	<style>
+		body { background-color: rgba(52,152,219,.75)}   
+	</style>
+</head>
+
 <%= render 'shared/nav_bar' %>
 
+<body>
+<div class="border-div-form2">
 <p>
   <strong>From:</strong>
   <%= @message.user.name.blank? ? @message.user.email : @message.user.name %>
@@ -30,3 +38,5 @@
     <button class="new">Reply</button><br>
   <% end %>
 </center>
+</div>
+</body>

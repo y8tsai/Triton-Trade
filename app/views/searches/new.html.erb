@@ -1,17 +1,14 @@
 <head>
 	<style>
 		body h1 { font-family: "Oswald", sans-serif; text-align: center; }
-		body { background-color: rgba(52,152,219,.75)}
-      		.searchbox { border-radius: 25px; border: 2px solid #3498db; background: #FFFFFF;
-                           width: 500px; height: 400px; position: absolute;
-                           top:0; bottom:0; left:0; right:0; margin: auto}      
+		body { background-color: rgba(52,152,219,.75)}    
 	</style>
 </head>
 
 <%= render 'shared/nav_bar' %>
 
 <body>
-<div class="border-form-div2">
+<div class="border-form-div">
 <h1>Advanced Search</h1>
 
 <%= form_for(@search) do |f| %>
