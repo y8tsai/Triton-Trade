@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <center><div class="field">
     <%= f.label :subject %><br>
     <%= f.text_field :subject, cols: 20, autofocus: true %><br>
     
@@ -23,5 +23,5 @@
   <%= f.hidden_field :recipient_id, :value => @sender.id %>
   <div class="actions">
     <%= f.submit %>
-  </div>
+  </div></center>
 <% end %>
