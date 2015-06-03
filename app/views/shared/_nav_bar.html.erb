@@ -31,10 +31,17 @@
 				<ul class="nav navbar-nav navbar-right">
 					<!--<li><%= link_to image_tag("http://static.viewbook.com/images/social_icons/facebook_16.png"), user_omniauth_authorize_path(:facebook) %></li>
 						<li><%= link_to image_tag("http://static.viewbook.com/images/social_icons/google_16.png"), user_omniauth_authorize_path(:google_oauth2) %></li>-->
-					<li><%= link_to 'Members', users_path %></li>
-					<li><%= link_to 'Inbox', inbox_path %></li>
-
 					<% if user_signed_in? %>
+
+					<li class="rightbutton"><%= link_to users_path do %>
+						<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>   Members
+						<% end %>
+					</li>
+					<li class="rightbutton"><%= link_to inbox_path do %>
+						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>   Inbox
+						<% end %>
+					</li>
+
 
 					<li><a class="navbartext">Hello, <%= current_user.name.blank? ? current_user.email : current_user.name  %>!</a></li>
 					<li class="rightbuttons"><%= link_to current_user do %>
