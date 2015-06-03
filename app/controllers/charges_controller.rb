@@ -6,22 +6,21 @@ end
 def show
 end
 
-def create
-
-  price = params[:item_price] * 100
+def create 
 
   customer = Stripe::Customer.create(
     :card => params[:stripeToken]
   )
 
+  item=Item.find(params[:item_id])
+
   charge = Stripe::Charge.create(
     :customer     => customer.id,
-    :amount       => price,
+    :amount       => item.price,
     :description  => 'Stripe customer',
     :currency     => 'usd',
   )
 
-  item=Item.find(params[:item_id])
   item.is_sold = true
   item.buyeremail = params[:current_useremail]
   item.save
@@ -38,7 +37,7 @@ def create
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
-    redirect_to charges_path
+    redirect_to root_path
   end
 
 end
