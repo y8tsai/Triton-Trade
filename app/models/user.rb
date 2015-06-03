@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:google_oauth2, :facebook]
+  after_create :send_welcome_msg
 
   validates_confirmation_of :password
   after_create :add_profile
@@ -46,6 +47,17 @@ class User < ActiveRecord::Base
     end
 
 	user
+  end
+
+  def send_welcome_msg
+    message = Message.new
+    message.user_id = user_params[:id]
+    message.recipient_id = user_params[:id]
+    message.subject = "Hello,"
+    # works only when user has username
+    #message.subject = "Hello, #{user_params[:name]}"
+    message.body = "Tutorial"
+    message.save
   end
 
   # Bind/Create User
