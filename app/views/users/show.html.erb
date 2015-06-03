@@ -41,7 +41,7 @@
 	    <li><strong>PID:</strong> <%= @user.PID.nil? ? "" : @user.PID %><br><br></li>
 
 	    <li><strong>About Me:</strong><br>Hello!</li>
-
+		Rating: <%= rating_for @user, "rating", cancel_place: 'left', cancel_hint: 'cancel this vote!', space: true%>
 	</ul>
 
 <div class = "itemshowcase">
@@ -75,7 +75,7 @@
 	</ul>
 </div>
 
-	   
+
 		<center><p><%= link_to 'Edit Profile', edit_user_registration_path %></p></center>
            <%# end %>
         <% end %>
