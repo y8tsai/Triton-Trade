@@ -12,6 +12,13 @@ class UsersController < ApplicationController
 
   def create
     User.create(user_params)
+
+    message = Message.new
+    message.user_id = user_params[:id]
+    message.recipient_id = user_params[:id]
+    message.subject = "Hello, #{user_params[:name]}"
+    message.body = "Tutorial"
+    message.save
   end
 
   def update
