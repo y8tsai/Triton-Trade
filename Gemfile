@@ -51,7 +51,7 @@ gem 'cancan'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 # gem for user rating
-gem 'ratyrate'
+gem 'ratyrate', :github => 'wazery/ratyrate'
 
 # gem for nifty generators that generate convenient scripts
 gem 'nifty-generators', :group=> :development
