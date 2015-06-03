@@ -51,11 +51,9 @@ class User < ActiveRecord::Base
 
   def send_welcome_msg
     message = Message.new
-    message.user_id = user_params[:id]
-    message.recipient_id = user_params[:id]
-    message.subject = "Hello,"
-    # works only when user has username
-    #message.subject = "Hello, #{user_params[:name]}"
+    message.user_id = self.id
+    message.recipient_id = self.id
+    message.subject = "Hello, #{self.full_name}"
     message.body = "Tutorial"
     message.save
   end
