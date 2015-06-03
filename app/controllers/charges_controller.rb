@@ -6,13 +6,13 @@ end
 def show
 end
 
-def create
-
-  price = params[:item_price] * 100
+def create 
 
   customer = Stripe::Customer.create(
     :card => params[:stripeToken]
   )
+
+  price = params[:item_price] * 100
 
   charge = Stripe::Charge.create(
     :customer     => customer.id,
