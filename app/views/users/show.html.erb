@@ -40,7 +40,8 @@
 	    <li><strong>Date of Birth:</strong> <%= @user.date_of_birth.nil? ? "" : @user.date_of_birth.to_time.strftime('%b %d, %Y') %></li>
 	    <li><strong>PID:</strong> <%= @user.PID.nil? ? "" : @user.PID %><br><br></li>
 
-		Rating: <%= rating_for @user, "dimension_name", star_path:'/images/ratyrate', "rating", cancel_place: 'left', cancel_hint: 'cancel this vote!', space: true%>
+	    <li><strong>About Me:</strong><br>Hello!</li>
+		Rating: <%= rating_for @user, "rating", star_path:'/images/ratyrate', cancel_place: 'left', cancel_hint: 'cancel this vote!', space: true%>
 	</ul>
 
 <div class = "itemshowcase">
