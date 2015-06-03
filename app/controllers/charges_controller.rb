@@ -12,15 +12,16 @@ def create
     :card => params[:stripeToken]
   )
 
-  item=Item.find(params[:item_id])
+  amount = params[:stripeAmount].to_i * 100
 
   charge = Stripe::Charge.create(
     :customer     => customer.id,
-    :amount       => item.price,
+    :amount       => amount,
     :description  => 'Stripe customer',
     :currency     => 'usd',
   )
 
+  item=Item.find(params[:item_id])
   item.is_sold = true
   item.buyeremail = params[:current_useremail]
   item.save
