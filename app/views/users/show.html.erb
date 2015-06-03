@@ -35,7 +35,7 @@
 
 	<% if user_signed_in? && current_user.id == @user.id%>
 		<%# if can? :crud, @user %>
-			<center><li><%= link_to 'Edit Profile', edit_user_registration_path %></li></center>
+			<center><%= link_to 'Edit Profile', edit_user_registration_path %></center>
 		<%# end %>
 	<% end %>
 
