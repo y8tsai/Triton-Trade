@@ -53,7 +53,8 @@ class User < ActiveRecord::Base
     message = Message.new
     message.user_id = self.id
     message.recipient_id = self.id
-    message.subject = "Hello, #{self.full_name}! Welcome to the Triton Trade community! Here is a quick guide to get you start buying and selling items to other members in our community.\n\nNavigation bar: Access quick features such as clicking our logo to be redirected to the home page, explore categories of items, or go to account management.\n\nHomepage: Search items by name or click one of the featured buttons below the search bar to be redirected to that page.\n\nBuy: View the listing of items for sale from other users. \n\nSell: Post an item you wish to be sold.\n\nFree: View items that are listed as free.\n\nThanks again for joining our community. Happy Trading!\nTriton Trade\n"
+    message.subject = "Hello, #{self.full_name}!"
+#    message.subject = "Hello, #{self.full_name}! Welcome to the Triton Trade community! Here is a quick guide to get you start buying and selling items to other members in our community.\n\nNavigation bar: Access quick features such as clicking our logo to be redirected to the home page, explore categories of items, or go to account management.\n\nHomepage: Search items by name or click one of the featured buttons below the search bar to be redirected to that page.\n\nBuy: View the listing of items for sale from other users. \n\nSell: Post an item you wish to be sold.\n\nFree: View items that are listed as free.\n\nThanks again for joining our community. Happy Trading!\nTriton Trade\n"
     message.body = "Tutorial"
     message.save
   end
