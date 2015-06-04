@@ -9,7 +9,7 @@ before_filter :authenticate_user!, only: [:new]
 
   def index
     if params[:tag] == "free"
-       @items = Item.where("price <= ?", 0) || Item.tagged_with(params[:tag])
+       @items = Item.where("price <= ?", 0) OR Item.tagged_with(params[:tag])
     elsif params[:tag]
        @items = Item.tagged_with(params[:tag])
     elsif params[:category]
