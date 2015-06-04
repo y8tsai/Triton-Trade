@@ -46,7 +46,7 @@
 	    <li><strong>Email:</strong> <%= @user.email %></li>
 	    <li><strong>Date of Birth:</strong> <%= @user.date_of_birth.nil? ? "" : @user.date_of_birth.to_time.strftime('%b %d, %Y') %></li>
 	    <li><strong>PID:</strong> <%= @user.PID.nil? ? "" : @user.PID %><br><br></li>
-		<li><strong>Rating:</strong> <%= rating_for @user, "rating", :disable_after_rate => true, star_path:'/images/', cancel_place: 'left', cancel_hint: 'Cancel this vote!', space: true%></li>
+		<li><strong>Rating:</strong> <%= rating_for @user, "rating", :disable_after_rate => true, star_path:'/images/', cancel_place: 'left', cancel_hint: 'Cancel this vote!', space: true, imdb_avg: true %></li>
 	</ul>
 
 <div class = "itemshowcase">
