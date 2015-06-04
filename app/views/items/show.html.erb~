@@ -58,16 +58,28 @@
 <% else %>
 	<% if user_signed_in? %>
 		<% if current_user.email != @item.user.email %>
+			<% if @item.all_tags.include?("free") || @item.price <= 0 %>
+		<%= form_tag({controller: "claims", action "create"}, method: "post") do %>
+		<%= submit_tag("Claim Item") %>
+	<%= hidden_field_tag :item_price, @item.price %>
+  	<%= hidden_field_tag :item_id, @item.id %>
+        <%= hidden_field_tag :current_useremail, current_user.email %>
+        <%= hidden_field_tag :current_userid, current_user.id %>
+
+		<% end %>
+			<% else %>
 		<%= form_tag({controller: "charges", action: "create"}, mthod: "post") do %> 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="Item price"
           data-amount= "<%=@item.price * 100 %>"></script>
+ 
   <%= hidden_field_tag :item_price, @item.price %>
   <%= hidden_field_tag :item_id, @item.id %>
   <%= hidden_field_tag :current_useremail, current_user.email %>
   <%= hidden_field_tag :current_userid, current_user.id %>
 			<% end %>
+		    <% end %>
 		<% end %>
 	<% end %>
 <% end %>
