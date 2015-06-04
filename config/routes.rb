@@ -22,7 +22,8 @@ Rails.application.routes.draw do
   get 'users/:id/promote', to: 'users#promote', as: 'promote_user'
   get 'users/:id/demote', to: 'users#demote', as: 'demote_user'
   match '/charges/', to: 'charges#create', via: 'post'
-
+  match '/claims/', to: 'claims#create', via: 'post' 
+ 
   # for admin previlleges
 
   # Example of regular route:
