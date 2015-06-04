@@ -10,7 +10,7 @@ before_filter :authenticate_user!, only: [:new]
   def index
     if params[:tag] == "free"
        @items = Item.where("price <= ?", 0) || Item.tagged_with(params[:tag])
-    elsif params[:tag] != "free"
+    elsif params[:tag] && params[:tag] != "free"
        @items = Item.tagged_with(params[:tag])
     elsif params[:category]
        @items = Item.where(category: params[:category])
