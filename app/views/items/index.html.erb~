@@ -23,9 +23,9 @@
 <%= render 'shared/nav_bar' %>
 <body>
 <% if request.original_url == "http://triton-trade.herokuapp.com/tags/free" %>
-<h1>For Free</h1>
-<% else %>
 <h1>For Sale</h1>
+<% else %>
+<h1>For Free</h1>
 <% end %>
 
 <% if user_signed_in? %>
