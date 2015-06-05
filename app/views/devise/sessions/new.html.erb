@@ -8,8 +8,6 @@
 <div class="border-form-div">
 <h2>Sign In</h2>
 
-<%= render 'shared/nav_bar' %>
-
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div><%= f.label :email %><br />
   <%= f.email_field :email, autofocus: true %></div>
@@ -28,14 +26,4 @@
 <text><%= render "devise/shared/links" %></text>
 </div>
 </div>
-<footer>
-            <div class="row">
-		<div class="col-sm-12">
-		    <p>
-		    <a href="../info">About Us</a> | &copy; Team OBT. All rights resvered.</p>
-		</div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-        </footer> 
 </body>
