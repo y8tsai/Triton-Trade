@@ -12,7 +12,7 @@ def create
     :card => params[:stripeToken]
   )
 
-  amount = 15 * 100
+  amount = params[:item_price].to_i * 100
 
   charge = Stripe::Charge.create(
     :customer     => customer.id,
