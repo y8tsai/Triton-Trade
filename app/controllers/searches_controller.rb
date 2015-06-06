@@ -17,6 +17,11 @@ def create
 	redirect_to @search
 end
 
+def update
+	@search.update(search_params)
+	redirect_to @search
+end
+
 private 
   def search_params
 	params.require(:search).permit(:name, :user_email, :tag, :condition, :minimum_price, :maximum_price, :category);
