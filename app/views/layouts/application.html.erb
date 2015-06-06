@@ -16,6 +16,6 @@
   <body>
     <%= render 'layouts/header' %>
     <%= yield %>
-    <%= render 'layouts/footer' %>
+    <%= render 'layouts/footer' unless current_page?(controller: 'items', action: 'show') %>
   </body>
 </html>
