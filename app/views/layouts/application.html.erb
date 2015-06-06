@@ -16,6 +16,6 @@
   <body>
     <%= render 'layouts/header' %>
     <%= yield %>
-    <%= render 'layouts/footer' unless current_page?(items_path) %>
+    <%= render 'layouts/footer' unless params[:controller] == 'items' and params[:action] == 'show' %>
   </body>
 </html>
