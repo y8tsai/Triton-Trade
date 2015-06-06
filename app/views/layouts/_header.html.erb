@@ -28,6 +28,18 @@
 						</ul>
 					</li>
 				</ul>
+				<% unless params[:controller] == 'pages' and params[:action] == 'index' %>
+					<%= form_for @search do |f| %>
+						<div class="input-group">
+							<%= f.text_field :name, class: "form-control input-sm", placeholder: "Find something you want!" %>
+							<span class="input-group-btn">
+							<%= button_tag(type: "submit", class: "btn btn-default btn-sm") do %>
+							<span class="glyphicon glyphicon-search"></span>
+							<% end %>
+							</span>
+						</div>
+					<% end %>
+				<% end %>
 				<ul class="nav navbar-nav navbar-right">
 					<!--<li><%= link_to image_tag("http://static.viewbook.com/images/social_icons/facebook_16.png"), user_omniauth_authorize_path(:facebook) %></li>
 						<li><%= link_to image_tag("http://static.viewbook.com/images/social_icons/google_16.png"), user_omniauth_authorize_path(:google_oauth2) %></li>-->
