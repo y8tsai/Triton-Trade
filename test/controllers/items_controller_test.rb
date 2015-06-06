@@ -5,6 +5,10 @@ class ItemsControllerTest < ActionController::TestCase
   #   assert true
   # end
 
+  def setup
+     @item = Item.new
+  end
+
   test "Create Item" do
     get :create
     assert_response :success
@@ -15,13 +19,8 @@ class ItemsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "Destroy Item" do
-    get :destroy
-    assert_response :success
-  end
-
   test "Show Item" do
-    get :show
+    get :show, id: @item.id
     assert_response :success
   end
 
@@ -32,6 +31,11 @@ class ItemsControllerTest < ActionController::TestCase
 
   test "Index Item" do
     get :index
+    assert_response :success
+  end
+
+  test "Destroy Item" do
+    get :destroy, id: @item.id
     assert_response :success
   end
 end
