@@ -1,0 +1,705 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.7ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:07:05, 2015-06-06 23:07:05).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "widgets"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "searches"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "profiles"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:07:05, 2015-06-06 23:07:05).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:07:05, 2015-06-06 23:07:05).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "widgets"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "searches"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "profiles"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:07:05, 2015-06-06 23:07:05).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:07:05, 2015-06-06 23:07:05).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "widgets"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "searches"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "profiles"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:07:05, 2015-06-06 23:07:05).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:07:05, 2015-06-06 23:07:05).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "widgets"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "searches"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "profiles"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:07:05, 2015-06-06 23:07:05).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:07:05, 2015-06-06 23:07:05).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "widgets"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (1.5ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "searches"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "profiles"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:07:05, 2015-06-06 23:07:05).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:07:05, 2015-06-06 23:07:05).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "widgets"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "searches"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "profiles"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:07:05, 2015-06-06 23:07:05).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:07:05, 2015-06-06 23:07:05).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:07:05', '2015-06-06 23:07:05', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.5ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:14:38, 2015-06-06 23:14:38).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "widgets"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "searches"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "profiles"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:14:38, 2015-06-06 23:14:38).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:14:38, 2015-06-06 23:14:38).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "widgets"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "searches"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "profiles"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:14:38, 2015-06-06 23:14:38).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:14:38, 2015-06-06 23:14:38).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "widgets"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "searches"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "profiles"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:14:38, 2015-06-06 23:14:38).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:14:38, 2015-06-06 23:14:38).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "widgets"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "searches"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "profiles"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:14:38, 2015-06-06 23:14:38).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:14:38, 2015-06-06 23:14:38).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "widgets"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "searches"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "profiles"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:14:38, 2015-06-06 23:14:38).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:14:38, 2015-06-06 23:14:38).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "widgets"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "searches"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "profiles"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:14:38, 2015-06-06 23:14:38).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:14:38, 2015-06-06 23:14:38).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:14:38', '2015-06-06 23:14:38', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.5ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:30:41, 2015-06-06 23:30:41).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "widgets"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "searches"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "profiles"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:30:41, 2015-06-06 23:30:41).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:30:41, 2015-06-06 23:30:41).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "widgets"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "searches"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "profiles"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:30:41, 2015-06-06 23:30:41).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:30:41, 2015-06-06 23:30:41).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "widgets"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "searches"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "profiles"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:30:41, 2015-06-06 23:30:41).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:30:41, 2015-06-06 23:30:41).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "widgets"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "searches"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "profiles"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:30:41, 2015-06-06 23:30:41).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:30:41, 2015-06-06 23:30:41).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "widgets"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "searches"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "profiles"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:30:41, 2015-06-06 23:30:41).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:30:41, 2015-06-06 23:30:41).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "widgets"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "searches"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "profiles"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:30:41, 2015-06-06 23:30:41).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "widgets" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "overall_averages" DISABLE TRIGGER ALL;ALTER TABLE "tags" DISABLE TRIGGER ALL;ALTER TABLE "taggings" DISABLE TRIGGER ALL;ALTER TABLE "messages" DISABLE TRIGGER ALL;ALTER TABLE "rating_caches" DISABLE TRIGGER ALL;ALTER TABLE "rates" DISABLE TRIGGER ALL;ALTER TABLE "average_caches" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "searches" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "widgets"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "widgets" ("name", "description", "stock", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, '2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "searches"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "searches" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "profiles"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+PG::NotNullViolation: ERROR:  null value in column "profile" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, 2015-06-06 23:30:41, 2015-06-06 23:30:41).
+: INSERT INTO "profiles" ("created_at", "updated_at", "id") VALUES ('2015-06-06 23:30:41', '2015-06-06 23:30:41', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "widgets" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "overall_averages" ENABLE TRIGGER ALL;ALTER TABLE "tags" ENABLE TRIGGER ALL;ALTER TABLE "taggings" ENABLE TRIGGER ALL;ALTER TABLE "messages" ENABLE TRIGGER ALL;ALTER TABLE "rating_caches" ENABLE TRIGGER ALL;ALTER TABLE "rates" ENABLE TRIGGER ALL;ALTER TABLE "average_caches" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "searches" ENABLE TRIGGER ALL

@@ -3101,3 +3101,848 @@ PG::ConnectionBad (could not connect to server: No such file or directory
   Rendered /home/jeff/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
   Rendered /home/jeff/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /home/jeff/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-06 15:28:10 -0700
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+):
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `initialize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `new'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.8) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.8) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.8) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.8) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.9.1) lib/puma/server.rb:490:in `handle_request'
+  puma (2.9.1) lib/puma/server.rb:361:in `process_client'
+  puma (2.9.1) lib/puma/server.rb:254:in `block in run'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-06 16:01:22 -0700
+
+ActiveRecord::NoDatabaseError (FATAL:  database "app_development" does not exist
+Run `$ bin/rake db:create db:migrate` to create your database):
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:898:in `rescue in connect'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.8) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.8) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.8) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.8) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.9.1) lib/puma/server.rb:490:in `handle_request'
+  puma (2.9.1) lib/puma/server.rb:361:in `process_client'
+  puma (2.9.1) lib/puma/server.rb:254:in `block in run'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-06 16:02:09 -0700
+
+ActiveRecord::NoDatabaseError (FATAL:  database "app_development" does not exist
+Run `$ bin/rake db:create db:migrate` to create your database):
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:898:in `rescue in connect'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /usr/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.8) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.8) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.8) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.8) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.9.1) lib/puma/server.rb:490:in `handle_request'
+  puma (2.9.1) lib/puma/server.rb:361:in `process_client'
+  puma (2.9.1) lib/puma/server.rb:254:in `block in run'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.2ms)
+  [1m[36m (65.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (55.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateWidgets (20140707111715)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (81.4ms)[0m  [1mCREATE TABLE "widgets" ("id" serial primary key, "name" character varying(255), "description" text, "stock" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140707111715"]]
+  [1m[36m (15.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProfiles (20150426002521)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (47.5ms)[0m  [1mCREATE TABLE "profiles" ("id" serial primary key, "profile" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150426002521"]]
+  [1m[36m (13.4ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateUsers (20150426013917)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (76.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (31.7ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36m (41.1ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150426013917"]]
+  [1m[36m (19.5ms)[0m  [1mCOMMIT[0m
+Migrating to AddProviderToUsers (20150427221755)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD COLUMN "provider" character varying(255)[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD COLUMN "uid" character varying(255)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150427221755"]]
+  [1m[35m (8.7ms)[0m  COMMIT
+Migrating to AddUsernameToUsers (20150428221735)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" ADD COLUMN "username" character varying(255)
+  [1m[36m (47.5ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD COLUMN "PID" character varying(255)
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD COLUMN "date_of_birth" timestamp[0m
+  [1m[35m (166.4ms)[0m  ALTER TABLE "users" ADD COLUMN "is_female" boolean DEFAULT 'f'
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150428221735"]]
+  [1m[35m (15.8ms)[0m  COMMIT
+Migrating to AddNameToUsers (20150501220242)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" ADD COLUMN "name" character varying(255)
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD COLUMN "PID" character varying(255)[0m
+PG::DuplicateColumn: ERROR:  column "PID" of relation "users" already exists
+: ALTER TABLE "users" ADD COLUMN "PID" character varying(255)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddNameToUsers (20150501220242)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "users" ADD COLUMN "name" character varying(255)[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD COLUMN "date_of_birth" timestamp
+PG::DuplicateColumn: ERROR:  column "date_of_birth" of relation "users" already exists
+: ALTER TABLE "users" ADD COLUMN "date_of_birth" timestamp
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddNameToUsers (20150501220242)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD COLUMN "name" character varying(255)[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "users" ADD COLUMN "is_female" boolean DEFAULT 'f'
+PG::DuplicateColumn: ERROR:  column "is_female" of relation "users" already exists
+: ALTER TABLE "users" ADD COLUMN "is_female" boolean DEFAULT 'f'
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddNameToUsers (20150501220242)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "users" ADD COLUMN "name" character varying(255)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150501220242"]]
+  [1m[36m (52.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddAvatarUrlToUsers (20150508221915)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD COLUMN "avatar_url" character varying(255)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150508221915"]]
+  [1m[36m (10.2ms)[0m  [1mCOMMIT[0m
+Migrating to Db (20150513181816)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150513181816"]]
+  [1m[35m (12.3ms)[0m  COMMIT
+Migrating to CreateItems (20150516003310)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (78.6ms)[0m  CREATE TABLE "items" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150516003310"]]
+  [1m[35m (13.7ms)[0m  COMMIT
+Migrating to AddFieldsToItems (20150516010342)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (103.0ms)[0m  ALTER TABLE "items" ADD COLUMN "is_sold" boolean DEFAULT 'f'
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "items" ADD COLUMN "price" decimal(6,2)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "items" ADD COLUMN "image_url" character varying(255)
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "items" ADD COLUMN "condition" character varying(255)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150516010342"]]
+  [1m[36m (19.0ms)[0m  [1mCOMMIT[0m
+Migrating to AddReferenceToItems (20150516011230)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "items" ADD COLUMN "user_id" integer[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150516011230"]]
+  [1m[36m (10.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTags (20150517011410)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (48.2ms)[0m  [1mCREATE TABLE "tags" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150517011410"]]
+  [1m[36m (12.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTaggings (20150517011535)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (40.0ms)[0m  [1mCREATE TABLE "taggings" ("id" serial primary key, "item_id" integer, "tag_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (31.8ms)[0m  CREATE  INDEX  "index_taggings_on_item_id" ON "taggings"  ("item_id")
+  [1m[36m (46.5ms)[0m  [1mCREATE  INDEX  "index_taggings_on_tag_id" ON "taggings"  ("tag_id")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150517011535"]]
+  [1m[36m (5.6ms)[0m  [1mCOMMIT[0m
+Migrating to AddUserIdToItems (20150517071356)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "items" ADD COLUMN "role" character varying(255)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150517071356"]]
+  [1m[36m (11.2ms)[0m  [1mCOMMIT[0m
+Migrating to AddRoleToUsers (20150517075851)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD COLUMN "role" character varying(255)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150517075851"]]
+  [1m[36m (10.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMessages (20150518012948)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (84.5ms)[0m  [1mCREATE TABLE "messages" ("id" serial primary key, "user_id" integer, "recipient_id" integer, "subject" character varying(255), "body" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150518012948"]]
+  [1m[36m (17.5ms)[0m  [1mCOMMIT[0m
+Migrating to AddAdminToUsers (20150520024004)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (209.2ms)[0m  [1mALTER TABLE "users" ADD COLUMN "admin" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150520024004"]]
+  [1m[36m (15.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRatingCaches (20150524030415)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (109.2ms)[0m  [1mCREATE TABLE "rating_caches" ("id" serial primary key, "cacheable_id" integer, "cacheable_type" character varying(255), "avg" float NOT NULL, "qty" integer NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (31.6ms)[0m  CREATE  INDEX  "index_rating_caches_on_cacheable_id_and_cacheable_type" ON "rating_caches"  ("cacheable_id", "cacheable_type")
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150524030415"]]
+  [1m[35m (14.7ms)[0m  COMMIT
+Migrating to CreateRates (20150524030416)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (80.8ms)[0m  CREATE TABLE "rates" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "stars" float NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (47.9ms)[0m  [1mCREATE  INDEX  "index_rates_on_rater_id" ON "rates"  ("rater_id")[0m
+  [1m[35m (39.4ms)[0m  CREATE  INDEX  "index_rates_on_rateable_id_and_rateable_type" ON "rates"  ("rateable_id", "rateable_type")
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150524030416"]]
+  [1m[35m (12.9ms)[0m  COMMIT
+Migrating to CreateAverageCaches (20150524030417)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (48.6ms)[0m  CREATE TABLE "average_caches" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150524030417"]]
+  [1m[35m (20.9ms)[0m  COMMIT
+Migrating to CreateOverallAverages (20150524030418)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (40.1ms)[0m  CREATE TABLE "overall_averages" ("id" serial primary key, "rateable_id" integer, "rateable_type" character varying(255), "overall_avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150524030418"]]
+  [1m[35m (20.3ms)[0m  COMMIT
+Migrating to AddCategoryColumnToItems (20150525001912)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "items" ADD COLUMN "category" character varying(255)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150525001912"]]
+  [1m[35m (19.0ms)[0m  COMMIT
+Migrating to AddPurchasedByToItems (20150527055403)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (75.8ms)[0m  ALTER TABLE "items" ADD COLUMN "buyeremail" character varying(255) DEFAULT '' NOT NULL
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150527055403"]]
+  [1m[35m (18.0ms)[0m  COMMIT
+Migrating to CreateSearches (20150530050035)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (114.4ms)[0m  CREATE TABLE "searches" ("id" serial primary key, "name" character varying(255), "category" character varying(255), "minimum_price" decimal, "maximum_price" decimal, "tag" character varying(255), "condition" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150530050035"]]
+  [1m[35m (17.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-06 16:06:42 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.erb within layouts/application (37.5ms)
+  Rendered layouts/_header.html.erb (11.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 3524ms (Views: 3471.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/buy.css?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/claims.css?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/charges.css?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/searches.css?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/sell.css?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/testpage.css?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/widgets.css?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/claims.js?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/buy.js?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/charges.js?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/ratyrate.js?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/searches.js?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/sell.js?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/testpage.js?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/widgets.js?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-06 16:06:46 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+Processing by PagesController#index as HTML
+  Rendered pages/index.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 140ms (Views: 139.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/charges.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/buy.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/claims.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/searches.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/sell.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/testpage.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/widgets.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/buy.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/charges.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/claims.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/ratyrate.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/searches.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/sell.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/testpage.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/widgets.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:05 -0700
+
+
+Started GET "/items" for 127.0.0.1 at 2015-06-06 16:10:20 -0700
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (1.0ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 164ms (Views: 156.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2015-06-06 16:10:23 -0700
+Processing by ItemsController#new as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-06-06 16:10:23 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (33.9ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 294ms (Views: 248.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/tags/free" for 127.0.0.1 at 2015-06-06 16:10:25 -0700
+Processing by ItemsController#index as HTML
+  Parameters: {"tag"=>"free"}
+  [1m[36mTag Load (1.4ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'free' LIMIT 1[0m
+Completed 404 Not Found in 74ms
+
+ActiveRecord::RecordNotFound (ActiveRecord::RecordNotFound):
+  app/models/item.rb:20:in `tagged_with'
+  app/controllers/items_controller.rb:12:in `index'
+
+
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.9ms)
+
+
+Started GET "/tags/free" for 127.0.0.1 at 2015-06-06 16:10:25 -0700
+Processing by ItemsController#index as HTML
+  Parameters: {"tag"=>"free"}
+  [1m[35mTag Load (0.5ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'free' LIMIT 1
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (ActiveRecord::RecordNotFound):
+  app/models/item.rb:20:in `tagged_with'
+  app/controllers/items_controller.rb:12:in `index'
+
+
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.1ms)
+
+
+Started GET "/tags/free" for 127.0.0.1 at 2015-06-06 16:10:30 -0700
+Processing by ItemsController#index as HTML
+  Parameters: {"tag"=>"free"}
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'free' LIMIT 1[0m
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (ActiveRecord::RecordNotFound):
+  app/models/item.rb:20:in `tagged_with'
+  app/controllers/items_controller.rb:12:in `index'
+
+
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.4ms)
+
+
+Started GET "/tags/free" for 127.0.0.1 at 2015-06-06 16:10:30 -0700
+Processing by ItemsController#index as HTML
+  Parameters: {"tag"=>"free"}
+  [1m[35mTag Load (0.5ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'free' LIMIT 1
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (ActiveRecord::RecordNotFound):
+  app/models/item.rb:20:in `tagged_with'
+  app/controllers/items_controller.rb:12:in `index'
+
+
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.9ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2015-06-06 16:10:48 -0700
+Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3S6fa23/jXPJxs4jwhaT75dRHJcqe6lITjiUBhyYqvI=", "search"=>{"name"=>"book"}, "button"=>""}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "searches" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2015-06-06 23:10:48.964705"], ["name", "book"], ["updated_at", "2015-06-06 23:10:48.964705"]]
+  [1m[36m (60.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/searches/1
+Completed 302 Found in 67ms (ActiveRecord: 62.0ms)
+
+
+Started GET "/searches/1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+Processing by SearchesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSearch Load (0.5ms)[0m  SELECT  "searches".* FROM "searches"  WHERE "searches"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mItem Load (1.3ms)[0m  [1mSELECT "items".* FROM "items"  WHERE (name ilike '%book%')  ORDER BY "items"."name" ASC[0m
+  Rendered searches/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 239ms (Views: 234.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/claims.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/charges.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/buy.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/searches.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/sell.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/testpage.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/widgets.css?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/buy.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/charges.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/claims.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/ratyrate.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/searches.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/sell.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/testpage.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/widgets.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-06 16:10:49 -0700
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-06-06 16:10:55 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 167ms (Views: 165.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-06-06 16:11:17 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3S6fa23/jXPJxs4jwhaT75dRHJcqe6lITjiUBhyYqvI=", "user"=>{"email"=>"test@gmail.com", "name"=>"Michael Park", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: password_confirmation
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2015-06-06 23:11:17.609101"], ["email", "test@gmail.com"], ["encrypted_password", "$2a$10$E4r7FmDjJabM8xVL2acBOeAp2BfjU8UCoLvyHsMZDmvMCil2Dg65S"], ["name", "Michael Park"], ["updated_at", "2015-06-06 23:11:17.609101"]]
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "messages" ("body", "created_at", "recipient_id", "subject", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["body", "Hello, Michael Park! Welcome to the Triton Trade community! Here is a quick guide to get you start buying and selling items to other members in our community.\n\nNavigation bar: Access quick features such as clicking our logo to be redirected to the home page, explore categories of items, or go to account management.\n\nHomepage: Search items by name or click one of the featured buttons below the search bar to be redirected to that page.\n\nBuy: View the listing of items for sale from other users. \n\nSell: Post an item you wish to be sold.\n\nFree: View items that are listed as free.\n\nThanks again for joining our community. Happy Trading!\nTriton Trade\n"], ["created_at", "2015-06-06 23:11:17.623842"], ["recipient_id", 1], ["subject", "Hello, Michael Park!"], ["updated_at", "2015-06-06 23:11:17.623842"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 246ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: user_id):
+  app/models/user.rb:16:in `add_profile'
+
+
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-06 16:31:43 -0700
+Processing by PagesController#index as HTML
+  Rendered pages/index.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 219ms (Views: 218.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2015-06-06 16:31:47 -0700
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 139ms (Views: 137.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2015-06-06 16:31:51 -0700
+Processing by ItemsController#new as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-06-06 16:31:51 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 144ms (Views: 141.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/info" for 127.0.0.1 at 2015-06-06 16:31:56 -0700
+Processing by PagesController#info as HTML
+  Rendered pages/info.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 192ms (Views: 190.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-06 16:32:43 -0700
+Processing by PagesController#index as HTML
+  Rendered pages/index.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 143ms (Views: 142.1ms | ActiveRecord: 0.0ms)

@@ -11,24 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150520024004) do
-=======
-ActiveRecord::Schema.define(version: 20150524030418) do
->>>>>>> f89a8cb239778d019fe1817c908917a8328f8260
-=======
-ActiveRecord::Schema.define(version: 20150524030418) do
->>>>>>> 33b0ebd8efe8044eab768be48f3c41c7d7e45db2
+ActiveRecord::Schema.define(version: 20150530050035) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 33b0ebd8efe8044eab768be48f3c41c7d7e45db2
   create_table "average_caches", force: true do |t|
     t.integer  "rater_id"
     t.integer  "rateable_id"
@@ -38,10 +25,6 @@ ActiveRecord::Schema.define(version: 20150524030418) do
     t.datetime "updated_at"
   end
 
-<<<<<<< HEAD
->>>>>>> f89a8cb239778d019fe1817c908917a8328f8260
-=======
->>>>>>> 33b0ebd8efe8044eab768be48f3c41c7d7e45db2
   create_table "items", force: true do |t|
     t.string   "name"
     t.text     "description"
@@ -53,6 +36,8 @@ ActiveRecord::Schema.define(version: 20150524030418) do
     t.string   "condition"
     t.integer  "user_id"
     t.string   "role"
+    t.string   "category"
+    t.string   "buyeremail",                          default: "",    null: false
   end
 
   create_table "messages", force: true do |t|
@@ -64,11 +49,6 @@ ActiveRecord::Schema.define(version: 20150524030418) do
     t.datetime "updated_at"
   end
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 33b0ebd8efe8044eab768be48f3c41c7d7e45db2
   create_table "overall_averages", force: true do |t|
     t.integer  "rateable_id"
     t.string   "rateable_type"
@@ -77,29 +57,12 @@ ActiveRecord::Schema.define(version: 20150524030418) do
     t.datetime "updated_at"
   end
 
-  create_table "posts", force: true do |t|
-    t.text     "content"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "role"
-  end
-
-<<<<<<< HEAD
->>>>>>> f89a8cb239778d019fe1817c908917a8328f8260
-=======
->>>>>>> 33b0ebd8efe8044eab768be48f3c41c7d7e45db2
   create_table "profiles", force: true do |t|
     t.string   "profile",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 33b0ebd8efe8044eab768be48f3c41c7d7e45db2
   create_table "rates", force: true do |t|
     t.integer  "rater_id"
     t.integer  "rateable_id"
@@ -125,12 +88,13 @@ ActiveRecord::Schema.define(version: 20150524030418) do
 
   add_index "rating_caches", ["cacheable_id", "cacheable_type"], name: "index_rating_caches_on_cacheable_id_and_cacheable_type", using: :btree
 
-<<<<<<< HEAD
->>>>>>> f89a8cb239778d019fe1817c908917a8328f8260
-=======
->>>>>>> 33b0ebd8efe8044eab768be48f3c41c7d7e45db2
   create_table "searches", force: true do |t|
-    t.string   "search",     null: false
+    t.string   "name"
+    t.string   "category"
+    t.decimal  "minimum_price"
+    t.decimal  "maximum_price"
+    t.string   "tag"
+    t.string   "condition"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -170,16 +134,9 @@ ActiveRecord::Schema.define(version: 20150524030418) do
     t.string   "PID"
     t.datetime "date_of_birth"
     t.boolean  "is_female",              default: false
+    t.string   "name"
     t.string   "avatar_url"
     t.string   "role"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    t.string   "name"
->>>>>>> f89a8cb239778d019fe1817c908917a8328f8260
-=======
-    t.string   "name"
->>>>>>> 33b0ebd8efe8044eab768be48f3c41c7d7e45db2
     t.boolean  "admin",                  default: false
   end
 
