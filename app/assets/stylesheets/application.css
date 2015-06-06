@@ -19,8 +19,8 @@
   /*padding: 19px 29px;*/
   margin: 50px auto 20px; 
   background-color: #fff;
-  border: 1px solid #3498db;
-  border-radius: 5%;
+  border: 2px solid #3498db;
+  border-radius: 25px;
   
   
  /* -webkit-border-radius: 5px;
@@ -37,8 +37,10 @@
   /*padding: 19px 29px;*/
   margin: 50px auto 20px; 
   background-color: #fff;
-  border: 1px solid #3498db;
-  border-radius: 5%;
+  border: 2px solid #3498db;
+  border-radius: 25px;
+
+
 }
 
 .border-form-div h2 {
