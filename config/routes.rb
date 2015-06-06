@@ -14,7 +14,6 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
 
   root 'pages#index'
-  get 'testpage' => 'pages#testpage'  
   get 'info' => 'pages#info'
   get 'inbox' => 'messages#index'
   get 'tags/:tag', to: 'items#index', as: "tag"
