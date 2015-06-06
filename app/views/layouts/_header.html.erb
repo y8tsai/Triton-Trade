@@ -28,7 +28,11 @@
 						</ul>
 					</li>
 				</ul>
+
+				<!-- Search field -->
 				<% unless params[:controller] == 'pages' and params[:action] == 'index' %>
+					<div class="col-sm-6">
+
 					<%= form_for @search do |f| %>
 						<div class="input-group">
 							<%= f.text_field :name, class: "form-control input-sm", placeholder: "Find something you want!" %>
@@ -39,6 +43,7 @@
 							</span>
 						</div>
 					<% end %>
+					</div>
 				<% end %>
 				<ul class="nav navbar-nav navbar-right">
 					<!--<li><%= link_to image_tag("http://static.viewbook.com/images/social_icons/facebook_16.png"), user_omniauth_authorize_path(:facebook) %></li>
