@@ -3946,3 +3946,285 @@ Processing by PagesController#index as HTML
   Rendered layouts/_header.html.erb (1.4ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 143ms (Views: 142.1ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (34.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (34.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (79.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateWidgets (20140707111715)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (98.8ms)[0m  [1mCREATE TABLE "widgets" ("id" serial primary key, "name" character varying(255), "description" text, "stock" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140707111715"]]
+  [1m[36m (17.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProfiles (20150426002521)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (65.3ms)[0m  [1mCREATE TABLE "profiles" ("id" serial primary key, "profile" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150426002521"]]
+  [1m[36m (4.6ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateUsers (20150426013917)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (87.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (30.7ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36m (31.7ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150426013917"]]
+  [1m[36m (20.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddProviderToUsers (20150427221755)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD COLUMN "provider" character varying(255)[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD COLUMN "uid" character varying(255)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150427221755"]]
+  [1m[35m (12.3ms)[0m  COMMIT
+Migrating to AddUsernameToUsers (20150428221735)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD COLUMN "username" character varying(255)
+  [1m[36m (46.2ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD COLUMN "PID" character varying(255)
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD COLUMN "date_of_birth" timestamp[0m
+  [1m[35m (215.6ms)[0m  ALTER TABLE "users" ADD COLUMN "is_female" boolean DEFAULT 'f'
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150428221735"]]
+  [1m[35m (17.7ms)[0m  COMMIT
+Migrating to AddNameToUsers (20150501220242)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" ADD COLUMN "name" character varying(255)
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150501220242"]]
+  [1m[35m (17.5ms)[0m  COMMIT
+Migrating to AddAvatarUrlToUsers (20150508221915)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD COLUMN "avatar_url" character varying(255)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150508221915"]]
+  [1m[35m (11.2ms)[0m  COMMIT
+Migrating to Db (20150513181816)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150513181816"]]
+  [1m[36m (4.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateItems (20150516003310)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (106.5ms)[0m  [1mCREATE TABLE "items" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150516003310"]]
+  [1m[36m (17.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddFieldsToItems (20150516010342)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (78.0ms)[0m  [1mALTER TABLE "items" ADD COLUMN "is_sold" boolean DEFAULT 'f'[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "items" ADD COLUMN "price" decimal(6,2)
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "items" ADD COLUMN "image_url" character varying(255)[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "items" ADD COLUMN "condition" character varying(255)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150516010342"]]
+  [1m[35m (13.0ms)[0m  COMMIT
+Migrating to AddReferenceToItems (20150516011230)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "items" ADD COLUMN "user_id" integer
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150516011230"]]
+  [1m[35m (9.6ms)[0m  COMMIT
+Migrating to CreateTags (20150517011410)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (64.1ms)[0m  CREATE TABLE "tags" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150517011410"]]
+  [1m[35m (5.3ms)[0m  COMMIT
+Migrating to CreateTaggings (20150517011535)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (45.3ms)[0m  CREATE TABLE "taggings" ("id" serial primary key, "item_id" integer, "tag_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (32.7ms)[0m  [1mCREATE  INDEX  "index_taggings_on_item_id" ON "taggings"  ("item_id")[0m
+  [1m[35m (31.4ms)[0m  CREATE  INDEX  "index_taggings_on_tag_id" ON "taggings"  ("tag_id")
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150517011535"]]
+  [1m[35m (13.5ms)[0m  COMMIT
+Migrating to AddUserIdToItems (20150517071356)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "items" ADD COLUMN "role" character varying(255)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150517071356"]]
+  [1m[35m (11.1ms)[0m  COMMIT
+Migrating to AddRoleToUsers (20150517075851)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD COLUMN "role" character varying(255)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150517075851"]]
+  [1m[35m (10.7ms)[0m  COMMIT
+Migrating to CreateMessages (20150518012948)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (106.3ms)[0m  CREATE TABLE "messages" ("id" serial primary key, "user_id" integer, "recipient_id" integer, "subject" character varying(255), "body" text, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150518012948"]]
+  [1m[35m (12.8ms)[0m  COMMIT
+Migrating to AddAdminToUsers (20150520024004)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (216.3ms)[0m  ALTER TABLE "users" ADD COLUMN "admin" boolean DEFAULT 'f'
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150520024004"]]
+  [1m[35m (18.7ms)[0m  COMMIT
+Migrating to CreateRatingCaches (20150524030415)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (77.0ms)[0m  CREATE TABLE "rating_caches" ("id" serial primary key, "cacheable_id" integer, "cacheable_type" character varying(255), "avg" float NOT NULL, "qty" integer NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (32.0ms)[0m  [1mCREATE  INDEX  "index_rating_caches_on_cacheable_id_and_cacheable_type" ON "rating_caches"  ("cacheable_id", "cacheable_type")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150524030415"]]
+  [1m[36m (17.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRates (20150524030416)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (77.4ms)[0m  [1mCREATE TABLE "rates" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "stars" float NOT NULL, "dimension" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (31.8ms)[0m  CREATE  INDEX  "index_rates_on_rater_id" ON "rates"  ("rater_id")
+  [1m[36m (23.0ms)[0m  [1mCREATE  INDEX  "index_rates_on_rateable_id_and_rateable_type" ON "rates"  ("rateable_id", "rateable_type")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150524030416"]]
+  [1m[36m (16.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateAverageCaches (20150524030417)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (84.1ms)[0m  [1mCREATE TABLE "average_caches" ("id" serial primary key, "rater_id" integer, "rateable_id" integer, "rateable_type" character varying(255), "avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150524030417"]]
+  [1m[36m (5.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateOverallAverages (20150524030418)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (47.3ms)[0m  [1mCREATE TABLE "overall_averages" ("id" serial primary key, "rateable_id" integer, "rateable_type" character varying(255), "overall_avg" float NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150524030418"]]
+  [1m[36m (13.9ms)[0m  [1mCOMMIT[0m
+Migrating to AddCategoryColumnToItems (20150525001912)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "items" ADD COLUMN "category" character varying(255)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150525001912"]]
+  [1m[36m (14.5ms)[0m  [1mCOMMIT[0m
+Migrating to AddPurchasedByToItems (20150527055403)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (77.6ms)[0m  [1mALTER TABLE "items" ADD COLUMN "buyeremail" character varying(255) DEFAULT '' NOT NULL[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150527055403"]]
+  [1m[36m (20.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSearches (20150530050035)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (81.1ms)[0m  [1mCREATE TABLE "searches" ("id" serial primary key, "name" character varying(255), "category" character varying(255), "minimum_price" decimal, "maximum_price" decimal, "tag" character varying(255), "condition" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150530050035"]]
+  [1m[36m (20.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-06 18:13:13 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.erb within layouts/application (46.4ms)
+  Rendered layouts/_header.html.erb (8.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 696ms (Views: 634.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/charges.css?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/buy.css?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/claims.css?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/searches.css?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/sell.css?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/testpage.css?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/widgets.css?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/buy.js?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/charges.js?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/claims.js?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/ratyrate.js?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/searches.js?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/sell.js?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/testpage.js?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/widgets.js?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-06 18:13:14 -0700
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-06-06 18:13:17 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (111.4ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 275ms (Views: 266.8ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-06-06 18:13:30 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ExxHaKiW+4XaerunKZVVKqxdfcqANNmpHvSQsO2oy4I=", "user"=>{"email"=>"test@gmail.com", "name"=>"Test", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: password_confirmation
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (1.7ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2015-06-07 01:13:31.149127"], ["email", "test@gmail.com"], ["encrypted_password", "$2a$10$Jhf3oVZyUs0qVJ8CNfGEa.tZsM1VuLlpjECmiZpc427BTh1Yr0cgy"], ["name", "Test"], ["updated_at", "2015-06-07 01:13:31.149127"]]
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "messages" ("body", "created_at", "recipient_id", "subject", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["body", "Hello, Test! Welcome to the Triton Trade community! Here is a quick guide to get you start buying and selling items to other members in our community.\n\nNavigation bar: Access quick features such as clicking our logo to be redirected to the home page, explore categories of items, or go to account management.\n\nHomepage: Search items by name or click one of the featured buttons below the search bar to be redirected to that page.\n\nBuy: View the listing of items for sale from other users. \n\nSell: Post an item you wish to be sold.\n\nFree: View items that are listed as free.\n\nThanks again for joining our community. Happy Trading!\nTriton Trade\n"], ["created_at", "2015-06-07 01:13:31.170685"], ["recipient_id", 1], ["subject", "Hello, Test!"], ["updated_at", "2015-06-07 01:13:31.170685"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 197ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: user_id):
+  app/models/user.rb:16:in `add_profile'
+
+
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.7ms)
